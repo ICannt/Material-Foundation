@@ -55,7 +55,6 @@ Temporary Items
 /libsrc
 /.classpath
 /.project
-build.gradle
 gradlebuild.bat
 gradleeclipse.bat
 gradlerefresh.bat
