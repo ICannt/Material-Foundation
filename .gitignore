@@ -14,10 +14,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# =========================
-# Operating System Files
-# =========================
-
 # OSX
 # =========================
 
@@ -41,3 +37,28 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# =========================
+# Project Specific
+# =========================
+
+
+/.gradle
+/.ignore
+/.settings
+/bin
+/build
+/eclipse
+/gradle
+/lib
+/libsrc
+/.classpath
+/.project
+build.gradle
+gradlebuild.bat
+gradleeclipse.bat
+gradlerefresh.bat
+gradlew
+gradlew.bat
+javahome.bat

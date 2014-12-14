@@ -1,0 +1,55 @@
+﻿
+itemGroup.materialfoundation=Material Foundation
+
+item.materialfoundation.tool.mf_block_fabricator.name=MF Block Fabricator
+item.materialfoundation.mineral.burnt_lime.name=Burnt Lime
+
+tile.materialfoundation.metal.plate.checker.iron.name=Iron Checker Plate
+tile.materialfoundation.metal.plate.checker.gold.name=Gold Checker Plate
+tile.materialfoundation.metal.plate.checker.copper.name=Copper Checker Plate
+tile.materialfoundation.metal.plate.checker.tin.name=Tin Checker Plate
+tile.materialfoundation.metal.plate.checker.silver.name=Silver Checker Plate
+tile.materialfoundation.metal.plate.checker.lead.name=Lead Checker Plate
+tile.materialfoundation.metal.plate.checker.nickel.name=Ferrous Checker Plate
+tile.materialfoundation.metal.plate.checker.platinum.name=Shiny Checker Plate
+tile.materialfoundation.metal.plate.checker.mithril.name=Mana Infused Checker Plate
+tile.materialfoundation.metal.plate.checker.electrum.name=Electrum Checker Plate
+tile.materialfoundation.metal.plate.checker.invar.name=Invar Checker Plate
+tile.materialfoundation.metal.plate.checker.bronze.name=Tinker's Alloy Checker Plate
+tile.materialfoundation.metal.plate.checker.signalum.name=Signalum Checker Plate
+tile.materialfoundation.metal.plate.checker.lumium.name=Lumium Checker Plate
+tile.materialfoundation.metal.plate.checker.enderium.name=Enderium Checker Plate
+
+tile.materialfoundation.metal.plate.scale_checker.iron.name=Iron Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.gold.name=Gold Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.copper.name=Copper Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.tin.name=Tin Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.silver.name=Silver Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.lead.name=Lead Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.nickel.name=Ferrous Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.platinum.name=Shiny Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.mithril.name=Mana Infused Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.electrum.name=Electrum Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.invar.name=Invar Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.bronze.name=Tinker's Alloy Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.signalum.name=Signalum Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.lumium.name=Lumium Scale Checker Plate
+tile.materialfoundation.metal.plate.scale_checker.enderium.name=Enderium Scale Checker Plate
+
+tile.materialfoundation.metal.plate.scale_scale.iron.name=Iron Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.gold.name=Gold Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.copper.name=Copper Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.tin.name=Tin Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.silver.name=Silver Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.lead.name=Lead Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.nickel.name=Ferrous Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.platinum.name=Shiny Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.mithril.name=Mana Infused Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.electrum.name=Electrum Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.invar.name=Invar Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.bronze.name=Tinker's Alloy Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.signalum.name=Signalum Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.lumium.name=Lumium Scale Plate
+tile.materialfoundation.metal.plate.scale_scale.enderium.name=Enderium Scale Plate
+
+tile.materialfoundation.composite.concrete.wall.basic.name=Concrete Wall

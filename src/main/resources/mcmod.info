@@ -1,0 +1,23 @@
+[
+    {
+        "modid": "${modid}",
+        "name": "${name}",
+        "description": "Material Foundation",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://icannt.org",
+        "updateUrl": "",
+        "authorList": ["trab"],
+        "credits": "TeamCoFH for Thermal Foundation",
+        "logoFile": "",
+        "screenshots": [],
+        "requiredMods":
+        [
+            "MinecraftForge,CoFHCore,ThermalFoundation"
+        ],
+        "dependencies":
+        [
+            "MinecraftForge,CoFHCore,ThermalFoundation"
+        ]
+    }
+]
