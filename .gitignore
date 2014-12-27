@@ -22,7 +22,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -50,7 +51,7 @@ Temporary Items
 /bin
 /build
 /eclipse
-/gradle
+#/gradle
 /lib
 /libsrc
 /.classpath
