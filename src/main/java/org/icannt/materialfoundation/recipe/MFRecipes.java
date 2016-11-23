@@ -5,7 +5,7 @@ import org.icannt.materialfoundation.item.MFItems;
 import org.icannt.materialfoundation.lib.DB;
 import org.icannt.materialfoundation.lib.MFMaterial;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -79,10 +79,10 @@ public class MFRecipes
 		        "SCS",
 				"BWB",
 				"GCG",
-		        Character.valueOf('W'), Items.water_bucket,
-		        Character.valueOf('S'), Blocks.sand,
-		        Character.valueOf('G'), Blocks.gravel,
-		        Character.valueOf('C'), Items.clay_ball,
+		        Character.valueOf('W'), Items.WATER_BUCKET,
+		        Character.valueOf('S'), Blocks.SAND,
+		        Character.valueOf('G'), Blocks.GRAVEL,
+		        Character.valueOf('C'), Items.CLAY_BALL,
 		        Character.valueOf('B'), MFItems.mineralBurntLime
 	        }));
 			// Future Idea - more advanced process to produce concrete faster, will require a Burnt Lime Block, which would be a caustic material 
@@ -108,7 +108,7 @@ public class MFRecipes
 	        " C ",
 	        Character.valueOf('I'), "ingotIron",
 	        Character.valueOf('S'), "stickWood",
-	        Character.valueOf('C'), Blocks.carpet	        
+	        Character.valueOf('C'), Blocks.CARPET	        
         }));
 		
 		
@@ -116,7 +116,7 @@ public class MFRecipes
 		 *   --- SMELTING --- 
 		 */
 		
-		GameRegistry.addSmelting(Blocks.sandstone, new ItemStack(MFItems.mineralBurntLime, 8, 0), 0.1F);
+		GameRegistry.addSmelting(Blocks.SANDSTONE, new ItemStack(MFItems.mineralBurntLime, 8, 0), 0.1F);
 		
 	}
 }

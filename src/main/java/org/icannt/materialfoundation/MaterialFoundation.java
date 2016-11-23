@@ -3,11 +3,11 @@ package org.icannt.materialfoundation;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraftforge.oredict.OreDictionary;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 
 import org.icannt.materialfoundation.lib.Constants;
 import org.icannt.materialfoundation.lib.DB;

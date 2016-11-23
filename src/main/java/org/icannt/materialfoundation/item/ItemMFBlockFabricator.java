@@ -3,7 +3,7 @@ package org.icannt.materialfoundation.item;
 import org.icannt.materialfoundation.gui.MFCreativeTab;
 import org.icannt.materialfoundation.lib.Constants;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.creativetab.CreativeTabs;

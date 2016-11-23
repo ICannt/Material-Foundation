@@ -3,7 +3,7 @@ package org.icannt.materialfoundation.block;
 import org.icannt.materialfoundation.lib.Constants;
 import org.icannt.materialfoundation.lib.MFMaterial;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.block.Block;

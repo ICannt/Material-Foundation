@@ -62,3 +62,4 @@ gradlerefresh.bat
 gradlew
 gradlew.bat
 javahome.bat
+*.launch
