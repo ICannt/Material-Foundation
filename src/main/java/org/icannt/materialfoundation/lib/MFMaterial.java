@@ -1,7 +1,5 @@
 package org.icannt.materialfoundation.lib;
 
-import net.minecraft.init.Items;
-
 public class MFMaterial
 {
 	public static final String[] MFRarity = { "Common", "Uncommon", "Rare", "Epic" };
