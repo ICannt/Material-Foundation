@@ -10,7 +10,6 @@ import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.StatCollector;
 
 /**
  * Created by PrinceCat on 29/08/2014.
@@ -27,11 +26,13 @@ public class ItemBlockMetalPlateScaleScale extends ItemBlock
         setMaxDamage(0);
     }
 
+    /*
     @Override
     public String getItemStackDisplayName(ItemStack item)
     {
         return StatCollector.translateToLocal(getUnlocalizedName(item));
     }
+    */
 
     @Override
     public String getUnlocalizedName(ItemStack item)
@@ -45,11 +46,13 @@ public class ItemBlockMetalPlateScaleScale extends ItemBlock
         return i;
     }
     
+    /*
     @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack item)
     {
         return EnumRarity.valueOf(MFMaterial.MFRarity[MFMaterial.MetalRarity[item.getItemDamage()]].toLowerCase());
     }
+    */
     
 }

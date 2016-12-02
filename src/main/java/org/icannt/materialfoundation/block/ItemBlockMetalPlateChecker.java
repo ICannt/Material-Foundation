@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.StatCollector;
 
 import org.icannt.materialfoundation.lib.Constants;
 import org.icannt.materialfoundation.lib.DB;
@@ -28,11 +27,13 @@ public class ItemBlockMetalPlateChecker extends ItemBlock
         setMaxDamage(0);
     }
 
+    /*
     @Override
     public String getItemStackDisplayName(ItemStack item)
     {
         return StatCollector.translateToLocal(getUnlocalizedName(item));
     }
+    */
 
     @Override
     public String getUnlocalizedName(ItemStack item)
@@ -46,11 +47,13 @@ public class ItemBlockMetalPlateChecker extends ItemBlock
         return i;
     }
 
+    /*
     @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack item)
     {
         return EnumRarity.valueOf(MFMaterial.MFRarity[MFMaterial.MetalRarity[item.getItemDamage()]].toLowerCase());
     }
+	*/
 
 }

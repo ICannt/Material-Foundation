@@ -9,12 +9,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -35,11 +33,6 @@ public class BlockMetalPlateScaleScale extends Block
 	
 	public static String namePath;
 
-	@SideOnly(Side.CLIENT)
-	public IIcon[] topBottomTexture;
-	@SideOnly(Side.CLIENT)
-	public IIcon[] sideTexture;
-
 	private static String topBottomTextureFolder;
 	private static String sideTextureFolder;
 	private static String topBottomSubType;
@@ -51,7 +44,7 @@ public class BlockMetalPlateScaleScale extends Block
 	
     public BlockMetalPlateScaleScale(String mfMaterial, String mfType, String mfSubType, String mfMeta[], int mfLight[], float mfHardness[], float mfResistance[], int mfRarity[])
     {
-        super(Material.iron);
+        super(Material.IRON);
         
 		meta = mfMeta;
 		light = mfLight;
@@ -64,9 +57,6 @@ public class BlockMetalPlateScaleScale extends Block
 
 		topBottomTextureFolder = topBottomSubType.split("_")[0].toLowerCase();
 		sideTextureFolder = sideSubType.split("_")[0].toLowerCase();
-	
-		topBottomTexture = new IIcon[meta.length];
-		sideTexture = new IIcon[meta.length];
 
 		topBottomSubType = mfSubType.split(":")[1];
 		sideSubType = mfSubType.split(":")[0];
@@ -77,16 +67,18 @@ public class BlockMetalPlateScaleScale extends Block
 		blockName = mfMaterial.toLowerCase() + "." + mfType.toLowerCase() + "." + sideTextureFolder + "_" + topBottomTextureFolder;
 		namePath = "." + blockName + ".";
 		
-		this.setBlockName(Constants.MODID + "." + blockName);
-		this.setStepSound(Block.soundTypeMetal);
+		// this.setBlockName(Constants.MODID + "." + blockName);
+		// this.setStepSound(Block.soundTypeMetal);
         this.setCreativeTab(MFCreativeTab.mfCreativeTab);
     }
 
+    /*
     @Override
     public int damageDropped(int i)
     {
         return i;
     }
+    */
 
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
@@ -96,31 +88,8 @@ public class BlockMetalPlateScaleScale extends Block
             list.add(new ItemStack(item, 1, i));
         }
     }
-   
-    @Override
-	@SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int metadata)
-    {
-		if(side == 0 || side == 1)
-		{
-			return topBottomTexture[metadata];
-		}
-		else
-		{
-			return sideTexture[metadata];
-		}
-    }
-
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister ir)
-    {
-        for (int i = 0; i < meta.length; i++)
-        {
-    		topBottomTexture[i] = ir.registerIcon(Constants.MODID + topBottomTexturePath + meta[i]);
-    		sideTexture[i] = ir.registerIcon(Constants.MODID + sideTexturePath + meta[i]);
-        }
-    }
     
+    /*
     @Override
     public float getBlockHardness(World world, int x, int y, int z)
     {
@@ -138,5 +107,5 @@ public class BlockMetalPlateScaleScale extends Block
     {
     	return resistance[world.getBlockMetadata(x, y, z)];
     }   
-    
+    */
 }

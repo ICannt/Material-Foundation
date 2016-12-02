@@ -16,18 +16,19 @@ public class ItemMFBlockFabricator extends Item
 	public ItemMFBlockFabricator()
 	{
 		this.setUnlocalizedName(Constants.MODID + "." + type + "." + name.toLowerCase());
-		this.setTextureName(Constants.MODID + ":" + type + "/" + name);
 		this.setCreativeTab(MFCreativeTab.mfCreativeTab);
 		this.setMaxStackSize(1);
 		//this.setMaxDamage(10 - 1);
 		//this.setNoRepair();
 	}
 	
+	/*
 	@Override 
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack itemStack)
 	{		
 		return false;     
     }
+    */
 	
 	@Override
     public Item setContainerItem(Item item)

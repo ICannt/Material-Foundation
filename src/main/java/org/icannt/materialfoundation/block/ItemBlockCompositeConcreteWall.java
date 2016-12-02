@@ -3,7 +3,6 @@ package org.icannt.materialfoundation.block;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.StatCollector;
 
 import org.icannt.materialfoundation.lib.Constants;
 import org.icannt.materialfoundation.lib.DB;
@@ -23,11 +22,13 @@ public class ItemBlockCompositeConcreteWall extends ItemBlock
         setMaxDamage(0);
     }
 
+    /*
     @Override
     public String getItemStackDisplayName(ItemStack item)
     {
         return StatCollector.translateToLocal(getUnlocalizedName(item));
     }
+	*/
 
     @Override
     public String getUnlocalizedName(ItemStack item)

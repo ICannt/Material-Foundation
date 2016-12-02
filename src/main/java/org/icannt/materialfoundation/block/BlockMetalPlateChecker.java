@@ -13,18 +13,15 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
- * Created by Liam on 29/08/2014.
- * Recoded and refactored by trab
+ * Metal Plate Checker
  */
 
 public class BlockMetalPlateChecker extends Block
@@ -37,15 +34,13 @@ public class BlockMetalPlateChecker extends Block
 	public static int[] rarity;
 	
 	public static String namePath;
-	
-	public IIcon[] textures;
-	
+		
 	private static String texturePath;
 	private static String blockName;
 	
     public BlockMetalPlateChecker(String mfMaterial, String mfType, String mfSubType, String mfMeta[], int mfLight[], float mfHardness[], float mfResistance[], int mfRarity[])
     {
-        super(Material.iron);
+        super(Material.IRON);
         
 		meta = mfMeta;
 		light = mfLight;
@@ -53,24 +48,25 @@ public class BlockMetalPlateChecker extends Block
 		resistance = mfResistance;
 		rarity = mfRarity;
 		
-		textures = new IIcon[meta.length];
 		
 		namePath = "." + mfMaterial.toLowerCase() + "." + mfType.toLowerCase() + "." + mfSubType.toLowerCase() + ".";
 		texturePath = ":" + mfMaterial.toLowerCase() + "/" + mfType.toLowerCase() + "/" + mfSubType.toLowerCase() + "/" + mfType + "_" + mfSubType + "_";
 		
 		blockName = mfMaterial.toLowerCase() + "." + mfType.toLowerCase() + "." + mfSubType.toLowerCase();
 		
-		this.setBlockName(Constants.MODID + "." + blockName);
-		this.setStepSound(Block.soundTypeMetal);
+		// this.setBlockName(Constants.MODID + "." + blockName);
+		// this.setStepSound(Block.soundTypeMetal);
         this.setCreativeTab(MFCreativeTab.mfCreativeTab);
         
     }
 
+    /*
     @Override
     public int damageDropped(int i)
     {
         return i;
     }
+	*/
 
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
@@ -81,22 +77,7 @@ public class BlockMetalPlateChecker extends Block
         }
     }
 
-    @Override
-    public IIcon getIcon(int side, int metadata)
-    {
-        return textures[metadata];
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister ir)
-    {
-        for (int i = 0; i < meta.length; i++)
-        {
-            textures[i] = ir.registerIcon(Constants.MODID + texturePath + meta[i]);
-        }
-    }
-
+    /*
     @Override
     public float getBlockHardness(World world, int x, int y, int z)
     {
@@ -114,5 +95,5 @@ public class BlockMetalPlateChecker extends Block
     {
     	return resistance[world.getBlockMetadata(x, y, z)];
     }   
-    
+    */
 }

@@ -45,8 +45,11 @@ Temporary Items
 # =========================
 
 
+*.launch
+/.classpath
 /.gradle
 /.ignore
+/.project
 /.settings
 /bin
 /build
@@ -54,12 +57,10 @@ Temporary Items
 #/gradle
 /lib
 /libsrc
-/.classpath
-/.project
+/run
 gradlebuild.bat
 gradleeclipse.bat
 gradlerefresh.bat
 gradlew
 gradlew.bat
 javahome.bat
-*.launch

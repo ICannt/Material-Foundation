@@ -16,7 +16,6 @@ public class ItemMineralBurntLime extends Item
 	public ItemMineralBurntLime()
 	{
 		this.setUnlocalizedName(Constants.MODID + "." + type + "." + name.toLowerCase());
-		this.setTextureName(Constants.MODID + ":" + type + "/" + name);
 		this.setCreativeTab(MFCreativeTab.mfCreativeTab);
 		this.setMaxStackSize(64);
 		//this.setMaxDamage(10 - 1);
