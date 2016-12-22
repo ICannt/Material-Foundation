@@ -1,0 +1,109 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+      "textures": {
+        "side": "materialfoundation:blocks/plate_scale_side_iron",
+        "top": "materialfoundation:blocks/plate_scale_topbottom_iron"
+      },
+  "model": "cube_top"
+  },
+  "variants": {
+    "inventory": [{}],
+    "normal": [{}],
+    "metal": {
+        "iron": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_iron",
+            "top": "materialfoundation:blocks/plate_scale_side_iron"
+            
+          }
+        },
+        "gold": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_gold",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_gold"
+          }
+        },
+        "copper": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_copper",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_copper"
+          }
+        },
+        "tin": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_tin",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_tin"
+          }
+        },
+        "silver": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_silver",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_silver"
+          }
+        },
+        "lead": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_lead",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_lead"
+          }
+        },
+        "nickel": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_nickel",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_nickel"
+          }
+        },
+        "platinum": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_platinum",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_platinum"
+          }
+        },
+
+        "mithril": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_mithril",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_mithril"
+          }
+        },
+        "electrum": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_electrum",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_electrum"
+          }
+        },
+
+        "invar": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_invar",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_invar"
+          }
+        },
+        "bronze": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_bronze",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_bronze"
+          }
+        },
+        "signalum": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_signalum",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_signalum"
+          }
+        },
+        "lumium": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_lumium",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_lumium"
+          }
+        },
+        "enderium": {
+          "textures": {
+            "side": "materialfoundation:blocks/plate_scale_side_enderium",
+            "top": "materialfoundation:blocks/plate_scale_topbottom_enderium"
+          }
+        }
+      }
+    }
+  }

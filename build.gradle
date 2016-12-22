@@ -11,28 +11,19 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
 
-version = "1.10.2-2.0"
-group= "org.icannt.material-foundation" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "material-foundation"
+version = "1.0"
+group= "org.icannt.materialfoundation" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "MaterialFoundation"
 
-/*
 sourceCompatibility = targetCompatibility = "1.6" // Need this here so eclipse task generates correctly.
 compileJava {
     sourceCompatibility = targetCompatibility = "1.6"
 }
-*/
-
-srcCompat = JavaVersion.VERSION_1_8
-targetCompat = JavaVersion.VERSION_1_8
 
 minecraft {
-    version = "1.10.2-12.18.2.2123"
-    if (file('../run').exists()) {
-        runDir = "../run/assets"
-    } else {
-        runDir = "assets"
-    }
-        
+    version = "1.10.2-12.18.3.2185"
+    runDir = "run"
+    
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
     // stable_#            stables are built at the discretion of the MCP team.
