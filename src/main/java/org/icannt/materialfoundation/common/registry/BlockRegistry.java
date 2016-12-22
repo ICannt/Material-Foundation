@@ -64,8 +64,7 @@ public class BlockRegistry {
 
     }
 
-    @SideOnly(Side.CLIENT)
-    public static void initModels() {
+    public static void initBlockModels() {
         METAL_CHECKER.initClient();
         METAL_SCALE.initClient();
     }

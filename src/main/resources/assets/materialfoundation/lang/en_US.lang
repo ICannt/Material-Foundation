@@ -38,3 +38,7 @@ tile.materialfoundation:block_metal_scale.bronze.name=Bronze Plate Metal Scale
 tile.materialfoundation:block_metal_scale.signalum.name=Signalum Plate Metal Scale
 tile.materialfoundation:block_metal_scale.lumium.name=Lumium Plate Metal Scale
 tile.materialfoundation:block_metal_scale.enderium.name=Enderium Plate Metal Scale
+
+# Items
+item.materialfoundation:burnt_lime.name=Burnt Lime
+item.materialfoundation:fabricator.name=Fabricator
