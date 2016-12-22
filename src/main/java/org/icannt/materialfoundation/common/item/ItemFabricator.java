@@ -6,7 +6,7 @@ import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
 /**
- * Created by Liam on 22/12/16.
+ * Created by ICannt on 22/12/16.
  */
 public class ItemFabricator extends Item {
 

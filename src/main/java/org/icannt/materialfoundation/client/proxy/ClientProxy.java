@@ -12,7 +12,7 @@ import org.icannt.materialfoundation.common.registry.BlockRegistry;
 import org.icannt.materialfoundation.common.registry.ItemRegistry;
 
 /**
- * Created by Liam on 20/12/16.
+ * Created by ICannt on 20/12/16.
  */
 public class ClientProxy implements CommonProxy {
 

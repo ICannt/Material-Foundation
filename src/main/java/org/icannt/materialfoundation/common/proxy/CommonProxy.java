@@ -1,7 +1,7 @@
 package org.icannt.materialfoundation.common.proxy;
 
 /**
- * Created by Liam on 20/12/16.
+ * Created by ICannt on 20/12/16.
  */
 public interface CommonProxy {
 

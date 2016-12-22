@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import org.icannt.materialfoundation.common.block.state.EnumMetalType;
 
 /**
- * Created by Liam on 20/12/16.
+ * Created by ICannt on 20/12/16.
  */
 public class ItemBlockMetal extends ItemBlock {
 

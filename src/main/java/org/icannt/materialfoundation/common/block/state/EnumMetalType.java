@@ -4,7 +4,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
 /**
- * Created by Liam on 21/12/16.
+ * Created by ICannt on 21/12/16.
  */
 public enum EnumMetalType implements IStringSerializable {
 

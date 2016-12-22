@@ -19,7 +19,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Liam on 20/12/16.
+ * Created by ICannt on 20/12/16.
  */
 
 @GameRegistry.ObjectHolder(MaterialFoundation.MOD_ID)

@@ -3,10 +3,10 @@ package org.icannt.materialfoundation.common.creativetab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.registry.BlockRegistry;
+import org.icannt.materialfoundation.common.registry.ItemRegistry;
 
 /**
- * Created by Liam on 21/12/16.
+ * Created by ICannt on 21/12/16.
  */
 public class TabMaterialFoundation extends CreativeTabs {
 
@@ -18,6 +18,6 @@ public class TabMaterialFoundation extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return Item.getItemFromBlock(BlockRegistry.METAL_CHECKER);
+        return ItemRegistry.FABRICATOR;
     }
 }

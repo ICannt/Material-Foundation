@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Liam on 22/12/16.
+ * Created by ICannt on 22/12/16.
  */
 @GameRegistry.ObjectHolder(MaterialFoundation.MOD_ID)
 public class ItemRegistry {

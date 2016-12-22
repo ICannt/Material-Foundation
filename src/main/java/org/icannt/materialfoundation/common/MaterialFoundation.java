@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.icannt.materialfoundation.common.proxy.CommonProxy;
 
 /**
- * Created by Liam on 20/12/16.
+ * Created by ICannt on 20/12/16.
  */
 @Mod(modid = MaterialFoundation.MOD_ID, name = MaterialFoundation.MOD_NAME, version = MaterialFoundation.VERSION)
 public class MaterialFoundation {
@@ -18,8 +18,8 @@ public class MaterialFoundation {
     public static CommonProxy proxy;
 
     public static final String MOD_ID = "materialfoundation";
-    public static final String MOD_NAME = "Material Foundation 2";
-    public static final String VERSION = "1.0";
+    public static final String MOD_NAME = "Material Foundation";
+    public static final String VERSION = "1.10.2-1.2";
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
