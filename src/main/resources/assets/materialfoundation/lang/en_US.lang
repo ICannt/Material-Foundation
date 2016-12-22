@@ -4,8 +4,8 @@ itemGroup.materialfoundation=Material Foundation
 
 # Items
 
-item.materialfoundation:tool.mf_block_fabricator.name=MF Block Fabricator
-item.materialfoundation:mineral.burnt_lime.name=Burnt Lime
+item.materialfoundation:tool.fabricator.name=MF Block Fabricator
+item.materialfoundation:burnt_lime.name=Burnt Lime
 
 
 # Blocks
