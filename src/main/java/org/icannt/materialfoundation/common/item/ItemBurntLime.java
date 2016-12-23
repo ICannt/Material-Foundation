@@ -1,7 +1,11 @@
 package org.icannt.materialfoundation.common.item;
 
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
 import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.state.EnumMetalType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
 /**
@@ -15,4 +19,5 @@ public class ItemBurntLime extends Item {
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
         setMaxStackSize(64);
     }
+    
 }

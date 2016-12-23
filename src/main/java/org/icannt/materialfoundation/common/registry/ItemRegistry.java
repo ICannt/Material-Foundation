@@ -1,10 +1,13 @@
 package org.icannt.materialfoundation.common.registry;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
+
 import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.item.ItemBurntLime;
 import org.icannt.materialfoundation.common.item.ItemFabricator;
@@ -39,6 +42,8 @@ public class ItemRegistry {
                 event.getRegistry().register(item);
                 ITEMS.add(item);
             }
+            
+            OreDictionary.registerOre("dustBurntLime", new ItemStack(BURNT_LIME));
         }
     }
 }
