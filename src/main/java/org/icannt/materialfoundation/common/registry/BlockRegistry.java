@@ -11,9 +11,11 @@ import net.minecraftforge.fml.common.registry.IForgeRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.BlockComposite;
 import org.icannt.materialfoundation.common.block.BlockMetalChecker;
 import org.icannt.materialfoundation.common.block.BlockMetalScale;
 import org.icannt.materialfoundation.common.block.BlockMetalScaleChecker;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
 
 import java.util.HashSet;
@@ -26,14 +28,17 @@ import java.util.Set;
 @GameRegistry.ObjectHolder(MaterialFoundation.MOD_ID)
 public class BlockRegistry {
 
-    @GameRegistry.ObjectHolder("block_metal_checker")
+    @GameRegistry.ObjectHolder("metal_checker")
     public static final BlockMetalChecker METAL_CHECKER = new BlockMetalChecker();
 
-    @GameRegistry.ObjectHolder("block_metal_scale")
+    @GameRegistry.ObjectHolder("metal_scale")
     public static final BlockMetalScale METAL_SCALE = new BlockMetalScale();
     
-    @GameRegistry.ObjectHolder("block_metal_scale_checker")
+    @GameRegistry.ObjectHolder("metal_scale_checker")
     public static final BlockMetalScaleChecker METAL_SCALE_CHECKER = new BlockMetalScaleChecker();
+
+    @GameRegistry.ObjectHolder("composite")
+    public static final BlockComposite COMPOSITE = new BlockComposite();
 
     @Mod.EventBusSubscriber
     public static class RegistrationHandler {
@@ -46,7 +51,8 @@ public class BlockRegistry {
             final Block[] blocks = {
                     METAL_CHECKER,
                     METAL_SCALE,
-                    METAL_SCALE_CHECKER
+                    METAL_SCALE_CHECKER,
+                    COMPOSITE
             };
 
             registry.registerAll(blocks);
@@ -59,7 +65,8 @@ public class BlockRegistry {
             final ItemBlock[] items = {
                 new ItemBlockMetal(METAL_CHECKER),
                 new ItemBlockMetal(METAL_SCALE),
-                new ItemBlockMetal(METAL_SCALE_CHECKER)
+                new ItemBlockMetal(METAL_SCALE_CHECKER),
+                new ItemBlockComposite(COMPOSITE)
             };
 
             for (ItemBlock item : items) {
@@ -70,9 +77,11 @@ public class BlockRegistry {
 
     }
 
+    @SideOnly(Side.CLIENT)
     public static void initBlockModels() {
         METAL_CHECKER.initClient();
         METAL_SCALE.initClient();
         METAL_SCALE_CHECKER.initClient();
+        COMPOSITE.initClient();
     }
 }

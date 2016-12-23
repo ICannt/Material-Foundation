@@ -36,8 +36,8 @@ public class BlockMetalChecker extends Block {
 
     public BlockMetalChecker() {
         super(Material.IRON, MapColor.IRON);
-        setUnlocalizedName(MaterialFoundation.MOD_ID + ":" + "block_metal_checker");
-        setRegistryName(MaterialFoundation.MOD_ID, "block_metal_checker");
+        setRegistryName(MaterialFoundation.MOD_ID, "metal_checker");
+        setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
     }
 

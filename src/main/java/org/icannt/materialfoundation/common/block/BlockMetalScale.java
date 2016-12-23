@@ -36,8 +36,8 @@ public class BlockMetalScale extends Block {
 
     public BlockMetalScale() {
         super(Material.IRON, MapColor.IRON);
-        setUnlocalizedName(MaterialFoundation.MOD_ID + ":" + "block_metal_scale");
-        setRegistryName(MaterialFoundation.MOD_ID, "block_metal_scale");
+        setRegistryName(MaterialFoundation.MOD_ID, "metal_scale");
+        setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
     }
 
