@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.icannt.materialfoundation.common.proxy.CommonProxy;
+import org.icannt.materialfoundation.common.recipe.ModRecipes;
 
 /**
  * Created by ICannt on 20/12/16.
@@ -29,6 +30,7 @@ public class MaterialFoundation {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init();
+        ModRecipes.registerRecipes();
     }
 
     @EventHandler

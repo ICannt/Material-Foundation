@@ -24,6 +24,11 @@ public class ItemFabricator extends Item {
 
     @Override
     public ItemStack getContainerItem(ItemStack stack) {
-        return stack;
+        return new ItemStack(this);
+    }
+
+    @Override
+    public boolean isDamageable() {
+        return false;
     }
 }
