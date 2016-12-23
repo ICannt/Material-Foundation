@@ -6,6 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import org.apache.commons.lang3.text.WordUtils;
 import org.icannt.materialfoundation.common.block.state.EnumCompositeType;
@@ -63,10 +64,10 @@ public class ModRecipes {
                     "BWB",
                     "GCG",
                     'W', Items.WATER_BUCKET,
-                    'S', Blocks.SAND,
-                    'G', Blocks.GRAVEL,
+                    'S', "sand",
+                    'G', "gravel",
                     'C', Items.CLAY_BALL,
-                    'B', ItemRegistry.BURNT_LIME
+                    'B', "dustBurntLime"
             ));
         }
 
@@ -82,6 +83,9 @@ public class ModRecipes {
         ));
 
         // Burnt Lime - Smelting
-        GameRegistry.addSmelting(Blocks.SANDSTONE, new ItemStack(ItemRegistry.BURNT_LIME, 8, 0), 0.1F);
+        for (ItemStack stack : OreDictionary.getOres("sandstone"))
+        {
+        	GameRegistry.addSmelting(stack, new ItemStack(ItemRegistry.BURNT_LIME, 8, 0), 0.1F);
+        }
     }
 }
