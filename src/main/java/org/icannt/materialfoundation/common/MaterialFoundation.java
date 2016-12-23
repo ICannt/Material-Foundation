@@ -30,11 +30,11 @@ public class MaterialFoundation {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init();
-        ModRecipes.registerRecipes();
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit();
+        ModRecipes.registerRecipes();
     }
 }
