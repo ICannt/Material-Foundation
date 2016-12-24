@@ -1,5 +1,11 @@
 package org.icannt.materialfoundation.common.recipe;
 
+import org.apache.commons.lang3.text.WordUtils;
+import org.icannt.materialfoundation.common.block.state.EnumCompositeType;
+import org.icannt.materialfoundation.common.block.state.EnumMetalType;
+import org.icannt.materialfoundation.common.registry.BlockRegistry;
+import org.icannt.materialfoundation.common.registry.ItemRegistry;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -8,11 +14,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-import org.apache.commons.lang3.text.WordUtils;
-import org.icannt.materialfoundation.common.block.state.EnumCompositeType;
-import org.icannt.materialfoundation.common.block.state.EnumMetalType;
-import org.icannt.materialfoundation.common.registry.BlockRegistry;
-import org.icannt.materialfoundation.common.registry.ItemRegistry;
 
 /**
  * Created by ICannt on 23/12/16.

@@ -1,5 +1,12 @@
 package org.icannt.materialfoundation.common.registry;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.item.ItemBurntLime;
+import org.icannt.materialfoundation.common.item.ItemFabricator;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent;
@@ -7,13 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
-
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.item.ItemBurntLime;
-import org.icannt.materialfoundation.common.item.ItemFabricator;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by ICannt on 22/12/16.

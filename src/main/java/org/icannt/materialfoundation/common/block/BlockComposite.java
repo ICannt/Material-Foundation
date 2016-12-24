@@ -1,5 +1,11 @@
 package org.icannt.materialfoundation.common.block;
 
+import java.util.Map;
+
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.state.EnumCompositeType;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -17,11 +23,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.state.EnumCompositeType;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-
-import java.util.Map;
 
 /**
  * Created by ICannt on 23/12/16.
