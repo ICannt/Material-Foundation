@@ -1,12 +1,13 @@
 package org.icannt.materialfoundation.client.model;
 
+import org.icannt.materialfoundation.common.registry.ItemRegistry;
+
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
-import org.icannt.materialfoundation.common.registry.ItemRegistry;
 
 /**
  * Created by ICannt on 22/12/16.
