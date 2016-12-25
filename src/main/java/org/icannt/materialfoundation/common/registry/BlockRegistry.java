@@ -4,10 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.BlockComposite;
-import org.icannt.materialfoundation.common.block.BlockMetalChecker;
-import org.icannt.materialfoundation.common.block.BlockMetalScale;
-import org.icannt.materialfoundation.common.block.BlockMetalScaleChecker;
+import org.icannt.materialfoundation.common.block.BlockCompositeConcrete;
+import org.icannt.materialfoundation.common.block.BlockMetalPlateChecker;
+import org.icannt.materialfoundation.common.block.BlockMetalPlateScale;
+import org.icannt.materialfoundation.common.block.BlockMetalPlateWallStudded;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
 
@@ -29,17 +29,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @GameRegistry.ObjectHolder(MaterialFoundation.MOD_ID)
 public class BlockRegistry {
 
-    @GameRegistry.ObjectHolder("metal_checker")
-    public static final BlockMetalChecker METAL_CHECKER = new BlockMetalChecker();
+    @GameRegistry.ObjectHolder("metal_plate_checker")
+    public static final BlockMetalPlateChecker METAL_PLATE_CHECKER = new BlockMetalPlateChecker();
 
-    @GameRegistry.ObjectHolder("metal_scale")
-    public static final BlockMetalScale METAL_SCALE = new BlockMetalScale();
+    @GameRegistry.ObjectHolder("metal_plate_scale")
+    public static final BlockMetalPlateScale METAL_PLATE_SCALE = new BlockMetalPlateScale();
     
-    @GameRegistry.ObjectHolder("metal_scale_checker")
-    public static final BlockMetalScaleChecker METAL_SCALE_CHECKER = new BlockMetalScaleChecker();
+    @GameRegistry.ObjectHolder("metal_plate_wall_studded")
+    public static final BlockMetalPlateWallStudded METAL_PLATE_WALL_STUDDED = new BlockMetalPlateWallStudded();
 
-    @GameRegistry.ObjectHolder("composite")
-    public static final BlockComposite COMPOSITE = new BlockComposite();
+    @GameRegistry.ObjectHolder("composite_concrete")
+    public static final BlockCompositeConcrete COMPOSITE_CONCRETE = new BlockCompositeConcrete();
 
     @Mod.EventBusSubscriber
     public static class RegistrationHandler {
@@ -50,10 +50,10 @@ public class BlockRegistry {
             final IForgeRegistry<Block> registry = event.getRegistry();
 
             final Block[] blocks = {
-                    METAL_CHECKER,
-                    METAL_SCALE,
-                    METAL_SCALE_CHECKER,
-                    COMPOSITE
+                    METAL_PLATE_CHECKER,
+                    METAL_PLATE_SCALE,
+                    METAL_PLATE_WALL_STUDDED,
+                    COMPOSITE_CONCRETE
             };
 
             registry.registerAll(blocks);
@@ -64,10 +64,10 @@ public class BlockRegistry {
             final IForgeRegistry<Item> registry = event.getRegistry();
 
             final ItemBlock[] items = {
-                new ItemBlockMetal(METAL_CHECKER),
-                new ItemBlockMetal(METAL_SCALE),
-                new ItemBlockMetal(METAL_SCALE_CHECKER),
-                new ItemBlockComposite(COMPOSITE)
+                new ItemBlockMetal(METAL_PLATE_CHECKER),
+                new ItemBlockMetal(METAL_PLATE_SCALE),
+                new ItemBlockMetal(METAL_PLATE_WALL_STUDDED),
+                new ItemBlockComposite(COMPOSITE_CONCRETE)
             };
 
             for (ItemBlock item : items) {
@@ -80,9 +80,9 @@ public class BlockRegistry {
 
     @SideOnly(Side.CLIENT)
     public static void initBlockModels() {
-        METAL_CHECKER.initClient();
-        METAL_SCALE.initClient();
-        METAL_SCALE_CHECKER.initClient();
-        COMPOSITE.initClient();
+        METAL_PLATE_CHECKER.initClient();
+        METAL_PLATE_SCALE.initClient();
+        METAL_PLATE_WALL_STUDDED.initClient();
+        COMPOSITE_CONCRETE.initClient();
     }
 }

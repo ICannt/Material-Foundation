@@ -27,7 +27,7 @@ public class ModRecipes {
         ItemStack container = new ItemStack(ItemRegistry.FABRICATOR);
 
         // Metal Checker
-        resultBlock = BlockRegistry.METAL_CHECKER;
+        resultBlock = BlockRegistry.METAL_PLATE_CHECKER;
         for (EnumMetalType metal : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
                     "XXY",
@@ -37,7 +37,7 @@ public class ModRecipes {
         }
 
         // Scale Checker
-        resultBlock = BlockRegistry.METAL_SCALE_CHECKER;
+        resultBlock = BlockRegistry.METAL_PLATE_WALL_STUDDED;
         for (EnumMetalType metal : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
                     "XX ",
@@ -47,7 +47,7 @@ public class ModRecipes {
         }
 
         // Metal Scale
-        resultBlock = BlockRegistry.METAL_SCALE;
+        resultBlock = BlockRegistry.METAL_PLATE_SCALE;
         for (EnumMetalType metal : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
                     "YXX",
@@ -58,7 +58,7 @@ public class ModRecipes {
         }
 
         // Composite Concrete
-        resultBlock = BlockRegistry.COMPOSITE;
+        resultBlock = BlockRegistry.COMPOSITE_CONCRETE;
         for (EnumCompositeType composite : EnumCompositeType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, composite.ordinal()),
                     "SWS",

@@ -21,7 +21,7 @@ public class MaterialFoundation {
 
     public static final String MOD_ID = "materialfoundation";
     public static final String MOD_NAME = "Material Foundation";
-    public static final String VERSION = "1.10.2-1.2";
+    public static final String VERSION = "1.10.2-2.0";
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {

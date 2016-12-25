@@ -31,13 +31,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by ICannt on 20/12/16.
  */
-public class BlockMetalChecker extends Block {
+public class BlockMetalPlateScale extends Block {
 
     public static final PropertyEnum<EnumMetalType> METAL_VARIANT = PropertyEnum.create("metal", EnumMetalType.class);
 
-    public BlockMetalChecker() {
+    public BlockMetalPlateScale() {
         super(Material.IRON, MapColor.IRON);
-        setRegistryName(MaterialFoundation.MOD_ID, "metal_checker");
+        setRegistryName(MaterialFoundation.MOD_ID, "metal_plate_scale");
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
     }
@@ -93,8 +93,8 @@ public class BlockMetalChecker extends Block {
 
             EnumMetalType metal = EnumMetalType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalChecker.this);
-            return variants.get(BlockMetalChecker.this.getDefaultState().withProperty(METAL_VARIANT, metal));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPlateScale.this);
+            return variants.get(BlockMetalPlateScale.this.getDefaultState().withProperty(METAL_VARIANT, metal));
         });
     }
 }

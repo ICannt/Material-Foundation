@@ -1,0 +1,46 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_iron",
+      "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_iron"
+    },
+    "model": "cube_column"
+  },
+  "variants": {
+    "inventory": [{}],
+    "normal": [{}],
+    "metal": {
+        "iron": {
+          "textures": {
+            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_iron",
+            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_iron"
+          }
+        },
+        "gold": {
+          "textures": {
+            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_gold",
+            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_gold"
+          }
+        },
+        "copper": {
+          "textures": {
+            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_copper",
+            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_copper"
+          }
+        },
+        "tin": {
+          "textures": {
+            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_tin",
+            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_tin"
+          }
+        },
+        "bronze": {
+          "textures": {
+            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_bronze",
+            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_bronze"
+          }
+        }
+      }
+    }
+  }
