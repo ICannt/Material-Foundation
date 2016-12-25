@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.state.EnumCompositeType;
+import org.icannt.materialfoundation.common.block.state.EnumMetalPaintedType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
 import net.minecraft.block.Block;
@@ -29,15 +29,15 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by ICannt on 23/12/16.
+ * Created by ICannt on 25/12/16.
  */
-public class BlockCompositeConcrete extends Block {
+public class BlockMetalPaintedPlateWallStudded extends Block {
 
-    private static final PropertyEnum<EnumCompositeType> VARIANT = PropertyEnum.create("composite", EnumCompositeType.class);
+    private static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
 
-    public BlockCompositeConcrete() {
-        super(Material.ROCK, MapColor.GRAY);
-        setRegistryName(MaterialFoundation.MOD_ID, "composite_concrete");
+    public BlockMetalPaintedPlateWallStudded() {
+        super(Material.IRON, MapColor.IRON);
+        setRegistryName(MaterialFoundation.MOD_ID, "metal_painted_plate_wall_studded");
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
     }
@@ -49,22 +49,22 @@ public class BlockCompositeConcrete extends Block {
 
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list) {
-        for (EnumCompositeType type : EnumCompositeType.values()) {
+        for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
             list.add(new ItemStack(this, 1, type.ordinal()));
         }
     }
-    
+
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumCompositeType.values()[meta]);
+        return getDefaultState().withProperty(VARIANT, EnumMetalPaintedType.values()[meta]);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
         return state.getValue(VARIANT).ordinal();
     }
-    
+
     @Override
     public int damageDropped(IBlockState state) {
         return getMetaFromState(state);
@@ -77,8 +77,8 @@ public class BlockCompositeConcrete extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
-    public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-        return blockState.getValue(VARIANT).getHardness();
+    public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
+        return state.getValue(VARIANT).getHardness();
     }
 
     @Override
@@ -91,10 +91,10 @@ public class BlockCompositeConcrete extends Block {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getItemDamage();
 
-            EnumCompositeType composite = EnumCompositeType.values()[meta];
+            EnumMetalPaintedType metal = EnumMetalPaintedType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockCompositeConcrete.this);
-            return variants.get(BlockCompositeConcrete.this.getDefaultState().withProperty(VARIANT, composite));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPaintedPlateWallStudded.this);
+            return variants.get(BlockMetalPaintedPlateWallStudded.this.getDefaultState().withProperty(VARIANT, metal));
         });
     }
 }

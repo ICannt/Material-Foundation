@@ -33,7 +33,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  */
 public class BlockMetalPlateWallStudded extends Block {
 
-    public static final PropertyEnum<EnumMetalType> METAL_VARIANT = PropertyEnum.create("metal", EnumMetalType.class);
+    private static final PropertyEnum<EnumMetalType> VARIANT = PropertyEnum.create("metal", EnumMetalType.class);
 
     public BlockMetalPlateWallStudded() {
         super(Material.IRON, MapColor.IRON);
@@ -44,7 +44,7 @@ public class BlockMetalPlateWallStudded extends Block {
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, METAL_VARIANT);
+        return new BlockStateContainer(this, VARIANT);
     }
 
     @Override
@@ -57,12 +57,12 @@ public class BlockMetalPlateWallStudded extends Block {
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(METAL_VARIANT, EnumMetalType.values()[meta]);
+        return getDefaultState().withProperty(VARIANT, EnumMetalType.values()[meta]);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return state.getValue(METAL_VARIANT).ordinal();
+        return state.getValue(VARIANT).ordinal();
     }
 
     @Override
@@ -72,18 +72,18 @@ public class BlockMetalPlateWallStudded extends Block {
 
     @Override
     public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-        return state.getValue(METAL_VARIANT).getLight();
+        return state.getValue(VARIANT).getLight();
     }
 
     @SuppressWarnings("deprecation")
     @Override
     public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
-        return state.getValue(METAL_VARIANT).getHardness();
+        return state.getValue(VARIANT).getHardness();
     }
 
     @Override
     public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
-        return world.getBlockState(pos).getValue(METAL_VARIANT).getResistance();
+        return world.getBlockState(pos).getValue(VARIANT).getResistance();
     }
 
     @SideOnly(Side.CLIENT)
@@ -94,7 +94,7 @@ public class BlockMetalPlateWallStudded extends Block {
             EnumMetalType metal = EnumMetalType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
             Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPlateWallStudded.this);
-            return variants.get(BlockMetalPlateWallStudded.this.getDefaultState().withProperty(METAL_VARIANT, metal));
+            return variants.get(BlockMetalPlateWallStudded.this.getDefaultState().withProperty(VARIANT, metal));
         });
     }
 }
