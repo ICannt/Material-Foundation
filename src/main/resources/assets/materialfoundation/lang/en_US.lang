@@ -10,12 +10,35 @@ item.materialfoundation:burnt_lime.name=Burnt Lime
 
 # Blocks
 
+# Concrete
+tile.materialfoundation:composite_concrete.base.name=Base Concrete
+tile.materialfoundation:composite_concrete.reinforced_grating_dark.name=Dark Grating Reinforced Concrete
+tile.materialfoundation:composite_concrete.reinforced_grating_light.name=Light Grating Reinforced Concrete
+
 # Metal Checker Plate
 tile.materialfoundation:metal_plate_checker.iron.name=Iron Checker Plate
 tile.materialfoundation:metal_plate_checker.gold.name=Gold Checker Plate
 tile.materialfoundation:metal_plate_checker.copper.name=Copper Checker Plate
 tile.materialfoundation:metal_plate_checker.tin.name=Tin Checker Plate
 tile.materialfoundation:metal_plate_checker.bronze.name=Bronze Checker Plate
+
+# Metal Painted Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.white.name=White Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.orange.name=Orange Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.magenta.name=Magenta Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.light_blue.name=Light Blue Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.yellow.name=Yellow Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.lime.name=Lime Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.pink.name=Pink Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.gray.name=Gray Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.silver.name=Light Gray Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.cyan.name=Cyan Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.purple.name=Purple Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.blue.name=Blue Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.brown.name=Brown Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.green.name=Green Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.red.name=Red Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.black.name=Black Checker Plate
 
 # Metal Scale Plate
 tile.materialfoundation:metal_plate_scale.iron.name=Iron Scale Plate
@@ -24,6 +47,24 @@ tile.materialfoundation:metal_plate_scale.copper.name=Copper Scale Plate
 tile.materialfoundation:metal_plate_scale.tin.name=Tin Scale Plate
 tile.materialfoundation:metal_plate_scale.bronze.name=Bronze Scale Plate
 
+# Metal Painted Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.white.name=White Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.orange.name=Orange Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.magenta.name=Magenta Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.light_blue.name=Light Blue Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.yellow.name=Yellow Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.lime.name=Lime Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.pink.name=Pink Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.gray.name=Gray Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.silver.name=Light Gray Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.cyan.name=Cyan Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.purple.name=Purple Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.blue.name=Blue Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.brown.name=Brown Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.green.name=Green Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.red.name=Red Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.black.name=Black Scale Plate
+
 # Metal Studded Wall Plate
 tile.materialfoundation:metal_plate_wall_studded.iron.name=Iron Studded Wall Plate
 tile.materialfoundation:metal_plate_wall_studded.gold.name=Gold Studded Wall Plate
@@ -31,7 +72,20 @@ tile.materialfoundation:metal_plate_wall_studded.copper.name=Copper Studded Wall
 tile.materialfoundation:metal_plate_wall_studded.tin.name=Tin Studded Wall Plate
 tile.materialfoundation:metal_plate_wall_studded.bronze.name=Bronze Studded Wall Plate
 
-# Concrete
-tile.materialfoundation:composite_concrete.base.name=Base Concrete
-tile.materialfoundation:composite_concrete.reinforced_grating_dark.name=Dark Grating Reinforced Concrete
-tile.materialfoundation:composite_concrete.reinforced_grating_light.name=Light Grating Reinforced Concrete
+# Metal Painted Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.white.name=White Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.orange.name=Orange Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.magenta.name=Magenta Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.light_blue.name=Light Blue Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.yellow.name=Yellow Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.lime.name=Lime Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.pink.name=Pink Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.gray.name=Gray Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.silver.name=Light Gray Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.cyan.name=Cyan Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.purple.name=Purple Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.blue.name=Blue Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.brown.name=Brown Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.green.name=Green Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.red.name=Red Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.black.name=Black Studded Wall Plate
