@@ -9,18 +9,18 @@
   "variants": {
     "inventory": [{}],
     "normal": [{}],
-    "composite_concrete": {
-      "concrete_base": {
+    "composite": {
+      "base": {
         "textures": {
           "all": "materialfoundation:blocks/composite_concrete_base"
         }
       },
-      "concrete_reinforced_dark": {
+      "reinforced_grate_dark": {
         "textures": {
           "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_dark"
         }
       },
-      "concrete_reinforced_light": {
+      "reinforced_grate_light": {
         "textures": {
           "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_light"
         }
