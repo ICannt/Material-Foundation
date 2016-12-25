@@ -15,12 +15,12 @@
           "all": "materialfoundation:blocks/composite_concrete_base"
         }
       },
-      "reinforced_grate_dark": {
+      "reinforced_grating_dark": {
         "textures": {
           "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_dark"
         }
       },
-      "reinforced_grate_light": {
+      "reinforced_grating_light": {
         "textures": {
           "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_light"
         }

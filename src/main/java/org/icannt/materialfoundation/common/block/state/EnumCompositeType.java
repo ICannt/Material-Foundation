@@ -9,8 +9,8 @@ import net.minecraft.util.IStringSerializable;
 public enum EnumCompositeType implements IStringSerializable {
 	
     BASE ("base", 0, 5, 30, EnumRarity.COMMON),
-    REINFORCED_GRATE_DARK ("reinforced_grate_dark", 0, 10, 50, EnumRarity.COMMON),
-    REINFORCED_GRATE_LIGHT ("reinforced_grate_light", 0, 10, 50, EnumRarity.COMMON);
+    REINFORCED_GRATING_DARK ("reinforced_grating_dark", 0, 10, 50, EnumRarity.COMMON),
+    REINFORCED_GRATING_LIGHT ("reinforced_grating_light", 0, 10, 50, EnumRarity.COMMON);
 
     private String name;
     private int light;
