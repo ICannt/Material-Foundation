@@ -17,6 +17,7 @@ public class ModelHandler {
     public static void registerItemModels() {
         // Burnt Lime
         registerItemModel(ItemRegistry.BURNT_LIME);
+        // MF Fabricator
         registerItemModel(ItemRegistry.FABRICATOR);
     }
 

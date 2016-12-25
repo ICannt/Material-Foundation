@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.state.EnumMetalPaintedType;
 import org.icannt.materialfoundation.common.block.state.EnumMetalType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
@@ -29,15 +30,15 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by ICannt on 20/12/16.
+ * Created by ICannt on 25/12/16.
  */
-public class BlockMetalScaleChecker extends Block {
+public class BlockMetalPaintedPlateChecker extends Block {
 
-    public static final PropertyEnum<EnumMetalType> METAL_VARIANT = PropertyEnum.create("metal", EnumMetalType.class);
+    public static final PropertyEnum<EnumMetalPaintedType> METAL_VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
 
-    public BlockMetalScaleChecker() {
+    public BlockMetalPaintedPlateChecker() {
         super(Material.IRON, MapColor.IRON);
-        setRegistryName(MaterialFoundation.MOD_ID, "metal_scale_checker");
+        setRegistryName(MaterialFoundation.MOD_ID, "metal_painted_plate_checker");
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
     }
@@ -57,7 +58,7 @@ public class BlockMetalScaleChecker extends Block {
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(METAL_VARIANT, EnumMetalType.values()[meta]);
+        return getDefaultState().withProperty(METAL_VARIANT, EnumMetalPaintedType.values()[meta]);
     }
 
     @Override
@@ -91,10 +92,10 @@ public class BlockMetalScaleChecker extends Block {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getItemDamage();
 
-            EnumMetalType metal = EnumMetalType.values()[meta];
+            EnumMetalPaintedType metal = EnumMetalPaintedType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalScaleChecker.this);
-            return variants.get(BlockMetalScaleChecker.this.getDefaultState().withProperty(METAL_VARIANT, metal));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPaintedPlateChecker.this);
+            return variants.get(BlockMetalPaintedPlateChecker.this.getDefaultState().withProperty(METAL_VARIANT, metal));
         });
     }
 }

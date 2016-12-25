@@ -7,7 +7,10 @@ import net.minecraft.util.IStringSerializable;
  * Created by ICannt on 23/12/16.
  */
 public enum EnumCompositeType implements IStringSerializable {
-    CONCRETE("concrete", 0, 5, 30, EnumRarity.COMMON);
+	
+    BASE ("base", 0, 5, 30, EnumRarity.COMMON),
+    REINFORCED_GRATE_DARK ("reinforced_grate_dark", 0, 10, 50, EnumRarity.COMMON),
+    REINFORCED_GRATE_LIGHT ("reinforced_grate_light", 0, 10, 50, EnumRarity.COMMON);
 
     private String name;
     private int light;
