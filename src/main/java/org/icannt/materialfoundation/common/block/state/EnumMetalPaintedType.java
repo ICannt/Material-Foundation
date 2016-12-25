@@ -8,22 +8,22 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumMetalPaintedType implements IStringSerializable {
 
-	BLACK ("black", 0, 5, 30, EnumRarity.COMMON),
+	WHITE ("white", 0, 5, 30, EnumRarity.COMMON),
+	PINK ("pink", 0, 5, 30, EnumRarity.COMMON),
+	ORANGE ("orange", 0, 5, 30, EnumRarity.COMMON),
+	LIGHT_BLUE ("light_blue", 0, 5, 30, EnumRarity.COMMON),
+	YELLOW ("yellow", 0, 5, 30, EnumRarity.COMMON),
+	MAGENTA ("magenta", 0, 5, 30, EnumRarity.COMMON),
+	PURPLE ("purple", 0, 5, 30, EnumRarity.COMMON),
+	GRAY ("gray", 0, 5, 30, EnumRarity.COMMON),
+	LIME ("lime", 0, 5, 30, EnumRarity.COMMON),
+	CYAN ("cyan", 0, 5, 30, EnumRarity.COMMON),
+	RED ("red", 0, 5, 30, EnumRarity.COMMON),
 	BLUE ("blue", 0, 5, 30, EnumRarity.COMMON),
 	BROWN ("brown", 0, 5, 30, EnumRarity.COMMON),
-	CYAN ("cyan", 0, 5, 30, EnumRarity.COMMON),
-	GRAY ("gray", 0, 5, 30, EnumRarity.COMMON),
 	GREEN ("green", 0, 5, 30, EnumRarity.COMMON),
-	LIGHT_BLUE ("light_blue", 0, 5, 30, EnumRarity.COMMON),
-	LIME ("lime", 0, 5, 30, EnumRarity.COMMON),
-	MAGENTA ("magenta", 0, 5, 30, EnumRarity.COMMON),
-	ORANGE ("orange", 0, 5, 30, EnumRarity.COMMON),
-	PINK ("pink", 0, 5, 30, EnumRarity.COMMON),
-	PURPLE ("purple", 0, 5, 30, EnumRarity.COMMON),
-	RED ("red", 0, 5, 30, EnumRarity.COMMON),
 	SILVER ("silver", 0, 5, 30, EnumRarity.COMMON),
-	WHITE ("white", 0, 5, 30, EnumRarity.COMMON),
-	YELLOW ("yellow", 0, 5, 30, EnumRarity.COMMON);
+	BLACK ("black", 0, 5, 30, EnumRarity.COMMON);
 
     private String name;
     private int light;
