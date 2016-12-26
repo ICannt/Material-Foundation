@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**
- * Created by ICannt on 22/12/16.
+ * Created by ICannt on 26/12/16.
  */
 public class ItemMetalTinPaint extends Item {
 
