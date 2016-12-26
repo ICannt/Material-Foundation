@@ -4,8 +4,29 @@ itemGroup.materialfoundation=Material Foundation
 
 # Items
 
-item.materialfoundation:fabricator.name=MF Block Fabricator
-item.materialfoundation:burnt_lime.name=Burnt Lime
+# Tools
+item.materialfoundation:tool_fabricator.name=MF Fabricator
+
+# Minerals
+item.materialfoundation:mineral_lime_burnt.name=Burnt Lime
+
+# Metal Paint Tins
+tile.materialfoundation:metal_tin_paint.black.name=Black Paint Tin
+tile.materialfoundation:metal_tin_paint.red.name=Red Paint Tin
+tile.materialfoundation:metal_tin_paint.green.name=Green Paint Tin
+tile.materialfoundation:metal_tin_paint.brown.name=Brown Paint Tin
+tile.materialfoundation:metal_tin_paint.blue.name=Blue Paint Tin
+tile.materialfoundation:metal_tin_paint.purple.name=Purple Paint Tin
+tile.materialfoundation:metal_tin_paint.cyan.name=Cyan Paint Tin
+tile.materialfoundation:metal_tin_paint.silver.name=Light Gray Paint Tin
+tile.materialfoundation:metal_tin_paint.gray.name=Gray Paint Tin
+tile.materialfoundation:metal_tin_paint.pink.name=Pink Paint Tin
+tile.materialfoundation:metal_tin_paint.lime.name=Lime Paint Tin
+tile.materialfoundation:metal_tin_paint.yellow.name=Yellow Paint Tin
+tile.materialfoundation:metal_tin_paint.light_blue.name=Light Blue Paint Tin
+tile.materialfoundation:metal_tin_paint.magenta.name=Magenta Paint Tin
+tile.materialfoundation:metal_tin_paint.orange.name=Orange Paint Tin
+tile.materialfoundation:metal_tin_paint.white.name=White Paint Tin
 
 
 # Blocks

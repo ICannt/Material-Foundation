@@ -19,6 +19,6 @@ public class TabMaterialFoundation extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return ItemRegistry.FABRICATOR;
+        return ItemRegistry.TOOL_FABRICATOR;
     }
 }

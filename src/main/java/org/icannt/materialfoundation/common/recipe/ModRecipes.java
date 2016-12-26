@@ -24,36 +24,38 @@ public class ModRecipes {
     public static void registerRecipes() {
         Block resultBlock;
         Item resultItem;
-        ItemStack container = new ItemStack(ItemRegistry.FABRICATOR);
+        ItemStack crafter = new ItemStack(ItemRegistry.TOOL_FABRICATOR);
 
-        // Metal Checker
+        // Metal Checker Plate
         resultBlock = BlockRegistry.METAL_PLATE_CHECKER;
         for (EnumMetalType metal : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
                     "XXY",
                     "XX ",
                     'X', "ingot" + WordUtils.capitalize(metal.getName()),
-                    'Y', container));
+                    'Y', crafter
+            ));
         }
 
-        // Scale Checker
+        // Scale Checker Plate
         resultBlock = BlockRegistry.METAL_PLATE_WALL_STUDDED;
         for (EnumMetalType metal : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
                     "XX ",
                     "XXY",
                     'X', "ingot" + WordUtils.capitalize(metal.getName()),
-                    'Y', container));
+                    'Y', crafter
+            ));
         }
 
-        // Metal Scale
+        // Metal Studded Wall Plate
         resultBlock = BlockRegistry.METAL_PLATE_SCALE;
         for (EnumMetalType metal : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
                     "YXX",
                     " XX",
                     'X', "ingot" + WordUtils.capitalize(metal.getName()),
-                    'Y', container
+                    'Y', crafter
             ));
         }
 
@@ -73,7 +75,7 @@ public class ModRecipes {
         }
 
         // Fabricator
-        resultItem = ItemRegistry.FABRICATOR;
+        resultItem = ItemRegistry.TOOL_FABRICATOR;
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultItem),
                 "ISI",
                 " S ",
@@ -86,7 +88,7 @@ public class ModRecipes {
         // Burnt Lime - Smelting
         for (ItemStack stack : OreDictionary.getOres("sandstone"))
         {
-        	GameRegistry.addSmelting(stack, new ItemStack(ItemRegistry.BURNT_LIME, 8, 0), 0.1F);
+        	GameRegistry.addSmelting(stack, new ItemStack(ItemRegistry.MINERAL_LIME_BURNT, 8, 0), 0.1F);
         }
     }
 }
