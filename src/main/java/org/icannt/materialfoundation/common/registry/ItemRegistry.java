@@ -4,8 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.item.ItemBurntLime;
-import org.icannt.materialfoundation.common.item.ItemFabricator;
+import org.icannt.materialfoundation.common.item.ItemMineralLimeBurnt;
+import org.icannt.materialfoundation.common.item.ItemToolFabricator;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,11 +22,14 @@ import net.minecraftforge.oredict.OreDictionary;
 @GameRegistry.ObjectHolder(MaterialFoundation.MOD_ID)
 public class ItemRegistry {
 
-    @GameRegistry.ObjectHolder("burnt_lime")
-    public static final ItemBurntLime BURNT_LIME = new ItemBurntLime();
-
-    @GameRegistry.ObjectHolder("fabricator")
-    public static final ItemFabricator FABRICATOR = new ItemFabricator();
+    @GameRegistry.ObjectHolder("tool_fabricator")
+    public static final ItemToolFabricator TOOL_FABRICATOR = new ItemToolFabricator();
+	
+    @GameRegistry.ObjectHolder("mineral_lime_burnt")
+    public static final ItemMineralLimeBurnt MINERAL_LIME_BURNT = new ItemMineralLimeBurnt();
+    
+    @GameRegistry.ObjectHolder("metal_tin_paint")
+    public static final ItemMetalTinPaint METAL_TIN_PAINT = new ItemMetalTinPaint();
 
     @Mod.EventBusSubscriber
     public static class RegistrationHandler {
@@ -34,8 +38,9 @@ public class ItemRegistry {
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
             final Item[] items = {
-                    BURNT_LIME,
-                    FABRICATOR
+            		TOOL_FABRICATOR,
+                    MINERAL_LIME_BURNT,
+                    METAL_TIN_PAINT
             };
 
             for (Item item : items) {
@@ -43,7 +48,8 @@ public class ItemRegistry {
                 ITEMS.add(item);
             }
             
-            OreDictionary.registerOre("dustBurntLime", new ItemStack(BURNT_LIME));
+            OreDictionary.registerOre("dustBurntLime", new ItemStack(MINERAL_LIME_BURNT));
+            
         }
     }
 }

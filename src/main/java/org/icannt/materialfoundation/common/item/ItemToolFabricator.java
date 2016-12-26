@@ -9,10 +9,10 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by ICannt on 22/12/16.
  */
-public class ItemFabricator extends Item {
+public class ItemToolFabricator extends Item {
 
-    public ItemFabricator() {
-        setRegistryName(MaterialFoundation.MOD_ID, "fabricator");
+    public ItemToolFabricator() {
+        setRegistryName(MaterialFoundation.MOD_ID, "tool_fabricator");
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
         setMaxStackSize(1);

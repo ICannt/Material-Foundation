@@ -15,10 +15,16 @@ import net.minecraftforge.client.model.ModelLoader;
 public class ModelHandler {
 
     public static void registerItemModels() {
-        // Burnt Lime
-        registerItemModel(ItemRegistry.BURNT_LIME);
+    	
         // MF Fabricator
-        registerItemModel(ItemRegistry.FABRICATOR);
+        registerItemModel(ItemRegistry.TOOL_FABRICATOR);
+        
+        // Burnt Lime
+        registerItemModel(ItemRegistry.MINERAL_LIME_BURNT);
+        
+        // Paint Tin
+        registerItemModel(ItemRegistry.METAL_TIN_PAINT);
+        
     }
 
     public static void registerItemModel(Item item) {

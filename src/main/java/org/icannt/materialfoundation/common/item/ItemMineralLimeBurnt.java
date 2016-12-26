@@ -8,10 +8,10 @@ import net.minecraft.item.Item;
 /**
  * Created by ICannt on 22/12/16.
  */
-public class ItemBurntLime extends Item {
+public class ItemMineralLimeBurnt extends Item {
 
-    public ItemBurntLime() {
-        setRegistryName(MaterialFoundation.MOD_ID, "burnt_lime");
+    public ItemMineralLimeBurnt() {
+        setRegistryName(MaterialFoundation.MOD_ID, "mineral_lime_burnt");
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
         setMaxStackSize(64);
