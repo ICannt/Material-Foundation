@@ -3,7 +3,7 @@ package org.icannt.materialfoundation.common.item.state;
 import net.minecraft.util.IStringSerializable;
 
 /**
- * Created by ICannt on 25/12/16.
+ * Created by ICannt on 26/12/16.
  */
 public enum EnumPaintType implements IStringSerializable {
 
