@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.block.BlockCompositeConcrete;
+import org.icannt.materialfoundation.common.block.BlockMetalCrateWithGrill;
 import org.icannt.materialfoundation.common.block.BlockMetalPaintedPlateChecker;
 import org.icannt.materialfoundation.common.block.BlockMetalPaintedPlateScale;
 import org.icannt.materialfoundation.common.block.BlockMetalPaintedPlateWallStudded;
@@ -13,6 +14,7 @@ import org.icannt.materialfoundation.common.block.BlockMetalPlateScale;
 import org.icannt.materialfoundation.common.block.BlockMetalPlateWallStudded;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalMulti;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPainted;
 
 import net.minecraft.block.Block;
@@ -36,6 +38,9 @@ public class BlockRegistry {
     @GameRegistry.ObjectHolder("composite_concrete")
     public static final BlockCompositeConcrete COMPOSITE_CONCRETE = new BlockCompositeConcrete();
 	
+    @GameRegistry.ObjectHolder("metal_crate_with_grill")
+    public static final BlockMetalCrateWithGrill METAL_CRATE_WITH_GRILL = new BlockMetalCrateWithGrill();
+    
     @GameRegistry.ObjectHolder("metal_plate_checker")
     public static final BlockMetalPlateChecker METAL_PLATE_CHECKER = new BlockMetalPlateChecker();
     
@@ -64,6 +69,7 @@ public class BlockRegistry {
 
             final Block[] blocks = {
                     COMPOSITE_CONCRETE,
+                    METAL_CRATE_WITH_GRILL,
                     METAL_PLATE_CHECKER,
                     METAL_PAINTED_PLATE_CHECKER,
                     METAL_PLATE_SCALE,
@@ -81,6 +87,7 @@ public class BlockRegistry {
 
             final ItemBlock[] items = {
                 new ItemBlockComposite(COMPOSITE_CONCRETE),
+                new ItemBlockMetalMulti(METAL_CRATE_WITH_GRILL),
                 new ItemBlockMetal(METAL_PLATE_CHECKER),
                 new ItemBlockMetalPainted(METAL_PAINTED_PLATE_CHECKER),
                 new ItemBlockMetal(METAL_PLATE_SCALE),
@@ -100,6 +107,7 @@ public class BlockRegistry {
     @SideOnly(Side.CLIENT)
     public static void initBlockModels() {
         COMPOSITE_CONCRETE.initClient();
+        METAL_CRATE_WITH_GRILL.initClient();
         METAL_PLATE_CHECKER.initClient();
         METAL_PAINTED_PLATE_CHECKER.initClient();
         METAL_PLATE_SCALE.initClient();
