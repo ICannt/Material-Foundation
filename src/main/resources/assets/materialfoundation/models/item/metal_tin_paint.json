@@ -1,10 +1,7 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "layer0": "materialfoundation:items/metal_tin_paint"
-    },
-    "parent": "minecraft:item/generated"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "materialfoundation:items/metal_tin_paint_empty"
   },
   "variants": {
     "inventory": [{}],
