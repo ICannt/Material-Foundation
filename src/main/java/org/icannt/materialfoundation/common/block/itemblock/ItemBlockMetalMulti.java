@@ -1,6 +1,6 @@
 package org.icannt.materialfoundation.common.block.itemblock;
 
-import org.icannt.materialfoundation.common.block.state.EnumMetalMultiType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
@@ -24,11 +24,11 @@ public class ItemBlockMetalMulti extends ItemBlock {
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + EnumMetalMultiType.values()[stack.getItemDamage()].getName();
+        return super.getUnlocalizedName() + "." + EnumMetalMultiType.values()[stack.getMetadata()].getName();
     }
     
     @Override
     public EnumRarity getRarity(ItemStack stack) {
-        return EnumMetalMultiType.values()[stack.getItemDamage()].getRarity();
+        return EnumMetalMultiType.values()[stack.getMetadata()].getRarity();
     }
 }
