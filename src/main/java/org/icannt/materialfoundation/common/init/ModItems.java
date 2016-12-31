@@ -1,12 +1,11 @@
 package org.icannt.materialfoundation.common.init;
 
-import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
-import org.icannt.materialfoundation.common.item.ItemMineralLimeBurnt;
-import org.icannt.materialfoundation.common.item.ItemToolFabricator;
-
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
+import org.icannt.materialfoundation.common.item.ItemMineralLimeBurnt;
+import org.icannt.materialfoundation.common.item.ItemToolFabricator;
 
 /**
  * Created by ICannt on 29/12/16.
