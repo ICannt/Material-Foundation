@@ -1,0 +1,50 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "all": "materialfoundation:blocks/metal_crate_with_grill_iron"
+    },
+    "model": "cube_all"
+  },
+  "variants": {
+    "inventory": [{}],
+    "normal": [{}],
+    "metal": {
+       "iron": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_iron"
+          }
+        },
+       "iron_gold": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_iron_gold"
+          }
+        },
+       "tin_iron": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_tin_iron"
+          }
+        },
+       "dark_steel_blaze": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_dark_steel_blaze"
+          }
+        },
+       "dark_steel_lapis": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_dark_steel_lapis"
+          }
+        },
+       "dark_steel_slime": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_dark_steel_slime"
+          }
+        },
+       "fluxed_gold": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_fluxed_gold"
+          }
+        }
+      }
+    }
+  }

@@ -37,6 +37,15 @@ tile.materialfoundation:composite_concrete.base.name=Base Concrete
 tile.materialfoundation:composite_concrete.reinforced_grating_dark.name=Dark Grating Reinforced Concrete
 tile.materialfoundation:composite_concrete.reinforced_grating_light.name=Light Grating Reinforced Concrete
 
+# Metal Crate With Grill
+tile.materialfoundation:metal_crate_with_grill.iron.name=Iron Crate With Grill
+tile.materialfoundation:metal_crate_with_grill.iron_gold.name=Iron Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill.tin_iron.name=Tin Crate With Iron Grill
+tile.materialfoundation:metal_crate_with_grill.dark_steel_blaze.name=Dark Steel Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill.dark_steel_lapis.name=Dark Steel Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill.dark_steel_slime.name=Dark Steel Crate With Slime Grill
+tile.materialfoundation:metal_crate_with_grill.fluxed_gold.name=Fluxed Crate With Gold Grill
+
 # Metal Checker Plate
 tile.materialfoundation:metal_plate_checker.iron.name=Iron Checker Plate
 tile.materialfoundation:metal_plate_checker.gold.name=Gold Checker Plate
