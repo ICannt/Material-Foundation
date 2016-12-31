@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.icannt.materialfoundation.common.block.*;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalMulti;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPainted;
 
 import java.lang.reflect.InvocationTargetException;
@@ -29,6 +30,8 @@ public class ModBlocks {
 
     public static final BlockMetalPaintedPlateWallStudded METAL_PAINTED_PLATE_WALL_STUDDED = new BlockMetalPaintedPlateWallStudded();
 
+    public static final BlockMetalCrateWithGrill METAL_CRATE_WITH_GRILL = new BlockMetalCrateWithGrill();
+
     public static void init() {
         // Blocks
         GameRegistry.register(COMPOSITE_CONCRETE);
@@ -38,6 +41,7 @@ public class ModBlocks {
         GameRegistry.register(METAL_PAINTED_PLATE_SCALE);
         GameRegistry.register(METAL_PLATE_WALL_STUDDED);
         GameRegistry.register(METAL_PAINTED_PLATE_WALL_STUDDED);
+        GameRegistry.register(METAL_CRATE_WITH_GRILL);
 
         // ItemBlocks
         /*
@@ -56,6 +60,7 @@ public class ModBlocks {
         registerItemBlock(METAL_PAINTED_PLATE_SCALE, ItemBlockMetalPainted.class);
         registerItemBlock(METAL_PLATE_WALL_STUDDED, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_WALL_STUDDED, ItemBlockMetalPainted.class);
+        registerItemBlock(METAL_CRATE_WITH_GRILL, ItemBlockMetalMulti.class);
 
     }
 

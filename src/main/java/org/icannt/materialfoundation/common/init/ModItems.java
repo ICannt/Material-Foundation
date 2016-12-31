@@ -1,6 +1,8 @@
 package org.icannt.materialfoundation.common.init;
 
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.ItemMineralLimeBurnt;
 import org.icannt.materialfoundation.common.item.ItemToolFabricator;
@@ -20,6 +22,8 @@ public class ModItems {
         GameRegistry.register(TOOL_FABRICATOR);
         GameRegistry.register(MINERAL_LIME_BURNT);
         GameRegistry.register(TIN_METAL_PAINT);
+
+        OreDictionary.registerOre("dustBurntLime", new ItemStack(MINERAL_LIME_BURNT));
 
     }
 }

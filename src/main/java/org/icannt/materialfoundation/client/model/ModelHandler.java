@@ -28,27 +28,13 @@ public class ModelHandler {
         registerItemModel(ModItems.MINERAL_LIME_BURNT);
         
         // Paint Tin
-        //registerItemModel(ModItems.TIN_METAL_PAINT);
-
-        List<ModelResourceLocation> models = new ArrayList<ModelResourceLocation>();
+        List<ModelResourceLocation> models = new ArrayList<>();
         for (EnumPaintType variant : EnumPaintType.values()) {
             models.add(new ModelResourceLocation(ModItems.TIN_METAL_PAINT.getRegistryName() + "_" + variant.getName(), "inventory"));
         }
 
         ModelBakery.registerItemVariants(ModItems.TIN_METAL_PAINT, models.toArray(new ModelResourceLocation[models.size()]));
         ModelLoader.setCustomMeshDefinition(ModItems.TIN_METAL_PAINT, new ItemPaintTinMesher());
-
-        /*
-        if (event.getSide().equals(Side.CLIENT)) {
-+            List<ModelResourceLocation> models = new ArrayList<ModelResourceLocation>();
-+
-+            for (String varient : ItemDeadmau5Helmet.variants)
-+                models.add(new ModelResourceLocation("deadmau5hats:deadmau5hat_" + varient, "inventory"));
-+
-+            ModelLoader.registerItemVariants(item, models.toArray(new ModelResourceLocation[models.size()]));
-+            ModelLoader.setCustomMeshDefinition(item, new Deadmau5MeshDefinition());
-+        }
-         */
     }
 
     public static void registerItemModel(Item item) {
@@ -69,5 +55,6 @@ public class ModelHandler {
         ModBlocks.METAL_PAINTED_PLATE_SCALE.initClient();
         ModBlocks.METAL_PLATE_WALL_STUDDED.initClient();
         ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED.initClient();
+        ModBlocks.METAL_CRATE_WITH_GRILL.initClient();
     }
 }

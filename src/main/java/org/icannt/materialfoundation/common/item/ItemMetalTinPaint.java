@@ -48,7 +48,7 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add(String.format("Colour: %s", WordUtils.capitalize(getVariant(stack).getName())));
+        tooltip.add(WordUtils.capitalize(getVariant(stack).getName()));
     }
 
     @SideOnly(Side.CLIENT)
