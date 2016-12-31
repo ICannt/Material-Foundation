@@ -88,7 +88,7 @@ public class BlockMetalPaintedPlateScale extends Block {
     @SideOnly(Side.CLIENT)
     public void initClient() {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
-            int meta = stack.getItemDamage();
+            int meta = stack.getMetadata();
 
             EnumMetalPaintedType metal = EnumMetalPaintedType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();

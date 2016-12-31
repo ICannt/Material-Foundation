@@ -3,6 +3,7 @@ package org.icannt.materialfoundation.common.init;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.block.*;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
@@ -44,15 +45,6 @@ public class ModBlocks {
         GameRegistry.register(METAL_CRATE_WITH_GRILL);
 
         // ItemBlocks
-        /*
-        GameRegistry.register(new ItemBlockComposite(COMPOSITE_CONCRETE).setRegistryName(COMPOSITE_CONCRETE.getRegistryName()));
-        GameRegistry.register(new ItemBlockMetal(METAL_PLATE_CHECKER).setRegistryName(METAL_PLATE_CHECKER.getRegistryName()));
-        GameRegistry.register(new ItemBlockMetalPainted(METAL_PAINTED_PLATE_CHECKER).setRegistryName(METAL_PAINTED_PLATE_CHECKER.getRegistryName()));
-        GameRegistry.register(new ItemBlockMetal(METAL_PLATE_SCALE).setRegistryName(METAL_PLATE_SCALE.getRegistryName()));
-        GameRegistry.register(new ItemBlockMetalPainted(METAL_PAINTED_PLATE_SCALE).setRegistryName(METAL_PAINTED_PLATE_SCALE.getRegistryName()));
-        GameRegistry.register(new ItemBlockMetal(METAL_PLATE_WALL_STUDDED).setRegistryName(METAL_PLATE_WALL_STUDDED.getRegistryName()));
-        GameRegistry.register(new ItemBlockMetalPainted(METAL_PAINTED_PLATE_WALL_STUDDED).setRegistryName(METAL_PAINTED_PLATE_WALL_STUDDED.getRegistryName()));
-        */
         registerItemBlock(COMPOSITE_CONCRETE, ItemBlockComposite.class);
         registerItemBlock(METAL_PLATE_CHECKER, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_CHECKER, ItemBlockMetalPainted.class);
@@ -70,7 +62,7 @@ public class ModBlocks {
             ib.setRegistryName(block.getRegistryName());
             GameRegistry.register(ib);
         } catch (InstantiationException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-            System.out.println(String.format("Caught exception registering ItemBlock for %s using %s class", block.getRegistryName(), clazz.getName()));
+            MaterialFoundation.LOGGER.warn(String.format("Caught exception registering ItemBlock for %s using %s class", block.getRegistryName(), clazz.getName()));
             e.printStackTrace();
         }
     }

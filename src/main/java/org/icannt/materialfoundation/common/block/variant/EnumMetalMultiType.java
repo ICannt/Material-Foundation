@@ -1,4 +1,4 @@
-package org.icannt.materialfoundation.common.block.state;
+package org.icannt.materialfoundation.common.block.variant;
 
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;

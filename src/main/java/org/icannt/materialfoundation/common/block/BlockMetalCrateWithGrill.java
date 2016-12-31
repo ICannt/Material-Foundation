@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.state.EnumMetalMultiType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
 import net.minecraft.block.Block;
@@ -89,7 +89,7 @@ public class BlockMetalCrateWithGrill extends Block {
     @SideOnly(Side.CLIENT)
     public void initClient() {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
-            int meta = stack.getItemDamage();
+            int meta = stack.getMetadata();
 
             EnumMetalMultiType metal = EnumMetalMultiType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
