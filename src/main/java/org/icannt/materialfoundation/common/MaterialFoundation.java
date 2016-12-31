@@ -17,17 +17,17 @@ import org.icannt.materialfoundation.common.recipe.ModRecipes;
 @Mod(modid = MaterialFoundation.MOD_ID, name = MaterialFoundation.MOD_NAME, version = MaterialFoundation.VERSION)
 public class MaterialFoundation {
 
-    @SidedProxy(serverSide = "org.icannt.materialfoundation.common.proxy.ServerProxy", clientSide = "org.icannt.materialfoundation.client.proxy.ClientProxy")
-    public static CommonProxy proxy;
-
-    @Mod.Instance(MOD_ID)
-    public static MaterialFoundation instance;
-
     public static final String MOD_ID = "materialfoundation";
     public static final String MOD_NAME = "Material Foundation";
     public static final String VERSION = "1.10.2-2.0";
 
     public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
+
+    @SidedProxy(serverSide = "org.icannt.materialfoundation.common.proxy.ServerProxy", clientSide = "org.icannt.materialfoundation.client.proxy.ClientProxy")
+    public static CommonProxy proxy;
+
+    @Mod.Instance(MOD_ID)
+    public static MaterialFoundation instance;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
