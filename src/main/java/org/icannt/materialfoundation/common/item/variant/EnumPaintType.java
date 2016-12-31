@@ -1,4 +1,4 @@
-package org.icannt.materialfoundation.common.item.state;
+package org.icannt.materialfoundation.common.item.variant;
 
 import net.minecraft.util.IStringSerializable;
 
@@ -7,6 +7,7 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumPaintType implements IStringSerializable {
 
+	EMPTY ("empty"),
 	BLACK ("black"),
 	SILVER ("silver"),
 	GREEN ("green"),

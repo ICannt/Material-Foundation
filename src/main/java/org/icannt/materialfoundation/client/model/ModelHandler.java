@@ -1,13 +1,18 @@
 package org.icannt.materialfoundation.client.model;
 
-import org.icannt.materialfoundation.common.registry.ItemRegistry;
-
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
+import org.icannt.materialfoundation.client.model.mesher.ItemPaintTinMesher;
+import org.icannt.materialfoundation.common.init.ModBlocks;
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by ICannt on 22/12/16.
@@ -17,14 +22,33 @@ public class ModelHandler {
     public static void registerItemModels() {
     	
         // MF Fabricator
-        registerItemModel(ItemRegistry.TOOL_FABRICATOR);
+        registerItemModel(ModItems.TOOL_FABRICATOR);
         
         // Burnt Lime
-        registerItemModel(ItemRegistry.MINERAL_LIME_BURNT);
+        registerItemModel(ModItems.MINERAL_LIME_BURNT);
         
         // Paint Tin
-        registerItemModel(ItemRegistry.METAL_TIN_PAINT);
-        
+        //registerItemModel(ModItems.TIN_METAL_PAINT);
+
+        List<ModelResourceLocation> models = new ArrayList<ModelResourceLocation>();
+        for (EnumPaintType variant : EnumPaintType.values()) {
+            models.add(new ModelResourceLocation(ModItems.TIN_METAL_PAINT.getRegistryName() + "_" + variant.getName(), "inventory"));
+        }
+
+        ModelBakery.registerItemVariants(ModItems.TIN_METAL_PAINT, models.toArray(new ModelResourceLocation[models.size()]));
+        ModelLoader.setCustomMeshDefinition(ModItems.TIN_METAL_PAINT, new ItemPaintTinMesher());
+
+        /*
+        if (event.getSide().equals(Side.CLIENT)) {
++            List<ModelResourceLocation> models = new ArrayList<ModelResourceLocation>();
++
++            for (String varient : ItemDeadmau5Helmet.variants)
++                models.add(new ModelResourceLocation("deadmau5hats:deadmau5hat_" + varient, "inventory"));
++
++            ModelLoader.registerItemVariants(item, models.toArray(new ModelResourceLocation[models.size()]));
++            ModelLoader.setCustomMeshDefinition(item, new Deadmau5MeshDefinition());
++        }
+         */
     }
 
     public static void registerItemModel(Item item) {
@@ -35,5 +59,15 @@ public class ModelHandler {
                 return new ModelResourceLocation(stack.getItem().getRegistryName(), "inventory");
             }
         });
+    }
+
+    public static void initBlockModels() {
+        ModBlocks.COMPOSITE_CONCRETE.initClient();
+        ModBlocks.METAL_PLATE_CHECKER.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_CHECKER.initClient();
+        ModBlocks.METAL_PLATE_SCALE.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_SCALE.initClient();
+        ModBlocks.METAL_PLATE_WALL_STUDDED.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED.initClient();
     }
 }

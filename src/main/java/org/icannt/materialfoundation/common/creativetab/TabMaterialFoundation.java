@@ -1,10 +1,9 @@
 package org.icannt.materialfoundation.common.creativetab;
 
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.registry.ItemRegistry;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.init.ModItems;
 
 /**
  * Created by ICannt on 21/12/16.
@@ -19,6 +18,6 @@ public class TabMaterialFoundation extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return ItemRegistry.TOOL_FABRICATOR;
+        return ModItems.TOOL_FABRICATOR;
     }
 }

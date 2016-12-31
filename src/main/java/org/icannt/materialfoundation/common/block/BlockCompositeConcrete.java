@@ -1,12 +1,5 @@
 package org.icannt.materialfoundation.common.block;
 
-import java.util.List;
-import java.util.Map;
-
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.state.EnumCompositeType;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -27,6 +20,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ICannt on 23/12/16.
@@ -89,7 +88,7 @@ public class BlockCompositeConcrete extends Block {
     @SideOnly(Side.CLIENT)
     public void initClient() {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
-            int meta = stack.getItemDamage();
+            int meta = stack.getMetadata();
 
             EnumCompositeType composite = EnumCompositeType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();

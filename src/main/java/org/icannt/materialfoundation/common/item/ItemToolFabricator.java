@@ -1,10 +1,9 @@
 package org.icannt.materialfoundation.common.item;
 
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
 /**
  * Created by ICannt on 22/12/16.
