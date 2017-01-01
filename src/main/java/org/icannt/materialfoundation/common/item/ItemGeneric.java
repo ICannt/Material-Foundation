@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.commons.lang3.text.WordUtils;
@@ -27,12 +28,14 @@ public class ItemGeneric extends Item {
         setRegistryName(MaterialFoundation.MOD_ID, "generic");
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
-        setMaxStackSize(64);
         setHasSubtypes(true);
+    	System.out.println("-*-" + this.getRegistryName() + "-*-");
+    	System.out.println("-*-" + this.getUnlocalizedName() + "-*-");
     }
 
     @Override
     public int getMetadata(int damage) {
+    	System.out.println("-*-" + damage + "-*-");
         return damage;
     }
 
@@ -45,6 +48,7 @@ public class ItemGeneric extends Item {
     @Override
     public void getSubItems(Item itemIn, CreativeTabs tab, List<ItemStack> subItems) {
         for (EnumGenericType type : EnumGenericType.values()) {
+        	System.out.println("-*-" + type.ordinal() + "-*-");
         	subItems.add(new ItemStack(this, 1, type.ordinal()));
         }
     }

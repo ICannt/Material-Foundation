@@ -26,13 +26,7 @@ public class ModelHandler {
         registerItemModel(ModItems.TOOL_FABRICATOR);
                
         // Generic Items
-        List<ModelResourceLocation> modelsGeneric = new ArrayList<>();
-        for (EnumGenericType variant : EnumGenericType.values()) {
-            modelsGeneric.add(new ModelResourceLocation(ModItems.GENERIC.getRegistryName() + "_" + variant.getName(), "inventory"));
-        }
-        
-        ModelBakery.registerItemVariants(ModItems.GENERIC, modelsGeneric.toArray(new ModelResourceLocation[modelsGeneric.size()]));
-        ModelLoader.setCustomMeshDefinition(ModItems.GENERIC, new ItemPaintTinMesher());
+        registerItemModel(ModItems.GENERIC);
         
         // Paint Tin
         List<ModelResourceLocation> modelsPaint = new ArrayList<>();

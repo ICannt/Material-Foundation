@@ -7,7 +7,7 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumGenericType implements IStringSerializable {
 
-	MINERAL_LIME_BURNT ("mineral_burnt_lime"),
+	MINERAL_LIME_BURNT ("mineral_lime_burnt"),
 	MINERAL_LIME_SLIME ("mineral_lime_slime");
 
     private String name;
