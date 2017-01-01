@@ -25,55 +25,11 @@ public class ModRecipes {
         Item resultItem;
         ItemStack crafter = new ItemStack(ModItems.TOOL_FABRICATOR);
 
-        // Metal Checker Plate
-        resultBlock = ModBlocks.METAL_PLATE_CHECKER;
-        for (EnumMetalType metal : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
-                    "XXY",
-                    "XX ",
-                    'X', "ingot" + WordUtils.capitalize(metal.getName()),
-                    'Y', crafter
-            ));
-        }
-
-        // Scale Checker Plate
-        resultBlock = ModBlocks.METAL_PLATE_WALL_STUDDED;
-        for (EnumMetalType metal : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
-                    "XX ",
-                    "XXY",
-                    'X', "ingot" + WordUtils.capitalize(metal.getName()),
-                    'Y', crafter
-            ));
-        }
-
-        // Metal Studded Wall Plate
-        resultBlock = ModBlocks.METAL_PLATE_SCALE;
-        for (EnumMetalType metal : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
-                    "YXX",
-                    " XX",
-                    'X', "ingot" + WordUtils.capitalize(metal.getName()),
-                    'Y', crafter
-            ));
-        }
-
-        // Composite Concrete
-        resultBlock = ModBlocks.COMPOSITE_CONCRETE;
-        for (EnumCompositeType composite : EnumCompositeType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, composite.ordinal()),
-                    "SWS",
-                    "BWB",
-                    "GCG",
-                    'W', Items.WATER_BUCKET,
-                    'S', "sand",
-                    'G', "gravel",
-                    'C', Items.CLAY_BALL,
-                    'B', "dustBurntLime"
-            ));
-        }
-
-        // Fabricator
+        /****************
+         * Item Recipes *
+         ****************/
+        
+        // Fabricator - Crafting Bench
         resultItem = ModItems.TOOL_FABRICATOR;
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultItem),
                 "ISI",
@@ -88,6 +44,71 @@ public class ModRecipes {
         for (ItemStack stack : OreDictionary.getOres("sandstone"))
         {
         	GameRegistry.addSmelting(stack, new ItemStack(ModItems.MINERAL_LIME_BURNT, 8, 0), 0.1F);
+        }
+      
+        
+        /*****************
+         * Block Recipes *
+         *****************/
+        
+        // Metal Checker Plate - Crafting Bench
+        resultBlock = ModBlocks.METAL_PLATE_CHECKER;
+        for (EnumMetalType metal : EnumMetalType.values()) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
+                    "XXY",
+                    "XX ",
+                    'X', "ingot" + WordUtils.capitalize(metal.getName()),
+                    'Y', crafter
+            ));
+        }
+               
+        // Metal Checker Plate - Crafting Bench
+        resultBlock = ModBlocks.METAL_PLATE_CHECKER;
+        for (EnumMetalType metal : EnumMetalType.values()) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
+                    "XXY",
+                    "XX ",
+                    'X', "ingot" + WordUtils.capitalize(metal.getName()),
+                    'Y', crafter
+            ));
+        }
+
+        
+        // Scale Checker Plate - Crafting Bench
+        resultBlock = ModBlocks.METAL_PLATE_WALL_STUDDED;
+        for (EnumMetalType metal : EnumMetalType.values()) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
+                    "XX ",
+                    "XXY",
+                    'X', "ingot" + WordUtils.capitalize(metal.getName()),
+                    'Y', crafter
+            ));
+        }
+
+        // Metal Studded Wall Plate - Crafting Bench
+        resultBlock = ModBlocks.METAL_PLATE_SCALE;
+        for (EnumMetalType metal : EnumMetalType.values()) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, metal.ordinal()),
+                    "YXX",
+                    " XX",
+                    'X', "ingot" + WordUtils.capitalize(metal.getName()),
+                    'Y', crafter
+            ));
+        }
+
+        // Composite Concrete - Crafting Bench
+        resultBlock = ModBlocks.COMPOSITE_CONCRETE;
+        for (EnumCompositeType composite : EnumCompositeType.values()) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, composite.ordinal()),
+                    "SWS",
+                    "BWB",
+                    "GCG",
+                    'W', Items.WATER_BUCKET,
+                    'S', "sand",
+                    'G', "gravel",
+                    'C', Items.CLAY_BALL,
+                    'B', "dustBurntLime"
+            ));
         }
     }
 }

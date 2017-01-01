@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "materialfoundation:items/metal_tin_paint_black"
+    "layer0": "materialfoundation:items/mineral_lime_slime"
   }
 }
