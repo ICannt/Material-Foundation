@@ -1,20 +1,21 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-		"model": "minecraft:item/generated"
+		"model": "minecraft:item/generated",
+		"textures": {
+			"layer0": "materialfoundation:items/mineral_lime_burnt"
+		}
 	},
 	"variants": {
-
-			"mineral_lime_burnt": {
-				"textures": {
-					"layer0": "materialfoundation:items/mineral_lime_burnt"
-				}
-			},
-			"mineral_lime_slime": {
-				"textures": {
-					"layer0": "materialfoundation:items/mineral_lime_slime"
-				}
+		"mineral_lime_burnt": {
+			"textures": {
+				"layer0": "materialfoundation:items/mineral_lime_burnt"
 			}
-
+			},
+		"mineral_lime_slime": {
+			"textures": {
+				"layer0": "materialfoundation:items/mineral_lime_slime"
+			}
+		}
 	}
 }
