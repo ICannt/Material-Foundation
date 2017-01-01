@@ -40,11 +40,12 @@ public class ModRecipes {
                 'C', Blocks.CARPET
         ));
 
+        // TODO: Fix Burnt Lime recipe
         // Burnt Lime - Smelting
-        for (ItemStack stack : OreDictionary.getOres("sandstone"))
+/*        for (ItemStack stack : OreDictionary.getOres("sandstone"))
         {
         	GameRegistry.addSmelting(stack, new ItemStack(ModItems.MINERAL_LIME_BURNT, 8, 0), 0.1F);
-        }
+        }*/
       
         
         /*****************

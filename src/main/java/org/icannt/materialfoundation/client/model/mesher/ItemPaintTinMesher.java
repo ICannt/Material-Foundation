@@ -13,8 +13,8 @@ public class ItemPaintTinMesher implements ItemMeshDefinition {
 
     @Override
     public ModelResourceLocation getModelLocation(ItemStack stack) {
-        if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
-            return null;
+        //if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
+        //    return null;
 
         String variant = ItemMetalTinPaint.getVariant(stack).getName();
 

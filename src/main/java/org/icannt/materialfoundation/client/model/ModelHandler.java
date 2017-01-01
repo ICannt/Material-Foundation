@@ -9,6 +9,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import org.icannt.materialfoundation.client.model.mesher.ItemPaintTinMesher;
 import org.icannt.materialfoundation.common.init.ModBlocks;
 import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
 import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 import java.util.ArrayList;
@@ -23,17 +24,23 @@ public class ModelHandler {
     	
         // MF Fabricator
         registerItemModel(ModItems.TOOL_FABRICATOR);
+               
+        // Generic Items
+        List<ModelResourceLocation> modelsGeneric = new ArrayList<>();
+        for (EnumGenericType variant : EnumGenericType.values()) {
+            modelsGeneric.add(new ModelResourceLocation(ModItems.GENERIC.getRegistryName() + "_" + variant.getName(), "inventory"));
+        }
         
-        // Burnt Lime
-        registerItemModel(ModItems.MINERAL_LIME_BURNT);
+        ModelBakery.registerItemVariants(ModItems.GENERIC, modelsGeneric.toArray(new ModelResourceLocation[modelsGeneric.size()]));
+        ModelLoader.setCustomMeshDefinition(ModItems.GENERIC, new ItemPaintTinMesher());
         
         // Paint Tin
-        List<ModelResourceLocation> models = new ArrayList<>();
+        List<ModelResourceLocation> modelsPaint = new ArrayList<>();
         for (EnumPaintType variant : EnumPaintType.values()) {
-            models.add(new ModelResourceLocation(ModItems.TIN_METAL_PAINT.getRegistryName() + "_" + variant.getName(), "inventory"));
+            modelsPaint.add(new ModelResourceLocation(ModItems.TIN_METAL_PAINT.getRegistryName() + "_" + variant.getName(), "inventory"));
         }
 
-        ModelBakery.registerItemVariants(ModItems.TIN_METAL_PAINT, models.toArray(new ModelResourceLocation[models.size()]));
+        ModelBakery.registerItemVariants(ModItems.TIN_METAL_PAINT, modelsPaint.toArray(new ModelResourceLocation[modelsPaint.size()]));
         ModelLoader.setCustomMeshDefinition(ModItems.TIN_METAL_PAINT, new ItemPaintTinMesher());
     }
 
