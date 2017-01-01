@@ -7,14 +7,16 @@
 		}
 	},
 	"variants": {
-		"mineral_lime_burnt": {
-			"textures": {
-				"layer0": "materialfoundation:items/mineral_lime_burnt"
-			}
+		"variant": {
+			"mineral_lime_burnt": {
+				"textures": {
+					"layer0": "materialfoundation:items/mineral_lime_burnt"
+				}
 			},
-		"mineral_lime_slime": {
-			"textures": {
-				"layer0": "materialfoundation:items/mineral_lime_slime"
+			"mineral_lime_slime": {
+				"textures": {
+					"layer0": "materialfoundation:items/mineral_lime_slime"
+				}
 			}
 		}
 	}
