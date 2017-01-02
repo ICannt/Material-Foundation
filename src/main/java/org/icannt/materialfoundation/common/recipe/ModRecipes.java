@@ -13,6 +13,8 @@ import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
 import org.icannt.materialfoundation.common.init.ModBlocks;
 import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 /**
  * Created by ICannt on 23/12/16.
@@ -23,6 +25,7 @@ public class ModRecipes {
     public static void registerRecipes() {
         Block resultBlock;
         Item resultItem;
+        ItemStack specialItem;
         ItemStack crafter = new ItemStack(ModItems.TOOL_FABRICATOR);
 
         /****************
@@ -40,12 +43,11 @@ public class ModRecipes {
                 'C', Blocks.CARPET
         ));
 
-        // TODO: Fix Burnt Lime recipe
         // Burnt Lime - Smelting
-/*        for (ItemStack stack : OreDictionary.getOres("sandstone"))
+        for (ItemStack stack : OreDictionary.getOres("sandstone"))
         {
-        	GameRegistry.addSmelting(stack, new ItemStack(ModItems.MINERAL_LIME_BURNT, 8, 0), 0.1F);
-        }*/
+        	GameRegistry.addSmelting(stack, new ItemStack(ModItems.GENERIC, 8, EnumGenericType.MINERAL_LIME_BURNT.ordinal()), 0.1F);
+        }
       
         
         /*****************
@@ -98,12 +100,23 @@ public class ModRecipes {
         }
 
         // Composite Concrete - Crafting Bench
-        resultBlock = ModBlocks.COMPOSITE_CONCRETE;
-        for (EnumCompositeType composite : EnumCompositeType.values()) {
+        resultBlock = ModBlocks.COMPOSITE_CONCRETE;        
+        for (EnumCompositeType composite : EnumCompositeType.values()) {       	
+        	switch (composite) {
+        	   case REINFORCED_GRATING_DARK:
+        		   specialItem = new ItemStack(ModItems.TIN_METAL_PAINT, 1, EnumPaintType.BLACK.ordinal());
+        	   break;
+        	   case REINFORCED_GRATING_LIGHT:
+        		   specialItem = new ItemStack(ModItems.TIN_METAL_PAINT, 1, EnumPaintType.WHITE.ordinal());
+        	   break;
+        	   default:
+        		   specialItem = new ItemStack(Items.EGG);
+        	}
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, composite.ordinal()),
-                    "SWS",
+                    "SQS",
                     "BWB",
                     "GCG",
+                    'Q', specialItem,
                     'W', Items.WATER_BUCKET,
                     'S', "sand",
                     'G', "gravel",

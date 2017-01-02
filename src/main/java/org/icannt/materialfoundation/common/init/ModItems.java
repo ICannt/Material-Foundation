@@ -7,6 +7,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import org.icannt.materialfoundation.common.item.ItemGeneric;
 import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.ItemToolFabricator;
+import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
 
 /**
  * Created by ICannt on 29/12/16.
@@ -23,9 +24,9 @@ public class ModItems {
         GameRegistry.register(TOOL_FABRICATOR);
         GameRegistry.register(GENERIC);
         GameRegistry.register(TIN_METAL_PAINT);
-
+ 
         // TODO: Fix ore dictionary after converting minerals to variants        
-        //OreDictionary.registerOre("dustBurntLime", new ItemStack(MINERAL_LIME_BURNT));
+        OreDictionary.registerOre("dustBurntLime", new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
 
     }
 }
