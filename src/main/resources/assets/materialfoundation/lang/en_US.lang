@@ -8,7 +8,8 @@ itemGroup.materialfoundation=Material Foundation
 item.materialfoundation:tool_fabricator.name=MF Fabricator
 
 # Minerals
-item.materialfoundation:mineral_lime_burnt.name=Burnt Lime
+item.materialfoundation:generic.mineral_lime_burnt.name=Burnt Lime
+item.materialfoundation:generic.mineral_lime_slime.name=Slime Lime
 
 # Metal Paint Tins
 item.materialfoundation:metal_tin_paint.empty.name=Paint Tin

@@ -1,5 +1,6 @@
 package org.icannt.materialfoundation.common.item.variant;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.util.IStringSerializable;
 
 /**
@@ -7,32 +8,38 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumPaintType implements IStringSerializable {
 
-	EMPTY ("empty"),
-	BLACK ("black"),
-	SILVER ("silver"),
-	GREEN ("green"),
-	BROWN ("brown"),
-	BLUE ("blue"),
-	RED ("red"),
-	CYAN ("cyan"),
-	LIME ("lime"),
-	GRAY ("gray"),
-	PURPLE ("purple"),
-	MAGENTA ("magenta"),
-	YELLOW ("yellow"),
-	LIGHT_BLUE ("light_blue"),
-	ORANGE ("orange"),
-	PINK ("pink"),
-	WHITE ("white");
+	EMPTY ("empty", "Empty"),
+	BLACK ("black", "Black"),
+	SILVER ("silver", "Silver"),
+	GREEN ("green", "Green"),
+	BROWN ("brown", "Brown"),
+	BLUE ("blue", "Blue"),
+	RED ("red", "Red"),
+	CYAN ("cyan", "Cyan"),
+	LIME ("lime", "Lime"),
+	GRAY ("gray", "Gray"),
+	PURPLE ("purple", "Purple"),
+	MAGENTA ("magenta", "Magenta"),
+	YELLOW ("yellow", "Yellow"),
+	LIGHT_BLUE ("light_blue", "Light Blue"),
+	ORANGE ("orange", "Orange"),
+	PINK ("pink", "Pink"),
+	WHITE ("white", "White");
 
     private String name;
+    private String localised;
 
-    EnumPaintType(String name) {
+    EnumPaintType(String name, String localised) {
         this.name = name;
+        this.localised = localised;
     }
 
     @Override
     public String getName() {
         return name;
     }
+
+	public String getLocalised() {
+		return localised;
+	}
 }
