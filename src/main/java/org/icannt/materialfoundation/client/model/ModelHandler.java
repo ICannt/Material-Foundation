@@ -1,21 +1,18 @@
 package org.icannt.materialfoundation.client.model;
 
-import net.minecraft.client.renderer.ItemMeshDefinition;
-import net.minecraft.client.renderer.block.model.ModelBakery;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IStringSerializable;
-import net.minecraftforge.client.model.ModelLoader;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.icannt.materialfoundation.client.model.mesher.ItemPaintTinMesher;
-import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.init.ModBlocks;
 import org.icannt.materialfoundation.common.init.ModItems;
 import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
 import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
-import java.util.ArrayList;
-import java.util.List;
+import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 
 /**
  * Created by ICannt on 22/12/16.

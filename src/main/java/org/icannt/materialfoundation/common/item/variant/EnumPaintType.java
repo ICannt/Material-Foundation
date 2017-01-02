@@ -1,6 +1,5 @@
 package org.icannt.materialfoundation.common.item.variant;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.util.IStringSerializable;
 
 /**
