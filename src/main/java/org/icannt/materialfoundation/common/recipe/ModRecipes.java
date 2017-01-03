@@ -1,5 +1,7 @@
 package org.icannt.materialfoundation.common.recipe;
 
+import com.sun.tools.javac.code.Attribute;
+import net.minecraftforge.oredict.RecipeSorter;
 import org.apache.commons.lang3.text.WordUtils;
 import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
@@ -118,33 +120,15 @@ public class ModRecipes {
             ));
         }
 
+
         // Composite Concrete - Crafting Bench
-        resultBlock = ModBlocks.COMPOSITE_CONCRETE;        
-        for (EnumCompositeType variant : EnumCompositeType.values()) {
-        	line1 = "SQS";
-        	switch (variant) {
-        	   case REINFORCED_GRATING_DARK:
-        		   specialItem = new ItemStack(ModItems.TIN_METAL_PAINT, 1, EnumPaintType.BLACK.ordinal());
-        	   break;
-        	   case REINFORCED_GRATING_LIGHT:
-        		   specialItem = new ItemStack(ModItems.TIN_METAL_PAINT, 1, EnumPaintType.WHITE.ordinal());
-        	   break;
-        	   default:
-        		   specialItem = new ItemStack(Blocks.AIR);
-        		   line1 = "S S";
-        	}
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, variant.ordinal()),
-                    line1,
-                    "BWB",
-                    "GCG",
-                    'Q', specialItem,
-                    'W', Items.WATER_BUCKET,
-                    'S', "sand",
-                    'G', "gravel",
-                    'C', Items.CLAY_BALL,
-                    'B', "dustBurntLime"
-            ));
-        }   
-        
+        GameRegistry.addRecipe(new CompositeConcreteRecipe(new ItemStack(ModBlocks.COMPOSITE_CONCRETE),
+                "sand",
+                new ItemStack(ModItems.TIN_METAL_PAINT),
+                "sand", "dustBurntLime",
+                new ItemStack(Items.WATER_BUCKET),
+                "dustBurntLime", "gravel",
+                new ItemStack(Items.CLAY_BALL),
+                "gravel"));
     }
 }

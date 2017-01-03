@@ -36,14 +36,7 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        String variant = "empty";
-
-        if (stack.getTagCompound() != null) {
-            if (stack.getTagCompound().hasKey("colour")) {
-                variant = stack.getTagCompound().getString("colour");
-            }
-        }
-        return super.getUnlocalizedName() + "." + variant;
+        return super.getUnlocalizedName() + "." + ItemMetalTinPaint.getVariant(stack).getName();
     }
 
     @SideOnly(Side.CLIENT)
@@ -67,13 +60,38 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public ItemStack getContainerItem(ItemStack stack) {
-        stack.attemptDamageItem(1, itemRand);
-        return stack;
+        ItemStack container = stack.copy();
+
+        if (container.getItemDamage() < getMaxDamage(container) - 1) {
+            container.attemptDamageItem(1, itemRand);
+            return container;
+        } else {
+            return ItemMetalTinPaint.create(EnumPaintType.EMPTY);
+        }
     }
 
     @Override
     public boolean isDamageable() {
         return true;
+    }
+
+    /**
+     * Helper method for determining if a paint tin is a certain colour
+     * @param stack ItemStack of ItemMetalTinPaint to check
+     * @param paint EnumPaintType of which colour to look for
+     * @return Boolean true if matches, or false
+     */
+    public static boolean isColour(ItemStack stack, EnumPaintType paint) {
+        if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
+            return false;
+
+        if (stack.getTagCompound() != null) {
+            if (stack.getTagCompound().hasKey("colour")) {
+                return stack.getTagCompound().getString("colour").equalsIgnoreCase(paint.getName());
+            }
+        }
+
+        return false;
     }
 
     /**
