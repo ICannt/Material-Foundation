@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.RecipeSorter;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import org.apache.commons.lang3.text.WordUtils;
@@ -122,6 +123,7 @@ public class ModRecipes {
             ));
         }
 
+        /*
         resultBlock = ModBlocks.COMPOSITE_CONCRETE;
         for (EnumCompositeType variant : EnumCompositeType.values()) {
             line1 = "SQS";
@@ -148,6 +150,11 @@ public class ModRecipes {
                     'B', "dustBurntLime"
             ));
         }
+        */
+
+        // Composite Concrete
+        RecipeSorter.register("materialfoundation:compositerecipe", CompositeRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped before:minecraft:shapeless");
+        GameRegistry.addRecipe(new CompositeRecipe());
 
     }
 }
