@@ -55,7 +55,7 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public boolean hasContainerItem(ItemStack stack) {
-        return true;
+        return ItemMetalTinPaint.getVariant(stack) != EnumPaintType.EMPTY;
     }
 
     @Override

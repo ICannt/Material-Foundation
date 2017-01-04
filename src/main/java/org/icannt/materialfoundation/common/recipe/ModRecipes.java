@@ -1,16 +1,5 @@
 package org.icannt.materialfoundation.common.recipe;
 
-import com.sun.tools.javac.code.Attribute;
-import net.minecraftforge.oredict.RecipeSorter;
-import org.apache.commons.lang3.text.WordUtils;
-import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
-import org.icannt.materialfoundation.common.init.ModBlocks;
-import org.icannt.materialfoundation.common.init.ModItems;
-import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
-import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
-import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
-
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -20,6 +9,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
+import org.apache.commons.lang3.text.WordUtils;
+import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
+import org.icannt.materialfoundation.common.init.ModBlocks;
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
+import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 /**
  * Created by ICannt on 23/12/16.
@@ -35,7 +32,6 @@ public class ModRecipes {
         String line1 = "";
         String line2 = "";
         String line3 = "";
-        
 
         /****************
          * Item Recipes *
@@ -52,16 +48,22 @@ public class ModRecipes {
                 'C', Blocks.CARPET
         ));
 
+        // Paint Tin Empty
+        GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
+                "I I",
+                "I I",
+                " I ",
+                'I', Items.IRON_INGOT));
+
         // Paint Tins - Crafting Bench
-        resultItem = ModItems.TIN_METAL_PAINT;
         for (EnumPaintType variant : EnumPaintType.values()) {
-        	if (variant.getName() != "empty") {
+        	if (!variant.getName().equalsIgnoreCase("empty")) {
 	            GameRegistry.addRecipe(new ShapelessOreRecipe(ItemMetalTinPaint.create(variant),
 	                    "dye" + WordUtils.capitalize(variant.getName().replace("_", " ")).replace(" ", ""),
-	                    Items.WATER_BUCKET,
+	                    ItemMetalTinPaint.create(EnumPaintType.EMPTY),
 	                    "dustBurntLime"
 	            ));
-        	}        	
+        	}
         }
         
         // Burnt Lime - Smelting
@@ -120,15 +122,32 @@ public class ModRecipes {
             ));
         }
 
+        resultBlock = ModBlocks.COMPOSITE_CONCRETE;
+        for (EnumCompositeType variant : EnumCompositeType.values()) {
+            line1 = "SQS";
+            switch (variant) {
+                case REINFORCED_GRATING_DARK:
+                case REINFORCED_GRATING_LIGHT:
+                    specialItem = new ItemStack(ModItems.TIN_METAL_PAINT);
+                    specialItem.setItemDamage(OreDictionary.WILDCARD_VALUE);
+                    break;
+                default:
+                    specialItem = new ItemStack(Blocks.AIR);
+                    line1 = "S S";
+                    break;
+            }
+            GameRegistry.addRecipe(new CompositeConcreteRecipe(new ItemStack(resultBlock, 12, variant.ordinal()),
+                    line1,
+                    "BWB",
+                    "GCG",
+                    'Q', specialItem,
+                    'W', Items.WATER_BUCKET,
+                    'S', "sand",
+                    'G', "gravel",
+                    'C', Items.CLAY_BALL,
+                    'B', "dustBurntLime"
+            ));
+        }
 
-        // Composite Concrete - Crafting Bench
-        GameRegistry.addRecipe(new CompositeConcreteRecipe(new ItemStack(ModBlocks.COMPOSITE_CONCRETE),
-                "sand",
-                new ItemStack(ModItems.TIN_METAL_PAINT),
-                "sand", "dustBurntLime",
-                new ItemStack(Items.WATER_BUCKET),
-                "dustBurntLime", "gravel",
-                new ItemStack(Items.CLAY_BALL),
-                "gravel"));
     }
 }
