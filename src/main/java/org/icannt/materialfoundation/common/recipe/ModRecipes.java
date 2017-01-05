@@ -28,11 +28,12 @@ public class ModRecipes {
     public static void registerRecipes() {
         Block resultBlock;
         Item resultItem;
-        ItemStack specialItem;
         ItemStack crafter = new ItemStack(ModItems.TOOL_FABRICATOR);
+        
+/*        ItemStack specialItem;
         String line1 = "";
         String line2 = "";
-        String line3 = "";
+        String line3 = "";*/
 
         /****************
          * Item Recipes *
@@ -51,10 +52,12 @@ public class ModRecipes {
 
         // Paint Tin Empty
         GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
-                "I I",
-                "I I",
-                " I ",
-                'I', Items.IRON_INGOT));
+                "C",
+                "I",
+                "I",
+                'C', crafter,
+                'I', Items.IRON_INGOT
+        ));
 
         // Paint Tins - Crafting Bench
         for (EnumPaintType variant : EnumPaintType.values()) {
@@ -66,6 +69,12 @@ public class ModRecipes {
 	            ));
         	}
         }
+
+        // Slime Lime - Crafting Bench
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 6, EnumGenericType.MINERAL_LIME_SLIME.ordinal()),
+                "slimeball",
+                "dustBurntLime"
+        ));
         
         // Burnt Lime - Smelting
         for (ItemStack stack : OreDictionary.getOres("sandstone"))
@@ -81,7 +90,7 @@ public class ModRecipes {
         // Metal Checker Plate - Crafting Bench
         resultBlock = ModBlocks.METAL_PLATE_CHECKER;
         for (EnumMetalType variant : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, variant.ordinal()),
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
                     "XXY",
                     "XX ",
                     'X', "ingot" + WordUtils.capitalize(variant.getName()),
@@ -92,7 +101,7 @@ public class ModRecipes {
         // Metal Checker Plate - Crafting Bench
         resultBlock = ModBlocks.METAL_PLATE_CHECKER;
         for (EnumMetalType variant : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, variant.ordinal()),
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
                     "XXY",
                     "XX ",
                     'X', "ingot" + WordUtils.capitalize(variant.getName()),
@@ -104,7 +113,7 @@ public class ModRecipes {
         // Scale Checker Plate - Crafting Bench
         resultBlock = ModBlocks.METAL_PLATE_WALL_STUDDED;
         for (EnumMetalType variant : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, variant.ordinal()),
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
                     "XX ",
                     "XXY",
                     'X', "ingot" + WordUtils.capitalize(variant.getName()),
@@ -115,7 +124,7 @@ public class ModRecipes {
         // Metal Studded Wall Plate - Crafting Bench
         resultBlock = ModBlocks.METAL_PLATE_SCALE;
         for (EnumMetalType variant : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, variant.ordinal()),
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
                     "YXX",
                     " XX",
                     'X', "ingot" + WordUtils.capitalize(variant.getName()),
