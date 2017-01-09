@@ -1,14 +1,13 @@
-package org.icannt.materialfoundation.common.block;
+package org.icannt.materialfoundation.common.block.blocks;
 
 import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
+import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -29,18 +28,18 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by ICannt on 23/12/16.
+ * Created by ICannt on 04/01/17.
  */
-public class BlockCompositeConcrete extends Block {
+public class BlockMetalGrill extends BlockPane {
 
-    private static final PropertyEnum<EnumCompositeType> VARIANT = PropertyEnum.create("composite", EnumCompositeType.class);
-
-    public BlockCompositeConcrete() {
-        super(Material.ROCK, MapColor.GRAY);
-        setRegistryName(MaterialFoundation.MOD_ID, "composite_concrete");
+	private static final PropertyEnum<EnumMetalGrillType> VARIANT = PropertyEnum.create("metal_grill", EnumMetalGrillType.class);
+	
+	public BlockMetalGrill() {
+		super(Material.IRON, true);
+        setRegistryName(MaterialFoundation.MOD_ID, "metal_grill");
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
-    }
+	}
 
     @Override
     protected BlockStateContainer createBlockState() {
@@ -49,22 +48,22 @@ public class BlockCompositeConcrete extends Block {
 
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list) {
-        for (EnumCompositeType type : EnumCompositeType.values()) {
+        for (EnumMetalGrillType type : EnumMetalGrillType.values()) {
             list.add(new ItemStack(this, 1, type.ordinal()));
         }
     }
-    
+
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumCompositeType.values()[meta]);
+        return getDefaultState().withProperty(VARIANT, EnumMetalGrillType.values()[meta]);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
         return state.getValue(VARIANT).ordinal();
     }
-    
+
     @Override
     public int damageDropped(IBlockState state) {
         return getMetaFromState(state);
@@ -77,8 +76,8 @@ public class BlockCompositeConcrete extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
-    public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-        return blockState.getValue(VARIANT).getHardness();
+    public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
+        return state.getValue(VARIANT).getHardness();
     }
 
     @Override
@@ -91,10 +90,10 @@ public class BlockCompositeConcrete extends Block {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getMetadata();
 
-            EnumCompositeType composite = EnumCompositeType.values()[meta];
+            EnumMetalGrillType metal = EnumMetalGrillType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockCompositeConcrete.this);
-            return variants.get(BlockCompositeConcrete.this.getDefaultState().withProperty(VARIANT, composite));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalGrill.this);
+            return variants.get(BlockMetalGrill.this.getDefaultState().withProperty(VARIANT, metal));
         });
     }
 }

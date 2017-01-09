@@ -1,9 +1,10 @@
-package org.icannt.materialfoundation.common.block;
+package org.icannt.materialfoundation.common.block.blocks;
 
 import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.BlockVariantBase;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
@@ -31,15 +32,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by ICannt on 20/12/16.
  */
-public class BlockMetalPlateChecker extends Block {
+public class BlockMetalPlateScale extends BlockVariantBase {
 
     private static final PropertyEnum<EnumMetalType> VARIANT = PropertyEnum.create("metal", EnumMetalType.class);
 
-    public BlockMetalPlateChecker() {
-        super(Material.IRON, MapColor.IRON);
-        setRegistryName(MaterialFoundation.MOD_ID, "metal_plate_checker");
-        setUnlocalizedName(getRegistryName().toString());
-        setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
+    public BlockMetalPlateScale() {
+        super(Material.IRON, MapColor.IRON, "metal_plate_scale");
     }
 
     @Override
@@ -93,8 +91,8 @@ public class BlockMetalPlateChecker extends Block {
 
             EnumMetalType metal = EnumMetalType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPlateChecker.this);
-            return variants.get(BlockMetalPlateChecker.this.getDefaultState().withProperty(VARIANT, metal));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPlateScale.this);
+            return variants.get(BlockMetalPlateScale.this.getDefaultState().withProperty(VARIANT, metal));
         });
     }
 }

@@ -1,10 +1,11 @@
-package org.icannt.materialfoundation.common.block;
+package org.icannt.materialfoundation.common.block.blocks;
 
 import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
+import org.icannt.materialfoundation.common.block.BlockVariantBase;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalPaintedType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
 import net.minecraft.block.Block;
@@ -31,15 +32,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by ICannt on 25/12/16.
  */
-public class BlockMetalPlateWallStudded extends Block {
+public class BlockMetalPaintedPlateWallStudded extends BlockVariantBase {
 
-    private static final PropertyEnum<EnumMetalType> VARIANT = PropertyEnum.create("metal", EnumMetalType.class);
+    private static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
 
-    public BlockMetalPlateWallStudded() {
-        super(Material.IRON, MapColor.IRON);
-        setRegistryName(MaterialFoundation.MOD_ID, "metal_plate_wall_studded");
-        setUnlocalizedName(getRegistryName().toString());
-        setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
+    public BlockMetalPaintedPlateWallStudded() {
+        super(Material.IRON, MapColor.IRON, "metal_painted_plate_wall_studded");
     }
 
     @Override
@@ -49,7 +47,7 @@ public class BlockMetalPlateWallStudded extends Block {
 
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list) {
-        for (EnumMetalType type : EnumMetalType.values()) {
+        for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
             list.add(new ItemStack(this, 1, type.ordinal()));
         }
     }
@@ -57,7 +55,7 @@ public class BlockMetalPlateWallStudded extends Block {
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumMetalType.values()[meta]);
+        return getDefaultState().withProperty(VARIANT, EnumMetalPaintedType.values()[meta]);
     }
 
     @Override
@@ -91,10 +89,10 @@ public class BlockMetalPlateWallStudded extends Block {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getMetadata();
 
-            EnumMetalType metal = EnumMetalType.values()[meta];
+            EnumMetalPaintedType metal = EnumMetalPaintedType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPlateWallStudded.this);
-            return variants.get(BlockMetalPlateWallStudded.this.getDefaultState().withProperty(VARIANT, metal));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPaintedPlateWallStudded.this);
+            return variants.get(BlockMetalPaintedPlateWallStudded.this.getDefaultState().withProperty(VARIANT, metal));
         });
     }
 }

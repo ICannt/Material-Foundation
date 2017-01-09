@@ -1,5 +1,6 @@
 package org.icannt.materialfoundation.common.block.itemblock;
 
+import org.icannt.materialfoundation.common.block.ItemBlockVariantBase;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
 
 import net.minecraft.block.Block;
@@ -10,16 +11,10 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by ICannt on 30/12/16.
  */
-public class ItemBlockMetalMulti extends ItemBlock {
+public class ItemBlockMetalMulti extends ItemBlockVariantBase {
 
     public ItemBlockMetalMulti(Block block) {
         super(block);
-        setHasSubtypes(true);
-    }
-
-    @Override
-    public int getMetadata(int damage) {
-        return damage;
     }
 
     @Override

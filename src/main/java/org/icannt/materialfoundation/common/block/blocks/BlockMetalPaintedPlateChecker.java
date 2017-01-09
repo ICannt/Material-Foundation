@@ -1,13 +1,15 @@
-package org.icannt.materialfoundation.common.block;
+package org.icannt.materialfoundation.common.block.blocks;
 
 import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
+import org.icannt.materialfoundation.common.block.BlockVariantBase;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalPaintedType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
-import net.minecraft.block.BlockPane;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -28,18 +30,15 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by ICannt on 04/01/17.
+ * Created by ICannt on 25/12/16.
  */
-public class BlockMetalGrill extends BlockPane {
+public class BlockMetalPaintedPlateChecker extends BlockVariantBase {
 
-	private static final PropertyEnum<EnumMetalGrillType> VARIANT = PropertyEnum.create("metal_grill", EnumMetalGrillType.class);
-	
-	public BlockMetalGrill() {
-		super(Material.IRON, true);
-        setRegistryName(MaterialFoundation.MOD_ID, "metal_grill");
-        setUnlocalizedName(getRegistryName().toString());
-        setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
-	}
+    private static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
+
+    public BlockMetalPaintedPlateChecker() {
+        super(Material.IRON, MapColor.IRON, "metal_painted_plate_checker");
+    }
 
     @Override
     protected BlockStateContainer createBlockState() {
@@ -48,7 +47,7 @@ public class BlockMetalGrill extends BlockPane {
 
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list) {
-        for (EnumMetalGrillType type : EnumMetalGrillType.values()) {
+        for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
             list.add(new ItemStack(this, 1, type.ordinal()));
         }
     }
@@ -56,7 +55,7 @@ public class BlockMetalGrill extends BlockPane {
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumMetalGrillType.values()[meta]);
+        return getDefaultState().withProperty(VARIANT, EnumMetalPaintedType.values()[meta]);
     }
 
     @Override
@@ -90,10 +89,10 @@ public class BlockMetalGrill extends BlockPane {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getMetadata();
 
-            EnumMetalGrillType metal = EnumMetalGrillType.values()[meta];
+            EnumMetalPaintedType metal = EnumMetalPaintedType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalGrill.this);
-            return variants.get(BlockMetalGrill.this.getDefaultState().withProperty(VARIANT, metal));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPaintedPlateChecker.this);
+            return variants.get(BlockMetalPaintedPlateChecker.this.getDefaultState().withProperty(VARIANT, metal));
         });
     }
 }

@@ -3,15 +3,15 @@ package org.icannt.materialfoundation.common.init;
 import java.lang.reflect.InvocationTargetException;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.BlockCompositeConcrete;
-import org.icannt.materialfoundation.common.block.BlockMetalCrateWithGrill;
-import org.icannt.materialfoundation.common.block.BlockMetalGrill;
-import org.icannt.materialfoundation.common.block.BlockMetalPaintedPlateChecker;
-import org.icannt.materialfoundation.common.block.BlockMetalPaintedPlateScale;
-import org.icannt.materialfoundation.common.block.BlockMetalPaintedPlateWallStudded;
-import org.icannt.materialfoundation.common.block.BlockMetalPlateChecker;
-import org.icannt.materialfoundation.common.block.BlockMetalPlateScale;
-import org.icannt.materialfoundation.common.block.BlockMetalPlateWallStudded;
+import org.icannt.materialfoundation.common.block.blocks.BlockCompositeConcrete;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrill;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalGrill;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateChecker;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateScale;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateWallStudded;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateChecker;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateScale;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateWallStudded;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalGrill;
@@ -34,7 +34,7 @@ public class ModBlocks {
     public static final BlockMetalPaintedPlateScale METAL_PAINTED_PLATE_SCALE = new BlockMetalPaintedPlateScale();
     public static final BlockMetalPlateWallStudded METAL_PLATE_WALL_STUDDED = new BlockMetalPlateWallStudded();
     public static final BlockMetalPaintedPlateWallStudded METAL_PAINTED_PLATE_WALL_STUDDED = new BlockMetalPaintedPlateWallStudded();
-    public static final BlockMetalGrill METAL_GRILL = new BlockMetalGrill();
+    //public static final BlockMetalGrill METAL_GRILL = new BlockMetalGrill();
     public static final BlockMetalCrateWithGrill METAL_CRATE_WITH_GRILL = new BlockMetalCrateWithGrill();
 
     public static void init() {
@@ -57,7 +57,7 @@ public class ModBlocks {
         registerItemBlock(METAL_PAINTED_PLATE_SCALE, ItemBlockMetalPainted.class);
         registerItemBlock(METAL_PLATE_WALL_STUDDED, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_WALL_STUDDED, ItemBlockMetalPainted.class);
-        registerItemBlock(METAL_GRILL, ItemBlockMetalGrill.class);
+        //registerItemBlock(METAL_GRILL, ItemBlockMetalGrill.class);
         registerItemBlock(METAL_CRATE_WITH_GRILL, ItemBlockMetalMulti.class);
 
     }

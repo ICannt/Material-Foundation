@@ -1,5 +1,6 @@
 package org.icannt.materialfoundation.common.block.itemblock;
 
+import org.icannt.materialfoundation.common.block.ItemBlockVariantBase;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
 
 import net.minecraft.block.Block;
@@ -10,16 +11,10 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by ICannt on 20/12/16.
  */
-public class ItemBlockMetalGrill extends ItemBlock {
+public class ItemBlockMetalGrill extends ItemBlockVariantBase {
 
     public ItemBlockMetalGrill(Block block) {
         super(block);
-        setHasSubtypes(true);
-    }
-
-    @Override
-    public int getMetadata(int damage) {
-        return damage;
     }
 
     @Override
