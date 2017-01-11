@@ -3,6 +3,11 @@ package org.icannt.materialfoundation.common.block.blocks;
 import java.util.List;
 import java.util.Map;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.item.EnumDyeColor;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
 import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
@@ -26,24 +31,26 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.icannt.materialfoundation.common.init.ModBlocks;
 
 /**
  * Created by ICannt on 04/01/17.
  */
 public class BlockMetalGrill extends BlockPane {
 
-	private static final PropertyEnum<EnumMetalGrillType> VARIANT = PropertyEnum.create("metal_grill", EnumMetalGrillType.class);
+	private static final PropertyEnum<EnumMetalGrillType> VARIANT = PropertyEnum.create("grill", EnumMetalGrillType.class);
 	
 	public BlockMetalGrill() {
 		super(Material.IRON, true);
         setRegistryName(MaterialFoundation.MOD_ID, "metal_grill");
+        setDefaultState(this.blockState.getBaseState().withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)).withProperty(VARIANT, EnumMetalGrillType.ROUND_OFFSET_BLAZE));
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
 	}
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, VARIANT);
+        return new BlockStateContainer(this,new IProperty[]{NORTH, SOUTH, EAST, WEST, VARIANT});
     }
 
     @Override
@@ -85,8 +92,17 @@ public class BlockMetalGrill extends BlockPane {
         return world.getBlockState(pos).getValue(VARIANT).getResistance();
     }
 
+    @Override
+    public boolean canPaneConnectTo(IBlockAccess world, BlockPos pos, EnumFacing dir) {
+        return super.canPaneConnectTo(world, pos, dir) && world.getBlockState(pos).getBlock() == ModBlocks.METAL_GRILL;
+    }
+
     @SideOnly(Side.CLIENT)
     public void initClient() {
+	    for (EnumMetalGrillType variant : EnumMetalGrillType.values()) {
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), variant.ordinal(), new ModelResourceLocation(ModBlocks.METAL_GRILL.getRegistryName() + "_" + variant.getName(), "inventory"));
+        }
+	    /*
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getMetadata();
 
@@ -95,5 +111,6 @@ public class BlockMetalGrill extends BlockPane {
             Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalGrill.this);
             return variants.get(BlockMetalGrill.this.getDefaultState().withProperty(VARIANT, metal));
         });
+        */
     }
 }

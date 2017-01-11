@@ -21,11 +21,12 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void init(FMLInitializationEvent event) {
+        super.init(event);
     }
 
     @Override
     public void postInit(FMLPostInitializationEvent event) {
-
+        super.postInit(event);
     }
 
     @Override

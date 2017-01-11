@@ -30,10 +30,10 @@ public class ModRecipes {
         Item resultItem;
         ItemStack crafter = new ItemStack(ModItems.TOOL_FABRICATOR);
         
-/*        ItemStack specialItem;
+        ItemStack specialItem;
         String line1 = "";
         String line2 = "";
-        String line3 = "";*/
+        String line3 = "";
 
         /****************
          * Item Recipes *
@@ -61,10 +61,10 @@ public class ModRecipes {
 
         // Paint Tins - Crafting Bench
         for (EnumPaintType variant : EnumPaintType.values()) {
-        	if (!variant.getName().equalsIgnoreCase("empty")) {
+        	if (variant != EnumPaintType.EMPTY) {
 	            GameRegistry.addRecipe(new ShapelessOreRecipe(ItemMetalTinPaint.create(variant),
 	                    "dye" + WordUtils.capitalize(variant.getName().replace("_", " ")).replace(" ", ""),
-	                    ItemMetalTinPaint.create(EnumPaintType.EMPTY),
+	                    new ItemStack(ModItems.TIN_METAL_PAINT),
 	                    "dustBurntLime"
 	            ));
         	}
@@ -132,7 +132,8 @@ public class ModRecipes {
             ));
         }
 
-        /*
+        // Composite Concrete
+        RecipeSorter.register("materialfoundation:compositerecipe", CompositeConcreteRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped before:minecraft:shapeless");
         resultBlock = ModBlocks.COMPOSITE_CONCRETE;
         for (EnumCompositeType variant : EnumCompositeType.values()) {
             line1 = "SQS";
@@ -159,11 +160,5 @@ public class ModRecipes {
                     'B', "dustBurntLime"
             ));
         }
-        */
-
-        // Composite Concrete
-        RecipeSorter.register("materialfoundation:compositerecipe", CompositeRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped before:minecraft:shapeless");
-        GameRegistry.addRecipe(new CompositeRecipe());
-
     }
 }

@@ -43,6 +43,5 @@ public class MaterialFoundation {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit(event);
-        ModRecipes.registerRecipes();
     }
 }

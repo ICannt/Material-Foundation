@@ -34,7 +34,7 @@ public class ModBlocks {
     public static final BlockMetalPaintedPlateScale METAL_PAINTED_PLATE_SCALE = new BlockMetalPaintedPlateScale();
     public static final BlockMetalPlateWallStudded METAL_PLATE_WALL_STUDDED = new BlockMetalPlateWallStudded();
     public static final BlockMetalPaintedPlateWallStudded METAL_PAINTED_PLATE_WALL_STUDDED = new BlockMetalPaintedPlateWallStudded();
-    //public static final BlockMetalGrill METAL_GRILL = new BlockMetalGrill();
+    public static final BlockMetalGrill METAL_GRILL = new BlockMetalGrill();
     public static final BlockMetalCrateWithGrill METAL_CRATE_WITH_GRILL = new BlockMetalCrateWithGrill();
 
     public static void init() {
@@ -47,6 +47,7 @@ public class ModBlocks {
         GameRegistry.register(METAL_PAINTED_PLATE_SCALE);
         GameRegistry.register(METAL_PLATE_WALL_STUDDED);
         GameRegistry.register(METAL_PAINTED_PLATE_WALL_STUDDED);
+        GameRegistry.register(METAL_GRILL);
         GameRegistry.register(METAL_CRATE_WITH_GRILL);
 
         // ItemBlocks
@@ -57,7 +58,7 @@ public class ModBlocks {
         registerItemBlock(METAL_PAINTED_PLATE_SCALE, ItemBlockMetalPainted.class);
         registerItemBlock(METAL_PLATE_WALL_STUDDED, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_WALL_STUDDED, ItemBlockMetalPainted.class);
-        //registerItemBlock(METAL_GRILL, ItemBlockMetalGrill.class);
+        registerItemBlock(METAL_GRILL, ItemBlockMetalGrill.class);
         registerItemBlock(METAL_CRATE_WITH_GRILL, ItemBlockMetalMulti.class);
 
     }
