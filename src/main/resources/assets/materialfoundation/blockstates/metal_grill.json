@@ -3,40 +3,40 @@
   "defaults": {
     "textures": {
       "pane": "materialfoundation:blocks/metal_grill_round_offset_iron",
-      "edge": "materialfoundation:blocks/metal_grill_round_offset_iron"
+      "edge": "materialfoundation:blocks/metal_grill_round_offset_edge_iron"
     },
-    "model": "minecraft:pane_post"
+    "model": "materialfoundation:grill_post"
   },
   "variants": {
     "grill": {
        "round_offset_blaze": {
           "textures": {
             "pane": "materialfoundation:blocks/metal_grill_round_offset_blaze",
-            "edge": "materialfoundation:blocks/metal_grill_round_offset_blaze"
+            "edge": "materialfoundation:blocks/metal_grill_round_offset_edge_blaze"
           }
         },
        "round_offset_gold": {
           "textures": {
             "pane": "materialfoundation:blocks/metal_grill_round_offset_gold",
-            "edge": "materialfoundation:blocks/metal_grill_round_offset_gold"
+            "edge": "materialfoundation:blocks/metal_grill_round_offset_edge_gold"
           }
         },
        "round_offset_iron": {
           "textures": {
             "pane": "materialfoundation:blocks/metal_grill_round_offset_iron",
-            "edge": "materialfoundation:blocks/metal_grill_round_offset_iron"
+            "edge": "materialfoundation:blocks/metal_grill_round_offset_edge_iron"
           }
         },
        "round_offset_lapis": {
           "textures": {
             "pane": "materialfoundation:blocks/metal_grill_round_offset_lapis",
-            "edge": "materialfoundation:blocks/metal_grill_round_offset_lapis"
+            "edge": "materialfoundation:blocks/metal_grill_round_offset_edge_lapis"
           }
         },
        "round_offset_slime": {
           "textures": {
             "pane": "materialfoundation:blocks/metal_grill_round_offset_slime",
-            "edge": "materialfoundation:blocks/metal_grill_round_offset_slime"
+            "edge": "materialfoundation:blocks/metal_grill_round_offset_edge_slime"
           }
         },
        "square_angled_dark": {
@@ -53,20 +53,20 @@
         }
       },
       "north": {
-        "true": { "submodel": { "nside": { "model": "minecraft:pane_side" } } },
-        "false": { "submodel": { "nside": { "model": "minecraft:pane_noside" } } }
+        "true": { "submodel": { "nside": { "model": "materialfoundation:grill_north" } } },
+        "false": { "submodel": { "nside": { "model": "materialfoundation:grill_noside" } } }
       },
       "east": {
-        "true": { "submodel": { "eside": { "model": "minecraft:pane_side", "y": 90 } } },
-        "false": { "submodel": { "eside": { "model": "minecraft:pane_noside_alt" } } }
+        "true": { "submodel": { "eside": { "model": "materialfoundation:grill_east", "y": 90 } } },
+        "false": { "submodel": { "eside": { "model": "materialfoundation:grill_noside_alt" } } }
       },
       "south": {
-        "true": { "submodel": { "sside": { "model": "minecraft:pane_side_alt" } } },
-        "false": { "submodel": { "sside": { "model": "minecraft:pane_noside_alt", "y": 90 } } }
+        "true": { "submodel": { "sside": { "model": "materialfoundation:grill_south" } } },
+        "false": { "submodel": { "sside": { "model": "materialfoundation:grill_noside_alt", "y": 90 } } }
       },
       "west": {
-        "true": { "submodel": { "wside": { "model": "minecraft:pane_side_alt", "y": 90 } } },
-        "false": { "submodel": { "wside": { "model": "minecraft:pane_noside", "y": 270 } } }
+        "true": { "submodel": { "wside": { "model": "materialfoundation:grill_west", "y": 90 } } },
+        "false": { "submodel": { "wside": { "model": "materialfoundation:grill_noside", "y": 270 } } }
       }
   }
   }
