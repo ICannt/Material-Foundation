@@ -24,8 +24,7 @@ public class ModItems {
         GameRegistry.register(TOOL_FABRICATOR);
         GameRegistry.register(GENERIC);
         GameRegistry.register(TIN_METAL_PAINT);
- 
-        // TODO: Fix ore dictionary after converting minerals to variants        
+    
         OreDictionary.registerOre("dustBurntLime", new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
 
     }

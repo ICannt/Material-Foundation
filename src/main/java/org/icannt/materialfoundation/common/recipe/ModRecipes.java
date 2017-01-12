@@ -12,6 +12,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import org.apache.commons.lang3.text.WordUtils;
 import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
 import org.icannt.materialfoundation.common.init.ModBlocks;
 import org.icannt.materialfoundation.common.init.ModItems;
@@ -26,14 +27,15 @@ public class ModRecipes {
 
 
     public static void registerRecipes() {
-        Block resultBlock;
-        Item resultItem;
-        ItemStack crafter = new ItemStack(ModItems.TOOL_FABRICATOR);
-        
-        ItemStack specialItem;
+    	
+        Block resultBlock;        
+        Item resultItem;        
+        ItemStack crafter = new ItemStack(ModItems.TOOL_FABRICATOR);       
+        ItemStack specialItem;        
         String line1 = "";
         String line2 = "";
         String line3 = "";
+        String variantName = "";
 
         /****************
          * Item Recipes *
@@ -50,7 +52,7 @@ public class ModRecipes {
                 'C', Blocks.CARPET
         ));
 
-        // Paint Tin Empty
+        // Paint Tin Empty - Crafting Bench
         GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
                 "C",
                 "I",
@@ -76,7 +78,7 @@ public class ModRecipes {
                 "dustBurntLime"
         ));
         
-        // Burnt Lime - Smelting
+        // Burnt Lime - Furnace
         for (ItemStack stack : OreDictionary.getOres("sandstone"))
         {
         	GameRegistry.addSmelting(stack, new ItemStack(ModItems.GENERIC, 6, EnumGenericType.MINERAL_LIME_BURNT.ordinal()), 0.1F);
@@ -97,20 +99,8 @@ public class ModRecipes {
                     'Y', crafter
             ));
         }
-               
-        // Metal Checker Plate - Crafting Bench
-        resultBlock = ModBlocks.METAL_PLATE_CHECKER;
-        for (EnumMetalType variant : EnumMetalType.values()) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
-                    "XXY",
-                    "XX ",
-                    'X', "ingot" + WordUtils.capitalize(variant.getName()),
-                    'Y', crafter
-            ));
-        }
 
-        
-        // Scale Checker Plate - Crafting Bench
+        // Metal Scale Checker Plate - Crafting Bench
         resultBlock = ModBlocks.METAL_PLATE_WALL_STUDDED;
         for (EnumMetalType variant : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
@@ -132,7 +122,24 @@ public class ModRecipes {
             ));
         }
 
-        // Composite Concrete
+        // Metal Grill - Crafting Bench
+        resultBlock = ModBlocks.METAL_GRILL;
+        for (EnumMetalGrillType variant : EnumMetalGrillType.values()) {
+        	variantName = variant.getName().replace("round_offset_", "").replace("square_angled_", "");
+        	// TODO: Only covers iron and gold so far, other round grills will be a shapeless craft with the right paint and an already made iron grill, "lapis" is just blue paint
+        	switch (variantName) {
+        		case "gold":
+        		case "iron":
+		            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, variant.ordinal()),
+		                    "YX",
+		                    'X', "ingot" + WordUtils.capitalize(variantName),
+		                    'Y', crafter
+		            ));
+	            break;
+        	}
+        }
+        
+        // Composite Concrete - Crafting Bench
         RecipeSorter.register("materialfoundation:compositerecipe", CompositeConcreteRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped before:minecraft:shapeless");
         resultBlock = ModBlocks.COMPOSITE_CONCRETE;
         for (EnumCompositeType variant : EnumCompositeType.values()) {
