@@ -54,7 +54,7 @@ tile.materialfoundation:metal_crate_with_grill.dark_steel_lapis.name=Dark Steel 
 tile.materialfoundation:metal_crate_with_grill.dark_steel_slime.name=Dark Steel Crate With Slime Grill
 tile.materialfoundation:metal_crate_with_grill.fluxed_gold.name=Fluxed Crate With Gold Grill
 
-#Metal Grill
+# Metal Grill
 tile.materialfoundation:metal_grill.round_offset_blaze.name=Blaze Offset Round Grill
 tile.materialfoundation:metal_grill.round_offset_gold.name=Gold Offset Round Grill
 tile.materialfoundation:metal_grill.round_offset_iron.name=Iron Offset Round Grill
@@ -62,6 +62,12 @@ tile.materialfoundation:metal_grill.round_offset_lapis.name=Lapis Offset Round G
 tile.materialfoundation:metal_grill.round_offset_slime.name=Slime Offset Round Grill
 tile.materialfoundation:metal_grill.square_angled_dark.name=Dark Angled Square Grill
 tile.materialfoundation:metal_grill.square_angled_light.name=Light Angled Square Grill
+
+# Metal Crate Plate
+tile.materialfoundation:metal_plate_crate.dark_steel.name=Dark Steel Crate Plate
+tile.materialfoundation:metal_plate_crate.fluxed.name=Fluxed Crate Plate
+tile.materialfoundation:metal_plate_crate.iron.name=Iron Crate Plate
+tile.materialfoundation:metal_plate_crate.tin.name=Tin Crate Plate
 
 # Metal Checker Plate
 tile.materialfoundation:metal_plate_checker.iron.name=Iron Checker Plate

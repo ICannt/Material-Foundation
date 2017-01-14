@@ -4,12 +4,12 @@
     "textures": {
       "all": "materialfoundation:blocks/metal_plate_crate_iron"
     },
-    "model": "cube_all"
+    "model": "minecraft:glass"
   },
   "variants": {
     "inventory": [{}],
     "normal": [{}],
-    "variant": {
+    "crate": {
         "iron": {
           "textures": {
             "all": "materialfoundation:blocks/metal_plate_crate_iron"

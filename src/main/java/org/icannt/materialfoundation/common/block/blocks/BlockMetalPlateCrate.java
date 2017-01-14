@@ -3,9 +3,15 @@ package org.icannt.materialfoundation.common.block.blocks;
 import java.util.List;
 import java.util.Map;
 
+import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.block.BlockGlassVariantBase;
+import org.icannt.materialfoundation.common.block.BlockVariantBase;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalPlateCrateType;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockGlass;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -30,8 +36,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  */
 public class BlockMetalPlateCrate extends BlockGlassVariantBase {
 
-    private static final PropertyEnum<EnumMetalPlateCrateType> VARIANT = PropertyEnum.create("variant", EnumMetalPlateCrateType.class);
-
+    private static final PropertyEnum<EnumMetalPlateCrateType> VARIANT = PropertyEnum.create("crate", EnumMetalPlateCrateType.class);
+   
     public BlockMetalPlateCrate() {
         super(Material.IRON, true, "metal_plate_crate");
     }
@@ -85,10 +91,10 @@ public class BlockMetalPlateCrate extends BlockGlassVariantBase {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getMetadata();
 
-            EnumMetalPlateCrateType variant = EnumMetalPlateCrateType.values()[meta];
+            EnumMetalPlateCrateType crate = EnumMetalPlateCrateType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
             Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPlateCrate.this);
-            return variants.get(BlockMetalPlateCrate.this.getDefaultState().withProperty(VARIANT, variant));
+            return variants.get(BlockMetalPlateCrate.this.getDefaultState().withProperty(VARIANT, crate));
         });
     }
 }
