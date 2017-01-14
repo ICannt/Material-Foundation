@@ -1,16 +1,17 @@
 package org.icannt.materialfoundation.common.recipe;
 
-import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.oredict.ShapedOreRecipe;
+import java.util.HashMap;
+
 import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
 import org.icannt.materialfoundation.common.init.ModBlocks;
 import org.icannt.materialfoundation.common.init.ModItems;
 import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
-import java.util.HashMap;
+import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
  * Created by ICannt on 4/1/17.

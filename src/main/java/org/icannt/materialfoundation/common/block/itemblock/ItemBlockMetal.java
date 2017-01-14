@@ -5,7 +5,6 @@ import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 /**

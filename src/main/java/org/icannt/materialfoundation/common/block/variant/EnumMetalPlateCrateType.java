@@ -9,9 +9,9 @@ import net.minecraft.util.IStringSerializable;
 public enum EnumMetalPlateCrateType implements IStringSerializable {
 
 	IRON ("iron", 0, 5, 30, EnumRarity.COMMON),
-	TIN ("tin", 0, 5, 30, EnumRarity.COMMON),
 	DARK_STEEL ("dark_steel", 0, 5, 30, EnumRarity.COMMON),
-	FLUXED ("fluxed", 0, 5, 30, EnumRarity.COMMON);
+	FLUXED ("fluxed", 0, 5, 30, EnumRarity.COMMON),
+	TIN ("tin", 0, 5, 30, EnumRarity.COMMON);
 
     private String name;
     private int light;

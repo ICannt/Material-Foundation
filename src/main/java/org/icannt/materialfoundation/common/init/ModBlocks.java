@@ -10,6 +10,7 @@ import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateC
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateScale;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateWallStudded;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateChecker;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateCrate;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateScale;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateWallStudded;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
@@ -17,6 +18,7 @@ import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalGrill;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalMulti;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPainted;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPlateCrate;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
@@ -35,8 +37,9 @@ public class ModBlocks {
     public static final BlockMetalPlateWallStudded METAL_PLATE_WALL_STUDDED = new BlockMetalPlateWallStudded();
     public static final BlockMetalPaintedPlateWallStudded METAL_PAINTED_PLATE_WALL_STUDDED = new BlockMetalPaintedPlateWallStudded();
     public static final BlockMetalGrill METAL_GRILL = new BlockMetalGrill();
+    public static final BlockMetalPlateCrate METAL_PLATE_CRATE = new BlockMetalPlateCrate();
     public static final BlockMetalCrateWithGrill METAL_CRATE_WITH_GRILL = new BlockMetalCrateWithGrill();
-
+    
     public static void init() {
     	
         // Blocks
@@ -48,6 +51,7 @@ public class ModBlocks {
         GameRegistry.register(METAL_PLATE_WALL_STUDDED);
         GameRegistry.register(METAL_PAINTED_PLATE_WALL_STUDDED);
         GameRegistry.register(METAL_GRILL);
+        GameRegistry.register(METAL_PLATE_CRATE);
         GameRegistry.register(METAL_CRATE_WITH_GRILL);
 
         // ItemBlocks
@@ -59,6 +63,7 @@ public class ModBlocks {
         registerItemBlock(METAL_PLATE_WALL_STUDDED, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_WALL_STUDDED, ItemBlockMetalPainted.class);
         registerItemBlock(METAL_GRILL, ItemBlockMetalGrill.class);
+        registerItemBlock(METAL_PLATE_CRATE, ItemBlockMetalPlateCrate.class);
         registerItemBlock(METAL_CRATE_WITH_GRILL, ItemBlockMetalMulti.class);
 
     }
