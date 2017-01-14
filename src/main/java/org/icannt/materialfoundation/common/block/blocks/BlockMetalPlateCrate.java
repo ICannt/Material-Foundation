@@ -39,7 +39,7 @@ public class BlockMetalPlateCrate extends BlockGlassVariantBase {
     private static final PropertyEnum<EnumMetalPlateCrateType> VARIANT = PropertyEnum.create("crate", EnumMetalPlateCrateType.class);
    
     public BlockMetalPlateCrate() {
-        super(Material.IRON, true, "metal_plate_crate");
+        super(Material.IRON, false, "metal_plate_crate");
     }
 
     @Override

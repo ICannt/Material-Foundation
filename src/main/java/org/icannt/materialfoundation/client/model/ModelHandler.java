@@ -53,5 +53,6 @@ public class ModelHandler {
         ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED.initClient();
         ModBlocks.METAL_CRATE_WITH_GRILL.initClient();
         ModBlocks.METAL_GRILL.initClient();
+        ModBlocks.METAL_PLATE_CRATE.initClient();
     }
 }
