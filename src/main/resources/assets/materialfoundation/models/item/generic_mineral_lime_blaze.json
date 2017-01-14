@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "materialfoundation:items/mineral_lime_blaze"
+  }
+}

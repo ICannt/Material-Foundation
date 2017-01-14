@@ -42,13 +42,13 @@
        "square_angled_dark": {
           "textures": {
             "pane": "materialfoundation:blocks/metal_grill_square_angled_dark",
-            "edge": "materialfoundation:blocks/metal_grill_square_angled_dark"
+            "edge": "materialfoundation:blocks/metal_grill_square_angled_edge_dark"
           }
         },
        "square_angled_light": {
           "textures": {
             "pane": "materialfoundation:blocks/metal_grill_square_angled_light",
-            "edge": "materialfoundation:blocks/metal_grill_square_angled_light"
+            "edge": "materialfoundation:blocks/metal_grill_square_angled_edge_light"
           }
         }
       },

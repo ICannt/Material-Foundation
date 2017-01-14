@@ -5,9 +5,11 @@ import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.ItemToolFabricator;
 import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 /**
  * Created by ICannt on 29/12/16.
@@ -24,8 +26,14 @@ public class ModItems {
         GameRegistry.register(TOOL_FABRICATOR);
         GameRegistry.register(GENERIC);
         GameRegistry.register(TIN_METAL_PAINT);
-    
-        OreDictionary.registerOre("dustBurntLime", new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
 
+        // Register the generic items with the Ore Dictionary
+        for (EnumGenericType variant : EnumGenericType.values()) {
+      		OreDictionary.registerOre(variant.getOreDict(), new ItemStack(ModItems.GENERIC, 1, variant.ordinal()));
+        }
+        
+        // Registration of Vanilla items that are not registered :(, purely a guess at what other mods might use
+        OreDictionary.registerOre("dustBlaze", new ItemStack(Items.BLAZE_POWDER));
+        
     }
 }

@@ -58,7 +58,7 @@ public class ModRecipes {
                 "I",
                 "I",
                 'C', crafter,
-                'I', Items.IRON_INGOT
+                'I', "ingotIron"
         ));
 
         // Paint Tins - Crafting Bench
@@ -72,11 +72,15 @@ public class ModRecipes {
         	}
         }
 
-        // Slime Lime - Crafting Bench
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 6, EnumGenericType.MINERAL_LIME_SLIME.ordinal()),
-                "slimeball",
-                "dustBurntLime"
-        ));
+        // Minerals (Besides Burnt Lime) - Crafting Bench
+        for (EnumGenericType variant : EnumGenericType.values()) {
+        	if (variant != EnumGenericType.MINERAL_LIME_BURNT) {
+		        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 1, variant.ordinal()),
+		                variant.getCraftWith(),
+		                "dustBurntLime"
+		        ));
+        	}
+        }
         
         // Burnt Lime - Furnace
         for (ItemStack stack : OreDictionary.getOres("sandstone"))
