@@ -1,8 +1,12 @@
 package org.icannt.materialfoundation.common.recipe;
 
+import java.util.Locale;
+
 import org.apache.commons.lang3.text.WordUtils;
 import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalPlateCrateType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
 import org.icannt.materialfoundation.common.init.ModBlocks;
 import org.icannt.materialfoundation.common.init.ModItems;
@@ -37,6 +41,8 @@ public class ModRecipes {
         String line2 = "";
         String line3 = "";
         String variantName = "";
+        ItemStack crateIngredient = null;
+        ItemStack grillIngredient = null;
 
         /****************
          * Item Recipes *
@@ -63,6 +69,7 @@ public class ModRecipes {
         ));
 
         // Paint Tins - Crafting Bench
+        // TODO: Needs support for new "dyes", has to be done at the same time as the new paints are added or it will crash
         for (EnumPaintType variant : EnumPaintType.values()) {
         	if (variant != EnumPaintType.EMPTY) {
 	            GameRegistry.addRecipe(new ShapelessOreRecipe(ItemMetalTinPaint.create(variant),
@@ -128,10 +135,11 @@ public class ModRecipes {
         }
 
         // Metal Grill - Crafting Bench
+    	// TODO: Only covers iron and gold so far, other round grills will be a shapeless craft with the right paint and an already made iron grill, "lapis" is just blue paint
+    	// TODO: Square grills will require paint on creation as there is no "plain" variant, light or dark only, so it needs to be shaped, on top of the iron ingot
         resultBlock = ModBlocks.METAL_GRILL;
         for (EnumMetalGrillType variant : EnumMetalGrillType.values()) {
         	variantName = variant.getName().replace("round_offset_", "").replace("square_angled_", "");
-        	// TODO: Only covers iron and gold so far, other round grills will be a shapeless craft with the right paint and an already made iron grill, "lapis" is just blue paint
         	switch (variantName) {
         		case "gold":
         		case "iron":
@@ -140,11 +148,77 @@ public class ModRecipes {
 		                    'X', "ingot" + WordUtils.capitalize(variantName),
 		                    'Y', crafter
 		            ));
-	            break;
+		            break;
+        		case "blaze":
+        		case "lapis":
+        		case "slime":
+        			// TODO: Need code here for painted round grill recipes
+        			break;
+        		case "dark":
+        		case "light":
+        			// TODO: Need code here for painted square grill recipes
         	}
         }
         
+        // Metal Crate Plate - Crafting Bench
+        // TODO: Only covers dark steel, iron and tin so far, fluxed will be a shapeless craft with fluxed paint and an already made iron plate
+        resultBlock = ModBlocks.METAL_PLATE_CRATE;
+        for (EnumMetalPlateCrateType variant : EnumMetalPlateCrateType.values()) {
+        	variantName = variant.getName();
+        	switch (variantName) {
+        		case "dark_steel":
+        		case "iron":
+        		case "tin":
+		            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 2, variant.ordinal()),
+		                    "Y",
+		                    "X",
+		                    'X', "ingot" +  WordUtils.capitalize(variantName.replace("_", " ")).replace(" ", ""),
+		                    'Y', crafter
+		            ));
+		            break;
+        		case "fluxed":
+        			// TODO: Need code here for fluxed crate plate recipe
+        	}
+        }
+        
+        resultBlock = ModBlocks.METAL_CRATE_WITH_GRILL;
+        for (EnumMetalMultiType variant : EnumMetalMultiType.values()) {
+        	variantName = variant.getName();
+        	switch (variantName) {
+        		case "iron":
+        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal());
+        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal());
+        			break;
+        		case "iron_gold":
+        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal());
+        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_GOLD.ordinal());
+        			break;
+        		case "tin_iron":
+        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.TIN.ordinal());
+        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal());
+        			break;
+        		case "fluxed_gold":
+        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.FLUXED.ordinal());
+        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_GOLD.ordinal());
+        			break;
+        		case "dark_steel_blaze":
+        		case "dark_steel_lapis":
+        		case "dark_steel_slime":
+        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.DARK_STEEL.ordinal());
+        			variantName = variantName.replace("dark_steel_", "round_offset_").toUpperCase(Locale.ENGLISH);
+        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.valueOf(variantName).ordinal());
+        	}
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 2, variant.ordinal()),
+                    "YYY",
+                    " X ",
+                    "YYY",
+                    'X', crateIngredient,
+                    'Y', grillIngredient
+            ));
+        }
+                
         // Composite Concrete - Crafting Bench
+        // TODO: Final recipe uses the square grills, not paints to make the reinforced concrete
         RecipeSorter.register("materialfoundation:compositerecipe", CompositeConcreteRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped before:minecraft:shapeless");
         resultBlock = ModBlocks.COMPOSITE_CONCRETE;
         for (EnumCompositeType variant : EnumCompositeType.values()) {
