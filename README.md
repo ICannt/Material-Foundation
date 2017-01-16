@@ -1,13 +1,18 @@
-![material_foundation](https://cloud.githubusercontent.com/assets/4687400/9700968/daf3276c-5449-11e5-8d1f-de4ea5463bc2.png)
+![material_foundation](https://raw.githubusercontent.com/ICannt/Material-Foundation-Textures/master/screenshots/MF-All-Content-With-Logo.jpg)
 
-Material Foundation 2
-===================== 
+Material Foundation 2.0
+======================= 
 
 High Quality, clean metal and composite materials put into a mod.
 
 All materials are 64x64 px to give more detail than normal.
 
-Can paint iron materials to give colour (upcoming feature).
+Can paint iron materials to give colour.
+
+Requires Ender IO or any mod that has Dark Steel for some recipes to work.
+
+All recipes have JEI support.
+
 
 Tools used:
 
