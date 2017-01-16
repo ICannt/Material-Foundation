@@ -1,17 +1,5 @@
 package org.icannt.materialfoundation.common.block.blocks;
 
-import java.util.List;
-import java.util.Map;
-
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.BlockGlassVariantBase;
-import org.icannt.materialfoundation.common.block.BlockVariantBase;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalPlateCrateType;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockGlass;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -30,6 +18,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.icannt.materialfoundation.common.block.BlockGlassVariantBase;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalPlateCrateType;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ICannt on 14/01/16.

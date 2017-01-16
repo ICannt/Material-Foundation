@@ -1,11 +1,10 @@
 package org.icannt.materialfoundation.common.block;
 
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
 /**
  * Created by ICannt on 8/1/17.

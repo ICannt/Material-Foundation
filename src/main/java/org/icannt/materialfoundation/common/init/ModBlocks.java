@@ -1,28 +1,13 @@
 package org.icannt.materialfoundation.common.init;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.blocks.BlockCompositeConcrete;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrill;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalGrill;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateChecker;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateScale;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateWallStudded;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateChecker;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateCrate;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateScale;
-import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateWallStudded;
-import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
-import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
-import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalGrill;
-import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalMulti;
-import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPainted;
-import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPlateCrate;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.blocks.*;
+import org.icannt.materialfoundation.common.block.itemblock.*;
+
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Created by ICannt on 29/12/16.

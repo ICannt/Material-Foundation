@@ -1,13 +1,5 @@
 package org.icannt.materialfoundation.common.item;
 
-import java.util.Arrays;
-import java.util.List;
-
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-import org.icannt.materialfoundation.common.init.ModItems;
-import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -15,6 +7,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by ICannt on 26/12/16.
@@ -42,7 +42,7 @@ public class ItemMetalTinPaint extends Item {
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add(ItemMetalTinPaint.getVariant(stack).getLocalised());
+        tooltip.add(ItemMetalTinPaint.getVariant(stack).getLocalisedName());
     }
 
     @SideOnly(Side.CLIENT)
@@ -120,13 +120,21 @@ public class ItemMetalTinPaint extends Item {
      * @param paint EnumPaintType The EnumPaintType variant to create
      * @return ItemStack of variant
      */
-    public static ItemStack create(EnumPaintType paint) {
+    public static ItemStack create(EnumPaintType paint, boolean wildcard) {
         ItemStack out = new ItemStack(ModItems.TIN_METAL_PAINT);
         NBTTagCompound tag = new NBTTagCompound();
 
         tag.setString("colour", paint.getName());
         out.setTagCompound(tag);
+
+        if (wildcard)
+            out.setItemDamage(OreDictionary.WILDCARD_VALUE);
+
         return out;
+    }
+
+    public static ItemStack create(EnumPaintType paint) {
+        return create(paint, false);
     }
     
 }

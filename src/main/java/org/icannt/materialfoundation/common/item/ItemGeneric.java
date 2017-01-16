@@ -1,16 +1,15 @@
 package org.icannt.materialfoundation.common.item;
 
-import java.util.List;
-
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
+import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
+
+import java.util.List;
 
 /**
  * Created by ICannt on 01/01/17.

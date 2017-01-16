@@ -1,11 +1,10 @@
 package org.icannt.materialfoundation.common.block.itemblock;
 
-import org.icannt.materialfoundation.common.block.ItemBlockVariantBase;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import org.icannt.materialfoundation.common.block.ItemBlockVariantBase;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
 
 /**
  * Created by ICannt on 20/12/16.

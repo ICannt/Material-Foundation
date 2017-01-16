@@ -1,11 +1,5 @@
 package org.icannt.materialfoundation.common.block.blocks;
 
-import java.util.List;
-import java.util.Map;
-
-import org.icannt.materialfoundation.common.block.BlockVariantBase;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalPaintedType;
-
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
@@ -25,13 +19,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.icannt.materialfoundation.common.block.BlockVariantBase;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalPaintedType;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ICannt on 25/12/16.
  */
 public class BlockMetalPaintedPlateChecker extends BlockVariantBase {
 
-    private static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
+    public static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
 
     public BlockMetalPaintedPlateChecker() {
         super(Material.IRON, MapColor.IRON, "metal_painted_plate_checker");
