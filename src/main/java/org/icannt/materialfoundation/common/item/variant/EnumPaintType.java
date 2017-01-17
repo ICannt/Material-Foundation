@@ -1,6 +1,5 @@
 package org.icannt.materialfoundation.common.item.variant;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;

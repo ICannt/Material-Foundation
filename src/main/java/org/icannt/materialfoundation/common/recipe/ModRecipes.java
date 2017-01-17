@@ -116,7 +116,7 @@ public class ModRecipes {
 
         // Painted Metal Checker Plate - Crafting Bench Shapeless
         for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
-            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_CHECKER, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_CHECKER, 1, OreDictionary.WILDCARD_VALUE), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
+            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_CHECKER, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_CHECKER, 1, EnumMetalType.IRON.ordinal()), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
         }
 
         // Metal Scale Checker Plate - Crafting Bench
@@ -132,7 +132,7 @@ public class ModRecipes {
 
         // Painted Metal Scale Checker Plate - Crafting Bench Shapeless
         for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
-            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_SCALE, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_SCALE, 1, OreDictionary.WILDCARD_VALUE), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
+            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_SCALE, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_SCALE, 1, EnumMetalType.IRON.ordinal()), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
         }
 
         // Metal Studded Wall Plate - Crafting Bench Shaped
@@ -148,7 +148,7 @@ public class ModRecipes {
 
         // Painted Studded Wall Plate - Crafting Bench Shapeless
         for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
-            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_WALL_STUDDED, 1, OreDictionary.WILDCARD_VALUE), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
+            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_WALL_STUDDED, 1, EnumMetalType.IRON.ordinal()), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
         }
 
         // Metal Grill - Crafting Bench Shaped
