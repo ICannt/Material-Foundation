@@ -251,7 +251,7 @@ public class ModRecipes {
             ));
         }
                 
-        // Composite Concrete - Crafting Bench
+        // Composite Concrete - Crafting Bench Shaped
         resultBlock = ModBlocks.COMPOSITE_CONCRETE;
         for (EnumCompositeType variant : EnumCompositeType.values()) {
             line1 = "SQS";

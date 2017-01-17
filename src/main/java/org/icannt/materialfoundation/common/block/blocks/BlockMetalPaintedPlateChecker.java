@@ -30,7 +30,7 @@ import java.util.Map;
  */
 public class BlockMetalPaintedPlateChecker extends BlockVariantBase {
 
-    public static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
+    private static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
 
     public BlockMetalPaintedPlateChecker() {
         super(Material.IRON, MapColor.IRON, "metal_painted_plate_checker");
