@@ -26,7 +26,7 @@ srcCompat = JavaVersion.VERSION_1_8
 targetCompat = JavaVersion.VERSION_1_8
 
 minecraft {
-    version = "1.10.2-12.18.2.2171"
+    version = "1.10.2-12.18.3.2215"
     runDir = "run"
     mappings = "snapshot_20161111"
 }
