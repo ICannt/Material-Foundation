@@ -5,6 +5,12 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.ISubtypeRegistry;
 import mezz.jei.api.ingredients.IModIngredientRegistration;
+import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
+import net.minecraft.inventory.ContainerWorkbench;
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.integration.jei.recipe.paint.base.ShapelessPaintTinRecipeHandler;
+import org.icannt.materialfoundation.common.integration.jei.recipe.paint.shaped.ShapedPaintRecipeHandler;
+import org.icannt.materialfoundation.common.integration.jei.recipe.paint.shapeless.ShapelessPaintRecipeHandler;
 
 /**
  * Created by Liam on 17/1/17.
@@ -15,6 +21,11 @@ public class JEIPlugin implements IModPlugin {
     @Override
     public void registerItemSubtypes(ISubtypeRegistry subtypeRegistry) {
 
+        // Read "colour" NBT on Paint Tins for recipes
+        ISubtypeRegistry.ISubtypeInterpreter interpreter = stack -> {
+                return stack.getTagCompound() != null && stack.getTagCompound().hasKey("colour") ? stack.getTagCompound().getString("colour") : null;
+        };
+        subtypeRegistry.registerNbtInterpreter(ModItems.TIN_METAL_PAINT, interpreter);
     }
 
     @Override
@@ -24,7 +35,14 @@ public class JEIPlugin implements IModPlugin {
 
     @Override
     public void register(IModRegistry registry) {
+        // Shapeless Paint Recipe
+        registry.addRecipeHandlers(new ShapelessPaintRecipeHandler());
 
+        // Shaped Paint Recipe
+        registry.addRecipeHandlers(new ShapedPaintRecipeHandler(registry.getJeiHelpers()));
+
+        // Base Paint Tin Recipe
+        registry.addRecipeHandlers(new ShapelessPaintTinRecipeHandler(registry.getJeiHelpers()));
     }
 
     @Override

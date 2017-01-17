@@ -1,6 +1,8 @@
 package org.icannt.materialfoundation.common.recipe.paint;
 
+import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
@@ -11,6 +13,7 @@ import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,6 +21,7 @@ import java.util.List;
  */
 public class ShapedPaintRecipe implements IRecipe {
 
+    private ArrayList<Object> input = new ArrayList<>();
     private ItemStack output;
     private EnumPaintType paint;
     private Object[] recipe;
@@ -26,6 +30,20 @@ public class ShapedPaintRecipe implements IRecipe {
         this.output = output;
         this.paint = paint;
         this.recipe = recipe;
+
+        for (Object in : recipe) {
+            if (in instanceof ItemStack) {
+                this.input.add(((ItemStack) in).copy());
+            } else if (in instanceof String) {
+                this.input.add(OreDictionary.getOres((String) in));
+            } else if (in instanceof Block) {
+                this.input.add(new ItemStack((Block) in));
+            } else if (in instanceof Item) {
+                this.input.add(new ItemStack((Item) in));
+            } else if (in == null) {
+                this.input.add(null);
+            }
+        }
     }
 
     @Override
@@ -80,11 +98,19 @@ public class ShapedPaintRecipe implements IRecipe {
     @Nullable
     @Override
     public ItemStack getRecipeOutput() {
-        return output;
+        return output.copy();
     }
 
     @Override
     public ItemStack[] getRemainingItems(InventoryCrafting inv) {
         return ForgeHooks.defaultRecipeGetRemainingItems(inv);
+    }
+
+    public ArrayList<Object> getInput() {
+        return this.input;
+    }
+
+    public EnumPaintType getPaint() {
+        return this.paint;
     }
 }

@@ -1,7 +1,9 @@
 package org.icannt.materialfoundation.common.recipe.paint;
 
 import com.google.common.collect.ImmutableList;
+import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
@@ -12,6 +14,7 @@ import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,14 +23,27 @@ import java.util.List;
  */
 public class ShapelessPaintRecipe implements IRecipe {
 
-    private ItemStack output;
+    private ArrayList<Object> input = new ArrayList<>();
+    private ItemStack output = null;
     private EnumPaintType paint;
     private ImmutableList<Object> recipe;
 
     public ShapelessPaintRecipe(ItemStack output, EnumPaintType paint, Object[] recipe) {
-        this.output = output;
+        this.output = output.copy();
         this.paint = paint;
         this.recipe = ImmutableList.copyOf(recipe);
+
+        for (Object in : recipe) {
+            if (in instanceof ItemStack) {
+                this.input.add(((ItemStack) in).copy());
+            } else if (in instanceof String) {
+                this.input.add(OreDictionary.getOres((String) in));
+            } else if (in instanceof Block) {
+                this.input.add(new ItemStack((Block) in));
+            } else if (in instanceof Item) {
+                this.input.add(new ItemStack((Item) in));
+            }
+        }
     }
 
     @Override
@@ -93,5 +109,17 @@ public class ShapelessPaintRecipe implements IRecipe {
     @Override
     public ItemStack[] getRemainingItems(InventoryCrafting inv) {
         return ForgeHooks.defaultRecipeGetRemainingItems(inv);
+    }
+
+    public List<Object> getInputs() {
+        return this.input;
+    }
+
+    public EnumPaintType getPaint() {
+        return this.paint;
+    }
+
+    public ItemStack getResult() {
+        return this.output;
     }
 }

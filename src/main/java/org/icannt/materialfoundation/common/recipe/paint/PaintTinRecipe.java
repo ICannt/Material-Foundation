@@ -24,10 +24,31 @@ import java.util.stream.Stream;
  */
 public class PaintTinRecipe implements IRecipe {
 
+    // Used for JEI Integration
+    private ArrayList<Object> input = new ArrayList<>();
+
+    // Used for JEI Integration
+    private ItemStack output;
+
     private EnumPaintType paint;
 
     public PaintTinRecipe(EnumPaintType paint) {
         this.paint = paint;
+        this.input.add(ItemMetalTinPaint.create(EnumPaintType.EMPTY));
+        this.input.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
+        this.input.add(new ItemStack(Items.WATER_BUCKET));
+        ArrayList<ItemStack> catalysts = new ArrayList<>(
+
+        );
+        Stream.of(paint.getRecipeCatalyst()).forEach(catalyst -> {
+            if (catalyst instanceof String) {
+                catalysts.addAll(OreDictionary.getOres((String) catalyst));
+            } else if (catalyst instanceof ItemStack) {
+                catalysts.add((ItemStack) catalyst);
+            }
+        });
+        this.input.add(catalysts);
+        this.output = ItemMetalTinPaint.create(paint);
     }
 
     @SuppressWarnings("unchecked")
@@ -130,5 +151,17 @@ public class PaintTinRecipe implements IRecipe {
     @Override
     public ItemStack[] getRemainingItems(InventoryCrafting inv) {
         return ForgeHooks.defaultRecipeGetRemainingItems(inv);
+    }
+
+    public ArrayList<Object> getInput() {
+        return this.input;
+    }
+
+    public EnumPaintType getPaint() {
+        return this.paint;
+    }
+
+    public ItemStack getOutput() {
+        return this.output;
     }
 }
