@@ -44,9 +44,9 @@ public class ModRecipes {
          * Recipe Registration *
          ***********************/
 
-        RecipeSorter.register("materialfoundation:paint_tin", PaintTinRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapeless");
-        RecipeSorter.register("materialfoundation:shapeless_painted", ShapelessPaintRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapeless");
-        RecipeSorter.register("materialfoundation:shaped_painted", ShapedPaintRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped");
+        RecipeSorter.register("materialfoundation:paint_tin", PaintTinRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapeless after:minecraft:shapeless");
+        RecipeSorter.register("materialfoundation:shapeless_painted", ShapelessPaintRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapeless after:minecraft:shapeless");
+        RecipeSorter.register("materialfoundation:shaped_painted", ShapedPaintRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped after:minecraft:shaped");
 
         /****************
          * Item Recipes *
@@ -64,7 +64,7 @@ public class ModRecipes {
         ));
 
         // Paint Tin Empty - Crafting Bench
-        GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
+        GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY, true),
                 "C",
                 "I",
                 "I",
@@ -173,19 +173,19 @@ public class ModRecipes {
                             new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal()), ItemMetalTinPaint.create(EnumPaintType.BLUE, true)}));
                     break;
         		case "slime":
-        		    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 1, variant.ordinal()), EnumPaintType.SLIME, new Object[] {
+        		    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), EnumPaintType.SLIME, new Object[] {
         		            new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.SLIME, true),
                             null, null, null,
                             null, null, null}));
         			break;
         		case "dark":
-                    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 1, variant.ordinal()), EnumPaintType.BLACK, new Object[] {
+                    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), EnumPaintType.BLACK, new Object[] {
                             new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.BLACK, true),
                             null, null, null,
                             null, null, null}));
                     break;
         		case "light":
-                    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 1, variant.ordinal()), EnumPaintType.WHITE, new Object[] {
+                    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), EnumPaintType.WHITE, new Object[] {
                             new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.WHITE, true),
                             null, null, null,
                             null, null, null}));
@@ -209,7 +209,7 @@ public class ModRecipes {
 		            ));
 		            break;
         		case "fluxed":
-        		    GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), EnumPaintType.FLUXED, new Object[] {new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal()), ItemMetalTinPaint.create(EnumPaintType.FLUXED)}));
+        		    GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), EnumPaintType.FLUXED, new Object[] {new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal()), ItemMetalTinPaint.create(EnumPaintType.FLUXED, true)}));
         		    break;
         	}
         }

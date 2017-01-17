@@ -1,7 +1,6 @@
 package org.icannt.materialfoundation.common.integration.jei.recipe.paint.shapeless;
 
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
@@ -16,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by Liam on 17/1/17.
+ * Created by ICannt on 17/1/17.
  */
 public class ShapelessPaintRecipeWrapper implements ICraftingRecipeWrapper {
 

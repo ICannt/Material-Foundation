@@ -35,6 +35,11 @@ public class ItemMetalTinPaint extends Item {
     }
 
     @Override
+    public boolean getHasSubtypes() {
+        return true;
+    }
+
+    @Override
     public String getUnlocalizedName(ItemStack stack) {
         return super.getUnlocalizedName() + "." + ItemMetalTinPaint.getVariant(stack).getName();
     }
@@ -66,7 +71,7 @@ public class ItemMetalTinPaint extends Item {
             container.attemptDamageItem(1, itemRand);
             return container;
         } else {
-            return ItemMetalTinPaint.create(EnumPaintType.EMPTY);
+            return ItemMetalTinPaint.create(EnumPaintType.EMPTY, true);
         }
     }
 
@@ -118,6 +123,7 @@ public class ItemMetalTinPaint extends Item {
     /**
      * Helper method for creating an ItemStack with the appropriate variant NBT tags
      * @param paint EnumPaintType The EnumPaintType variant to create
+     * @param wildcard Boolean A flag whether to set the stack's damage to OreDictionary.WILDCARD_VALUE
      * @return ItemStack of variant
      */
     public static ItemStack create(EnumPaintType paint, boolean wildcard) {

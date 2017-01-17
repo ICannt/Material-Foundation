@@ -2,7 +2,6 @@ package org.icannt.materialfoundation.common.integration.jei.recipe.paint.shaped
 
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.IRecipeWrapper;
 import mezz.jei.api.recipe.IStackHelper;
 import mezz.jei.api.recipe.wrapper.IShapedCraftingRecipeWrapper;
 import net.minecraft.client.Minecraft;
@@ -13,12 +12,11 @@ import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 import javax.annotation.Nullable;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by Liam on 17/1/17.
+ * Created by ICannt on 17/1/17.
  */
 public class ShapedPaintRecipeWrapper implements IShapedCraftingRecipeWrapper {
 

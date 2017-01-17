@@ -7,7 +7,7 @@ import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
 import org.icannt.materialfoundation.common.recipe.paint.PaintTinRecipe;
 
 /**
- * Created by Liam on 17/1/17.
+ * Created by ICannt on 17/1/17.
  */
 public class ShapelessPaintTinRecipeHandler implements IRecipeHandler<PaintTinRecipe> {
 
