@@ -71,7 +71,7 @@ public class ItemMetalTinPaint extends Item {
             container.attemptDamageItem(1, itemRand);
             return container;
         } else {
-            return ItemMetalTinPaint.create(EnumPaintType.EMPTY, true);
+            return ItemMetalTinPaint.create(EnumPaintType.EMPTY);
         }
     }
 
