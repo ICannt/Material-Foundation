@@ -64,7 +64,7 @@ public class ModRecipes {
         ));
 
         // Paint Tin Empty - Crafting Bench
-        GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY, true),
+        GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
                 "C",
                 "I",
                 "I",
