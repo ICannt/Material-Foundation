@@ -40,6 +40,7 @@ public class ModRecipes {
         ItemStack crateIngredient = null;
         ItemStack grillIngredient = null;
 
+        
         /***********************
          * Recipe Registration *
          ***********************/
@@ -48,6 +49,7 @@ public class ModRecipes {
         RecipeSorter.register("materialfoundation:shapeless_painted", ShapelessPaintRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapeless after:minecraft:shapeless");
         RecipeSorter.register("materialfoundation:shaped_painted", ShapedPaintRecipe.class, RecipeSorter.Category.SHAPED, "after:forge:shaped after:minecraft:shaped");
 
+        
         /****************
          * Item Recipes *
          ****************/
@@ -55,21 +57,21 @@ public class ModRecipes {
         // Fabricator - Crafting Bench
         resultItem = ModItems.TOOL_FABRICATOR;
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultItem),
-                "ISI",
-                " S ",
-                " C ",
-                'I', "ingotIron",
-                'S', "stickWood",
-                'C', Blocks.CARPET
+        	"ISI",
+        	" S ",
+        	" C ",
+        	'I', "ingotIron",
+        	'S', "stickWood",
+        	'C', Blocks.CARPET
         ));
 
         // Paint Tin Empty - Crafting Bench
         GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
-                "C",
-                "I",
-                "I",
-                'C', crafter,
-                'I', "ingotIron"
+        	"C",
+        	"I",
+        	"I",
+        	'C', crafter,
+        	'I', "ingotIron"
         ));
 
 
@@ -77,7 +79,6 @@ public class ModRecipes {
         for (EnumPaintType colour : EnumPaintType.values()) {
             if (colour == EnumPaintType.EMPTY)
                 continue;
-
             GameRegistry.addRecipe(new PaintTinRecipe(colour));
         }
 
@@ -85,10 +86,9 @@ public class ModRecipes {
         for (EnumGenericType variant : EnumGenericType.values()) {
             if (variant == EnumGenericType.MINERAL_LIME_BURNT)
                 continue;
-
             GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 1, variant.ordinal()),
-                    variant.getCraftWith(),
-                    "dustBurntLime"
+            	variant.getCraftWith(),
+            	"dustBurntLime"
             ));
         }
         
@@ -107,48 +107,57 @@ public class ModRecipes {
         resultBlock = ModBlocks.METAL_PLATE_CHECKER;
         for (EnumMetalType variant : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
-                    "XXY",
-                    "XX ",
-                    'X', "ingot" + WordUtils.capitalize(variant.getName()),
-                    'Y', crafter
+            	"XXY",
+            	"XX ",
+            	'X', "ingot" + WordUtils.capitalize(variant.getName()),
+            	'Y', crafter
             ));
         }
 
         // Painted Metal Checker Plate - Crafting Bench Shapeless
         for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
-            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_CHECKER, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_CHECKER, 1, EnumMetalType.IRON.ordinal()), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
+            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_CHECKER, 1, type.ordinal()), type.getPaintColour(), new Object[] {
+            	new ItemStack(ModBlocks.METAL_PLATE_CHECKER, 1, EnumMetalType.IRON.ordinal()),
+            	ItemMetalTinPaint.create(type.getPaintColour(), true)
+            }));
         }
 
         // Metal Scale Checker Plate - Crafting Bench
         resultBlock = ModBlocks.METAL_PLATE_WALL_STUDDED;
         for (EnumMetalType variant : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
-                    "XX ",
-                    "XXY",
-                    'X', "ingot" + WordUtils.capitalize(variant.getName()),
-                    'Y', crafter
+            	"XX ",
+            	"XXY",
+            	'X', "ingot" + WordUtils.capitalize(variant.getName()),
+            	'Y', crafter
             ));
         }
 
         // Painted Metal Scale Checker Plate - Crafting Bench Shapeless
         for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
-            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_SCALE, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_SCALE, 1, EnumMetalType.IRON.ordinal()), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
+            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_SCALE, 1, type.ordinal()), type.getPaintColour(), new Object[] {
+            	new ItemStack(ModBlocks.METAL_PLATE_SCALE, 1, EnumMetalType.IRON.ordinal()),
+            	ItemMetalTinPaint.create(type.getPaintColour(), true)
+            }));
         }
 
         // Metal Studded Wall Plate - Crafting Bench Shaped
         resultBlock = ModBlocks.METAL_PLATE_SCALE;
         for (EnumMetalType variant : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
-                    "YXX",
-                    " XX",
-                    'X', "ingot" + WordUtils.capitalize(variant.getName()),
-                    'Y', crafter
+                "YXX",
+                " XX",
+                'X', "ingot" + WordUtils.capitalize(variant.getName()),
+                'Y', crafter
             ));
         }
 
         // Painted Studded Wall Plate - Crafting Bench Shapeless
         for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
-            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED, 1, type.ordinal()), type.getPaintColour(), new Object[] {new ItemStack(ModBlocks.METAL_PLATE_WALL_STUDDED, 1, EnumMetalType.IRON.ordinal()), ItemMetalTinPaint.create(type.getPaintColour(), true)}));
+            GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED, 1, type.ordinal()), type.getPaintColour(), new Object[] {
+            	new ItemStack(ModBlocks.METAL_PLATE_WALL_STUDDED, 1, EnumMetalType.IRON.ordinal()),
+            	ItemMetalTinPaint.create(type.getPaintColour(), true)
+            }));
         }
 
         // Metal Grill - Crafting Bench Shaped
@@ -159,36 +168,43 @@ public class ModRecipes {
         		case "gold":
         		case "iron":
 		            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, variant.ordinal()),
-		                    "YX",
-		                    'X', "ingot" + WordUtils.capitalize(variantName),
-		                    'Y', crafter
+		            	"YX",
+		            	'X', "ingot" + WordUtils.capitalize(variantName),
+		            	'Y', crafter
 		            ));
 		            break;
         		case "blaze":
                     GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 1, variant.ordinal()), EnumPaintType.BLAZE, new Object[] {
-                            new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal()), ItemMetalTinPaint.create(EnumPaintType.BLAZE, true)}));
+                    	new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal()),
+                    	ItemMetalTinPaint.create(EnumPaintType.BLAZE, true)
+                    }));
         		    break;
         		case "lapis":
                     GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 1, variant.ordinal()), EnumPaintType.BLUE, new Object[] {
-                            new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal()), ItemMetalTinPaint.create(EnumPaintType.BLUE, true)}));
+                    	new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal()),
+                    	ItemMetalTinPaint.create(EnumPaintType.BLUE, true)
+                    }));
                     break;
         		case "slime":
         		    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), EnumPaintType.SLIME, new Object[] {
-        		            new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.SLIME, true),
-                            null, null, null,
-                            null, null, null}));
+        		    	new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.SLIME, true),
+        		    	null, null, null,
+        		    	null, null, null
+                    }));
         			break;
         		case "dark":
                     GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), EnumPaintType.BLACK, new Object[] {
-                            new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.BLACK, true),
-                            null, null, null,
-                            null, null, null}));
+                    	new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.BLACK, true),
+                    	null, null, null,
+                    	null, null, null
+                    }));
                     break;
         		case "light":
                     GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), EnumPaintType.WHITE, new Object[] {
-                            new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.WHITE, true),
-                            null, null, null,
-                            null, null, null}));
+                    	new ItemStack(ModItems.TOOL_FABRICATOR), "ingotIron", ItemMetalTinPaint.create(EnumPaintType.WHITE, true),
+                    	null, null, null,
+                    	null, null, null
+                    }));
                     break;
         	}
         }
@@ -209,7 +225,10 @@ public class ModRecipes {
 		            ));
 		            break;
         		case "fluxed":
-        		    GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), EnumPaintType.FLUXED, new Object[] {new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal()), ItemMetalTinPaint.create(EnumPaintType.FLUXED, true)}));
+        		    GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), EnumPaintType.FLUXED, new Object[] {
+        		    	new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal()),
+    		    		ItemMetalTinPaint.create(EnumPaintType.FLUXED, true)
+    		    		}));
         		    break;
         	}
         }
@@ -268,15 +287,15 @@ public class ModRecipes {
                     break;
             }
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, variant.ordinal()),
-                    line1,
-                    "BWB",
-                    "GCG",
-                    'Q', specialItem,
-                    'W', Items.WATER_BUCKET,
-                    'S', "sand",
-                    'G', "gravel",
-                    'C', Items.CLAY_BALL,
-                    'B', "dustBurntLime"
+            	line1,
+            	"BWB",
+                "GCG",
+                'Q', specialItem,
+                'W', Items.WATER_BUCKET,
+                'S', "sand",
+                'G', "gravel",
+                'C', Items.CLAY_BALL,
+                'B', "dustBurntLime"
             ));
         }
     }
