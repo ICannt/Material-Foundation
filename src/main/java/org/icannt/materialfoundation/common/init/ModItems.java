@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import org.icannt.materialfoundation.common.item.ItemGeneric;
 import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaintEmpty;
 import org.icannt.materialfoundation.common.item.ItemToolFabricator;
 import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
 
@@ -15,15 +16,16 @@ import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
 public class ModItems {
 
     public static final ItemToolFabricator TOOL_FABRICATOR = new ItemToolFabricator();
-
     public static final ItemGeneric GENERIC = new ItemGeneric();
-
     public static final ItemMetalTinPaint TIN_METAL_PAINT = new ItemMetalTinPaint();
+    public static final ItemMetalTinPaintEmpty METAL_TIN_PAINT_EMPTY = new ItemMetalTinPaintEmpty();
+    
 
     public static void init() {
         GameRegistry.register(TOOL_FABRICATOR);
         GameRegistry.register(GENERIC);
         GameRegistry.register(TIN_METAL_PAINT);
+        GameRegistry.register(METAL_TIN_PAINT_EMPTY);
 
         // Register the generic items with the Ore Dictionary
         for (EnumGenericType variant : EnumGenericType.values()) {

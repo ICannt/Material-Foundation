@@ -38,7 +38,9 @@ public class ShapelessPaintTinRecipeWrapper implements ICraftingRecipeWrapper {
         for (List<ItemStack> inner : input) {
             for (int i = 0; i < inner.size(); i++) {
                 if (inner.get(i).getItem() == ModItems.TIN_METAL_PAINT)
-                    inner.set(i, ItemMetalTinPaint.create(EnumPaintType.EMPTY));
+                    //inner.set(i, ItemMetalTinPaint.create(EnumPaintType.EMPTY));
+                	inner.set(i, new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY)); // Check for safety
+                	System.out.println("Crashing here?");
             }
         }
 

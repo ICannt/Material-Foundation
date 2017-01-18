@@ -1,8 +1,8 @@
-# Creative Tab
+### Creative Tab ###
 itemGroup.materialfoundation=Material Foundation
 
 
-# Items
+### Items ###
 
 # Tools
 item.materialfoundation:tool_fabricator.name=MF Fabricator
@@ -13,8 +13,10 @@ item.materialfoundation:generic.mineral_lime_burnt.name=Burnt Lime
 item.materialfoundation:generic.mineral_lime_fluxed.name=Fluxed Lime
 item.materialfoundation:generic.mineral_lime_slime.name=Slime Lime
 
-# Metal Paint Tins
-item.materialfoundation:metal_tin_paint.empty.name=Paint Tin
+# Empty Paint Tin
+item.materialfoundation:metal_tin_paint_empty.name=Paint Tin
+
+# Basic Colour Paint Tins
 item.materialfoundation:metal_tin_paint.black.name=Black Paint Tin
 item.materialfoundation:metal_tin_paint.red.name=Red Paint Tin
 item.materialfoundation:metal_tin_paint.green.name=Green Paint Tin
@@ -32,13 +34,13 @@ item.materialfoundation:metal_tin_paint.magenta.name=Magenta Paint Tin
 item.materialfoundation:metal_tin_paint.orange.name=Orange Paint Tin
 item.materialfoundation:metal_tin_paint.white.name=White Paint Tin
 
-# Metal Special Paint Tins
+# Special Colour Paint Tins
 item.materialfoundation:metal_tin_paint.blaze.name=Blaze Paint Tin
 item.materialfoundation:metal_tin_paint.fluxed.name=Fluxed Paint Tin
 item.materialfoundation:metal_tin_paint.slime.name=Slime Paint Tin
 
 
-# Blocks
+### Blocks ###
 
 # Concrete
 tile.materialfoundation:composite_concrete.base.name=Base Concrete

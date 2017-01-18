@@ -40,7 +40,7 @@ public class ModRecipes {
         String paintName = "";
         ItemStack crateIngredient = null;
         ItemStack grillIngredient = null;
-        EnumPaintType paint = EnumPaintType.WHITE;
+        EnumPaintType paint = null;
 
         
         /***********************
@@ -68,7 +68,8 @@ public class ModRecipes {
         ));
 
         // Paint Tin Empty - Crafting Bench
-        GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
+        // GameRegistry.addRecipe(new ShapedOreRecipe(ItemMetalTinPaint.create(EnumPaintType.EMPTY),
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY),
         	"C",
         	"I",
         	"I",
@@ -79,8 +80,8 @@ public class ModRecipes {
 
         // Paint Tins - Crafting Bench Shapeless
         for (EnumPaintType colour : EnumPaintType.values()) {
-            if (colour == EnumPaintType.EMPTY)
-                continue;
+//            if (colour == EnumPaintType.EMPTY)
+//                continue;
             GameRegistry.addRecipe(new PaintTinRecipe(colour));
         }
 

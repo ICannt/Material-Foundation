@@ -41,6 +41,9 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
+    	System.out.println(ItemMetalTinPaint.getVariant(stack).getName());
+    	System.out.println(super.getUnlocalizedName() + "." + ItemMetalTinPaint.getVariant(stack).getName());
+    	// Causing an NPE, seems to be coming from the JEI code
         return super.getUnlocalizedName() + "." + ItemMetalTinPaint.getVariant(stack).getName();
     }
 
@@ -60,7 +63,8 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public boolean hasContainerItem(ItemStack stack) {
-        return ItemMetalTinPaint.getVariant(stack) != EnumPaintType.EMPTY;
+        //return ItemMetalTinPaint.getVariant(stack) != EnumPaintType.EMPTY;
+    	return ItemMetalTinPaint.getVariant(stack) != null; // Check for safety
     }
 
     @Override
@@ -71,7 +75,8 @@ public class ItemMetalTinPaint extends Item {
             container.attemptDamageItem(1, itemRand);
             return container;
         } else {
-            return ItemMetalTinPaint.create(EnumPaintType.EMPTY);
+            //return ItemMetalTinPaint.create(EnumPaintType.EMPTY);
+        	return new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY); // Check for safety
         }
     }
 
@@ -105,11 +110,12 @@ public class ItemMetalTinPaint extends Item {
      * @return EnumPaintType Enum containing the variant
      */
     public static EnumPaintType getVariant(ItemStack stack) {
-        if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
-            return EnumPaintType.EMPTY;
-
-        EnumPaintType result = EnumPaintType.EMPTY;
-
+//        if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
+//            return EnumPaintType.EMPTY;
+//
+//        EnumPaintType result = EnumPaintType.EMPTY;
+    	EnumPaintType result = null; // Check for safety
+    	
         if (stack.getTagCompound() != null) {
             if (stack.getTagCompound().hasKey("colour")) {
                 String colour = stack.getTagCompound().getString("colour");

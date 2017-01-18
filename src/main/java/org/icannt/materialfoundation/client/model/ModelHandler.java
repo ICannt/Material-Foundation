@@ -36,6 +36,9 @@ public class ModelHandler {
 
         ModelBakery.registerItemVariants(ModItems.TIN_METAL_PAINT, modelsPaint.toArray(new ModelResourceLocation[modelsPaint.size()]));
         ModelLoader.setCustomMeshDefinition(ModItems.TIN_METAL_PAINT, new ItemPaintTinMesher());
+        
+        // Empty Paint Tin
+        registerItemModel(ModItems.METAL_TIN_PAINT_EMPTY);
     }
 
     public static void registerItemModel(Item item) {
