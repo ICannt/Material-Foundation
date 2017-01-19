@@ -37,9 +37,8 @@ public class PaintTinRecipe implements IRecipe {
         this.input.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY));
         this.input.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
         this.input.add(new ItemStack(Items.WATER_BUCKET));
-        ArrayList<ItemStack> catalysts = new ArrayList<>(
 
-        );
+        ArrayList<ItemStack> catalysts = new ArrayList<>();
         Stream.of(paint.getRecipeCatalyst()).forEach(catalyst -> {
             if (catalyst instanceof String) {
                 catalysts.addAll(OreDictionary.getOres((String) catalyst));
@@ -83,8 +82,7 @@ public class PaintTinRecipe implements IRecipe {
 
             for (Object input : inputs) {
                 if (input instanceof ItemStack) {
-                    // if (((ItemStack) input).getItem() == ModItems.TIN_METAL_PAINT && ItemMetalTinPaint.isColour(stack, EnumPaintType.EMPTY)) {
-                	if (((ItemStack) input).getItem() == ModItems.METAL_TIN_PAINT_EMPTY) { // Check for safety
+                	if (((ItemStack) input).getItem() == ModItems.METAL_TIN_PAINT_EMPTY) {
                         inputs.remove(input);
                         break;
                     } else {
@@ -112,6 +110,8 @@ public class PaintTinRecipe implements IRecipe {
     @Nullable
     @Override
     public ItemStack getCraftingResult(InventoryCrafting inv) {
+        boolean found = false;
+
         for (int slot = 0; slot < inv.getSizeInventory(); slot++) {
             ItemStack stack = inv.getStackInSlot(slot);
 
@@ -125,22 +125,28 @@ public class PaintTinRecipe implements IRecipe {
                         List<ItemStack> ores = OreDictionary.getOres((String) catalyst);
                         for (ItemStack ore : ores) {
                             if (OreDictionary.itemMatches(ore, stack, false)) {
-                                return ItemMetalTinPaint.create(paint);
+                                found = true;
+                                break;
                             }
                         }
-                    } else if(catalyst instanceof ItemStack) {
-                        if (OreDictionary.itemMatches((ItemStack) catalyst, stack, false))
-                            return ItemMetalTinPaint.create(paint);
+                    } else if (catalyst instanceof ItemStack) {
+                        if (OreDictionary.itemMatches((ItemStack) catalyst, stack, false)) {
+                            found = true;
+                            break;
+                        }
                     }
                 }
         }
+
+        if (found)
+            return ItemMetalTinPaint.create(this.paint);
 
         return null;
     }
 
     @Override
     public int getRecipeSize() {
-        return 10;
+        return this.input.size();
     }
 
     @Nullable

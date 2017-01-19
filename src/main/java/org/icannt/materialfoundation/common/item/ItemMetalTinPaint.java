@@ -28,6 +28,7 @@ public class ItemMetalTinPaint extends Item {
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
         setMaxStackSize(1);
         setMaxDamage(80);
+        setNoRepair();
     }
 
     @Override

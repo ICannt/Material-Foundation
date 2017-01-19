@@ -15,16 +15,12 @@ public class ItemMetalTinPaintEmpty extends Item {
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
         setMaxStackSize(16);
+        setNoRepair();
     }
 
     @Override
     public boolean hasContainerItem(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public ItemStack getContainerItem(ItemStack stack) {
-        return new ItemStack(this);
+        return false;
     }
 
     @Override

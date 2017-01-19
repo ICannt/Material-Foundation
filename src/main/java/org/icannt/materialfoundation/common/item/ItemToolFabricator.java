@@ -15,6 +15,7 @@ public class ItemToolFabricator extends Item {
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
         setMaxStackSize(1);
+        setNoRepair();
     }
 
     @Override

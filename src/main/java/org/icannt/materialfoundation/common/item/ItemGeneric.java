@@ -21,6 +21,7 @@ public class ItemGeneric extends Item {
         setUnlocalizedName(getRegistryName().toString());
         setCreativeTab(TabMaterialFoundation.MATERIAL_FOUNDATION_TAB);
         setHasSubtypes(true);
+        setNoRepair();
     }
     
     @Override
