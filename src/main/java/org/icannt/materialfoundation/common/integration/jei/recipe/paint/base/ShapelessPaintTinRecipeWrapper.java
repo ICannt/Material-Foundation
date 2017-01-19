@@ -35,15 +35,6 @@ public class ShapelessPaintTinRecipeWrapper implements ICraftingRecipeWrapper {
         IStackHelper stackHelper = helper.getStackHelper();
 
         List<List<ItemStack>> input = stackHelper.expandRecipeItemStackInputs(this.inputs);
-        for (List<ItemStack> inner : input) {
-            for (int i = 0; i < inner.size(); i++) {
-                if (inner.get(i).getItem() == ModItems.TIN_METAL_PAINT)
-                    //inner.set(i, ItemMetalTinPaint.create(EnumPaintType.EMPTY));
-                	inner.set(i, new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY)); // Check for safety
-                	System.out.println("Crashing here?");
-            }
-        }
-
 
         ingredients.setInputLists(ItemStack.class, input);
         ingredients.setOutputs(ItemStack.class, this.getOutputs());

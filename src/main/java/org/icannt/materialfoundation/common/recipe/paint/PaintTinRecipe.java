@@ -34,8 +34,7 @@ public class PaintTinRecipe implements IRecipe {
 
     public PaintTinRecipe(EnumPaintType paint) {
         this.paint = paint;
-        //this.input.add(ItemMetalTinPaint.create(EnumPaintType.EMPTY));
-        this.input.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY)); // Check for safety
+        this.input.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY));
         this.input.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
         this.input.add(new ItemStack(Items.WATER_BUCKET));
         ArrayList<ItemStack> catalysts = new ArrayList<>(
@@ -57,7 +56,6 @@ public class PaintTinRecipe implements IRecipe {
     public boolean matches(InventoryCrafting inv, World worldIn) {
 
         List<Object> inputs = new LinkedList<>();
-        //inputs.add(ItemMetalTinPaint.create(EnumPaintType.EMPTY));
         inputs.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY)); // Check for safety
         inputs.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
         inputs.add(new ItemStack(Items.WATER_BUCKET));

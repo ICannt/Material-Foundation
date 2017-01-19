@@ -9,7 +9,6 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumPaintType implements IStringSerializable {
 
-	//EMPTY ("empty", "Empty", new Object[]{}), // Check for safety
 	BLACK ("black", "Black", new Object[]{"dyeBlack"}),
 	SILVER ("silver", "Silver", new Object[]{"dyeLightGray"}),
 	GREEN ("green", "Green", new Object[]{"dyeGreen"}),

@@ -15,6 +15,7 @@ import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by ICannt on 26/12/16.
@@ -41,16 +42,18 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-    	System.out.println(ItemMetalTinPaint.getVariant(stack).getName());
-    	System.out.println(super.getUnlocalizedName() + "." + ItemMetalTinPaint.getVariant(stack).getName());
-    	// Causing an NPE, seems to be coming from the JEI code
-        return super.getUnlocalizedName() + "." + ItemMetalTinPaint.getVariant(stack).getName();
+        if (ItemMetalTinPaint.getVariant(stack).isPresent()) {
+            return super.getUnlocalizedName() + "." + ItemMetalTinPaint.getVariant(stack).get().getName();
+        } else {
+            return super.getUnlocalizedName();
+        }
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add(ItemMetalTinPaint.getVariant(stack).getLocalisedName());
+        if (ItemMetalTinPaint.getVariant(stack).isPresent())
+            tooltip.add(ItemMetalTinPaint.getVariant(stack).get().getLocalisedName());
     }
 
     @SideOnly(Side.CLIENT)
@@ -63,8 +66,7 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public boolean hasContainerItem(ItemStack stack) {
-        //return ItemMetalTinPaint.getVariant(stack) != EnumPaintType.EMPTY;
-    	return ItemMetalTinPaint.getVariant(stack) != null; // Check for safety
+    	return ItemMetalTinPaint.getVariant(stack).isPresent();
     }
 
     @Override
@@ -75,8 +77,7 @@ public class ItemMetalTinPaint extends Item {
             container.attemptDamageItem(1, itemRand);
             return container;
         } else {
-            //return ItemMetalTinPaint.create(EnumPaintType.EMPTY);
-        	return new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY); // Check for safety
+        	return new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY);
         }
     }
 
@@ -92,10 +93,10 @@ public class ItemMetalTinPaint extends Item {
      * @return Boolean true if matches, or false
      */
     public static boolean isColour(ItemStack stack, EnumPaintType paint) {
-        if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
+        if (stack.getItem() != ModItems.TIN_METAL_PAINT)
             return false;
 
-        if (stack.getTagCompound() != null) {
+        if (stack.hasTagCompound()) {
             if (stack.getTagCompound().hasKey("colour")) {
                 return stack.getTagCompound().getString("colour").equalsIgnoreCase(paint.getName());
             }
@@ -107,23 +108,19 @@ public class ItemMetalTinPaint extends Item {
     /**
      * Helper method for passing an ItemStack of ItemMetalTinPaint and returning the appropriate variant based on NBT
      * @param stack ItemStack of ItemMetalTinPaint
-     * @return EnumPaintType Enum containing the variant
+     * @return Optional<EnumPaintType> Enum containing the variant
      */
-    public static EnumPaintType getVariant(ItemStack stack) {
-//        if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
-//            return EnumPaintType.EMPTY;
-//
-//        EnumPaintType result = EnumPaintType.EMPTY;
-    	EnumPaintType result = null; // Check for safety
+    public static Optional<EnumPaintType> getVariant(ItemStack stack) {
+    	EnumPaintType result = null;
     	
-        if (stack.getTagCompound() != null) {
+        if (stack.hasTagCompound()) {
             if (stack.getTagCompound().hasKey("colour")) {
                 String colour = stack.getTagCompound().getString("colour");
-                result = Arrays.stream(EnumPaintType.values()).filter(type -> type.getName().equals(colour)).findFirst().get();
+                result = Arrays.stream(EnumPaintType.values()).filter(type -> type.getName().equalsIgnoreCase(colour)).findFirst().get();
             }
         }
 
-        return result;
+        return Optional.ofNullable(result);
     }
 
     /**

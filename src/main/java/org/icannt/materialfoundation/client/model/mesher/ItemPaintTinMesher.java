@@ -16,7 +16,7 @@ public class ItemPaintTinMesher implements ItemMeshDefinition {
         if (!stack.getItem().equals(ModItems.TIN_METAL_PAINT))
             return null;
 
-        String variant = ItemMetalTinPaint.getVariant(stack).getName();
+        String variant = ItemMetalTinPaint.getVariant(stack).isPresent() ? ItemMetalTinPaint.getVariant(stack).get().getName() : "empty";
 
         return new ModelResourceLocation(stack.getItem().getRegistryName() + "_" + variant, "inventory");
     }
