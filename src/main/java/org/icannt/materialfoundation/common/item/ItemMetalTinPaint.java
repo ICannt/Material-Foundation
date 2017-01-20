@@ -67,7 +67,7 @@ public class ItemMetalTinPaint extends Item {
 
     @Override
     public boolean hasContainerItem(ItemStack stack) {
-    	return ItemMetalTinPaint.getVariant(stack).isPresent();
+    	return true;
     }
 
     @Override
@@ -117,7 +117,10 @@ public class ItemMetalTinPaint extends Item {
         if (stack.hasTagCompound()) {
             if (stack.getTagCompound().hasKey("colour")) {
                 String colour = stack.getTagCompound().getString("colour");
-                result = Arrays.stream(EnumPaintType.values()).filter(type -> type.getName().equalsIgnoreCase(colour)).findFirst().get();
+                for (EnumPaintType paint : EnumPaintType.values()) {
+                    if (paint.getName().equalsIgnoreCase(colour))
+                        result = paint;
+                }
             }
         }
 
