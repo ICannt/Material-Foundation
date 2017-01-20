@@ -62,7 +62,7 @@ public class ShapelessPaintRecipe implements IRecipe {
 
             for (Object input : inputs) {
                 if (input instanceof ItemStack) {
-                    if (((ItemStack) input).getItem() == ModItems.TIN_METAL_PAINT) {
+                    if (((ItemStack) input).getItem() == ModItems.METAL_TIN_PAINT) {
                         if (ItemMetalTinPaint.isColour(stack, paint)) {
                             inputs.remove(input);
                             break;

@@ -31,11 +31,11 @@ public class ModelHandler {
         // Paint Tin
         List<ModelResourceLocation> modelsPaint = new ArrayList<>();
         for (EnumPaintType variant : EnumPaintType.values()) {
-            modelsPaint.add(new ModelResourceLocation(ModItems.TIN_METAL_PAINT.getRegistryName() + "_" + variant.getName(), "inventory"));
+            modelsPaint.add(new ModelResourceLocation(ModItems.METAL_TIN_PAINT.getRegistryName() + "_" + variant.getName(), "inventory"));
         }
 
-        ModelBakery.registerItemVariants(ModItems.TIN_METAL_PAINT, modelsPaint.toArray(new ModelResourceLocation[modelsPaint.size()]));
-        ModelLoader.setCustomMeshDefinition(ModItems.TIN_METAL_PAINT, new ItemPaintTinMesher());
+        ModelBakery.registerItemVariants(ModItems.METAL_TIN_PAINT, modelsPaint.toArray(new ModelResourceLocation[modelsPaint.size()]));
+        ModelLoader.setCustomMeshDefinition(ModItems.METAL_TIN_PAINT, new ItemPaintTinMesher());
         
         // Empty Paint Tin
         registerItemModel(ModItems.METAL_TIN_PAINT_EMPTY);

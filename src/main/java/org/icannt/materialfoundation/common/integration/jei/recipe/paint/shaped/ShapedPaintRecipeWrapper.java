@@ -40,7 +40,7 @@ public class ShapedPaintRecipeWrapper implements IShapedCraftingRecipeWrapper {
         List<List<ItemStack>> input = stackHelper.expandRecipeItemStackInputs(this.inputs);
         for (List<ItemStack> inner : input) {
             for (int i = 0; i < inner.size(); i++) {
-                if (inner.get(i).getItem() == ModItems.TIN_METAL_PAINT)
+                if (inner.get(i).getItem() == ModItems.METAL_TIN_PAINT)
                     inner.set(i, ItemMetalTinPaint.create(this.paint));
             }
         }

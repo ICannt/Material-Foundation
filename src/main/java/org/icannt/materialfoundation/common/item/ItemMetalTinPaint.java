@@ -94,7 +94,7 @@ public class ItemMetalTinPaint extends Item {
      * @return Boolean true if matches, or false
      */
     public static boolean isColour(ItemStack stack, EnumPaintType paint) {
-        if (stack.getItem() != ModItems.TIN_METAL_PAINT)
+        if (stack.getItem() != ModItems.METAL_TIN_PAINT)
             return false;
 
         if (stack.hasTagCompound()) {
@@ -131,7 +131,7 @@ public class ItemMetalTinPaint extends Item {
      * @return ItemStack of variant
      */
     public static ItemStack create(EnumPaintType paint, boolean wildcard) {
-        ItemStack out = new ItemStack(ModItems.TIN_METAL_PAINT);
+        ItemStack out = new ItemStack(ModItems.METAL_TIN_PAINT);
         NBTTagCompound tag = new NBTTagCompound();
 
         tag.setString("colour", paint.getName());

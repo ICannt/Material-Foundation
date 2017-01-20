@@ -23,7 +23,7 @@ public class JEIPlugin implements IModPlugin {
         ISubtypeRegistry.ISubtypeInterpreter interpreter = stack -> {
                 return stack.getTagCompound() != null && stack.getTagCompound().hasKey("colour") ? stack.getTagCompound().getString("colour") : null;
         };
-        subtypeRegistry.registerNbtInterpreter(ModItems.TIN_METAL_PAINT, interpreter);
+        subtypeRegistry.registerNbtInterpreter(ModItems.METAL_TIN_PAINT, interpreter);
     }
 
     @Override

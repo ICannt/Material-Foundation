@@ -57,7 +57,7 @@ public class ShapedPaintRecipe implements IRecipe {
             }
 
             if (stack != null && expected instanceof ItemStack) {
-                if (((ItemStack) expected).getItem() == ModItems.TIN_METAL_PAINT) {
+                if (((ItemStack) expected).getItem() == ModItems.METAL_TIN_PAINT) {
                     if (!ItemMetalTinPaint.isColour(stack, paint))
                         return false;
                 } else {

@@ -17,14 +17,14 @@ public class ModItems {
 
     public static final ItemToolFabricator TOOL_FABRICATOR = new ItemToolFabricator();
     public static final ItemGeneric GENERIC = new ItemGeneric();
-    public static final ItemMetalTinPaint TIN_METAL_PAINT = new ItemMetalTinPaint();
+    public static final ItemMetalTinPaint METAL_TIN_PAINT = new ItemMetalTinPaint();
     public static final ItemMetalTinPaintEmpty METAL_TIN_PAINT_EMPTY = new ItemMetalTinPaintEmpty();
     
 
     public static void init() {
         GameRegistry.register(TOOL_FABRICATOR);
         GameRegistry.register(GENERIC);
-        GameRegistry.register(TIN_METAL_PAINT);
+        GameRegistry.register(METAL_TIN_PAINT);
         GameRegistry.register(METAL_TIN_PAINT_EMPTY);
 
         // Register the generic items with the Ore Dictionary

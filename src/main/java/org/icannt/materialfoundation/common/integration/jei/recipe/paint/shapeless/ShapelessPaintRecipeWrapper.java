@@ -33,7 +33,7 @@ public class ShapelessPaintRecipeWrapper implements ICraftingRecipeWrapper {
     public void getIngredients(IIngredients ingredients) {
         List<ItemStack> input = new ArrayList<>(this.getInputs());
         for (int i = 0; i < input.size(); i++) {
-            if (input.get(i).getItem() == ModItems.TIN_METAL_PAINT)
+            if (input.get(i).getItem() == ModItems.METAL_TIN_PAINT)
                 input.set(i, ItemMetalTinPaint.create(this.paint));
         }
 
