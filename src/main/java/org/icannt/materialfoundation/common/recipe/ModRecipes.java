@@ -86,7 +86,7 @@ public class ModRecipes {
         for (EnumGenericType variant : EnumGenericType.values()) {
             if (variant == EnumGenericType.MINERAL_LIME_BURNT)
                 continue;
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 1, variant.ordinal()),
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 2, variant.ordinal()),
             	variant.getCraftWith(),
             	"dustBurntLime"
             ));
@@ -233,7 +233,7 @@ public class ModRecipes {
 		            break;
         		case "fluxed":
         			// Shaped the same as the non paint recipes except with the paint tin on the left of the iron ingot
-                    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), paint, new Object[] {
+                    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), EnumPaintType.FLUXED, new Object[] {
                        	null, crafter, null,
                        	ItemMetalTinPaint.create(EnumPaintType.FLUXED, true), "ingotIron", null,
                        	null, null, null
@@ -275,7 +275,7 @@ public class ModRecipes {
         			variantName = variantName.replace("dark_steel_", "round_offset_").toUpperCase(Locale.ENGLISH);
         			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.valueOf(variantName).ordinal());
         	}
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 2, variant.ordinal()),
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, variant.ordinal()),
                 "YYY",
                 " X ",
                 "YYY",
