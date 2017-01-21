@@ -284,7 +284,7 @@ public class ModRecipes {
             ));
         }
                 
-        // Composite Concrete - Crafting Bench Shaped
+        // Composite Concrete - Crafting Bench Shaped and Shapeless
         resultBlock = ModBlocks.COMPOSITE_CONCRETE;
         for (EnumCompositeType variant : EnumCompositeType.values()) {
             line1 = "SQS";
@@ -310,6 +310,13 @@ public class ModRecipes {
                 'G', "gravel",
                 'C', Items.CLAY_BALL,
                 'B', "dustBurntLime"
+            ));            
+            if (variant == EnumCompositeType.BASE)
+                continue;
+            // Shapeless with concrete and already made square grill
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.COMPOSITE_CONCRETE, 1, variant.ordinal()),
+            	new ItemStack(ModBlocks.COMPOSITE_CONCRETE, 1, EnumCompositeType.BASE.ordinal()),
+            	specialItem
             ));
         }
     }
