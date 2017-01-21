@@ -25,9 +25,9 @@ public enum EnumPaintType implements IStringSerializable {
 	ORANGE ("orange", "Orange", new Object[]{"dyeOrange"}),
 	PINK ("pink", "Pink", new Object[]{"dyePink"}),
 	WHITE ("white", "White", new Object[]{"dyeWhite"}),
-	SLIME("slime", "Slime", new Object[]{new ItemStack(Items.SLIME_BALL)}),
-	BLAZE("blaze", "Blaze", new Object[]{new ItemStack(Items.BLAZE_POWDER)}),
-	FLUXED("fluxed", "Fluxed", new Object[]{new ItemStack(Items.REDSTONE)});
+	SLIME("slime", "Slime", new Object[]{"slimeball"}),
+	BLAZE("blaze", "Blaze", new Object[]{"dustBlaze"}),
+	FLUXED("fluxed", "Fluxed", new Object[]{"dustRedstone"});
 
     private String name;
     private String localised;

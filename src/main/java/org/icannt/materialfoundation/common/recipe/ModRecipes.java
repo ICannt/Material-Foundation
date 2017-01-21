@@ -56,7 +56,7 @@ public class ModRecipes {
          * Item Recipes *
          ****************/
         
-        // Fabricator - Crafting Bench
+        // Fabricator - Crafting Bench Shaped
         resultItem = ModItems.TOOL_FABRICATOR;
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultItem),
         	"ISI",
@@ -67,7 +67,7 @@ public class ModRecipes {
         	'C', Blocks.CARPET
         ));
 
-        // Paint Tin Empty - Crafting Bench
+        // Paint Tin Empty - Crafting Bench Shaped
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY),
         	"C",
         	"I",
@@ -77,10 +77,8 @@ public class ModRecipes {
         ));
 
 
-        // Paint Tins - Crafting Bench Shapeless
+        // Paint Tins (currently hardcoded in the PaintTinRecipe class) - Crafting Bench Shapeless
         for (EnumPaintType colour : EnumPaintType.values()) {
-//            if (colour == EnumPaintType.EMPTY)
-//                continue;
             GameRegistry.addRecipe(new PaintTinRecipe(colour));
         }
 
@@ -124,7 +122,7 @@ public class ModRecipes {
             }));
         }
 
-        // Metal Scale Checker Plate - Crafting Bench
+        // Metal Scale Checker Plate - Crafting Bench Shaped
         resultBlock = ModBlocks.METAL_PLATE_WALL_STUDDED;
         for (EnumMetalType variant : EnumMetalType.values()) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 8, variant.ordinal()),
@@ -169,8 +167,6 @@ public class ModRecipes {
         	variantName = variant.getName().replace("round_offset_", "").replace("square_angled_", "");
         	// Paint names already match some of the materials, only replace ones that don't match then capitalise to get the right Enum
         	paintName = variantName.replace("lapis", "blue").replace("dark", "black").replace("light", "white").toUpperCase(Locale.ENGLISH);
-        	// The paint recipe grill will always be iron in this section
-        	grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal());
         	switch (variantName) {
         		case "gold":
         		case "iron":
@@ -184,9 +180,7 @@ public class ModRecipes {
         		case "blaze":
         		case "lapis":
         		case "slime":
-        		case "dark":
-        		case "light":
-        			// Only set the actual paint, when we are not dealing with metals
+        			// Only set the actual paint when we are not dealing with metals
         			paint = EnumPaintType.valueOf(paintName);
         			// Paint goes above ingot, crafter to the left
                     GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), paint, new Object[] {
@@ -194,29 +188,34 @@ public class ModRecipes {
                     	crafter, "ingotIron", null,
                        	null, null, null
                     }));
-                    // Manually mirror recipe
+                    break;
+        		case "dark":
+        		case "light":
+        			// Only set the actual paint when we are not dealing with metals
+        			paint = EnumPaintType.valueOf(paintName);
+        			// Paint goes above ingot, crafter to the left
                     GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 12, variant.ordinal()), paint, new Object[] {
-                       	ItemMetalTinPaint.create(paint, true), null, null,
-                    	"ingotIron", crafter, null,
+                    	crafter, ItemMetalTinPaint.create(paint, true), null,
+                    	null, "ingotIron", null,
                        	null, null, null
                     }));
                     break;
         	}
-        	// Shapeless with already made iron grills
+        	// Shapeless with already made iron grills, uses much more paint!
         	switch (variantName) {
 	    		case "blaze":
 	    		case "lapis":
 	    		case "slime":
         			paint = EnumPaintType.valueOf(paintName);
                     GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 1, variant.ordinal()), paint, new Object[] {
-                    	grillIngredient,
+                    	new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal()),
                     	ItemMetalTinPaint.create(paint, true)
                     }));
                     break;
         	}
         }
         
-        // Metal Crate Plate - Crafting Bench Shaped
+        // Metal Crate Plate - Crafting Bench Shaped and Shapeless
         resultBlock = ModBlocks.METAL_PLATE_CRATE;
         for (EnumMetalPlateCrateType variant : EnumMetalPlateCrateType.values()) {
         	variantName = variant.getName();
@@ -224,18 +223,26 @@ public class ModRecipes {
         		case "dark_steel":
         		case "iron":
         		case "tin":
+        			// Pure metal crate plates, paint not needed
 		            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 2, variant.ordinal()),
-		                    "Y",
-		                    "X",
-		                    'X', "ingot" +  WordUtils.capitalize(variantName.replace("_", " ")).replace(" ", ""),
-		                    'Y', crafter
+	                    "Y",
+	                    "X",
+	                    'X', "ingot" +  WordUtils.capitalize(variantName.replace("_", " ")).replace(" ", ""),
+	                    'Y', crafter
 		            ));
 		            break;
         		case "fluxed":
-        		    GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), EnumPaintType.FLUXED, new Object[] {
-        		    	new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal()),
-    		    		ItemMetalTinPaint.create(EnumPaintType.FLUXED, true)
-    		    		}));
+        			// Shaped the same as the non paint recipes except with the paint tin on the left of the iron ingot
+                    GameRegistry.addRecipe(new ShapedPaintRecipe(new ItemStack(resultBlock, 2, variant.ordinal()), paint, new Object[] {
+                       	null, crafter, null,
+                       	ItemMetalTinPaint.create(EnumPaintType.FLUXED, true), "ingotIron", null,
+                       	null, null, null
+                    }));
+                    // Shapeless with already made iron crate plate, uses much more paint!
+        		    GameRegistry.addRecipe(new ShapelessPaintRecipe(new ItemStack(resultBlock, 1, variant.ordinal()), EnumPaintType.FLUXED, new Object[] {
+    		    		new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal()),
+		    			ItemMetalTinPaint.create(EnumPaintType.FLUXED, true)
+		    		}));
         		    break;
         	}
         }
@@ -269,11 +276,11 @@ public class ModRecipes {
         			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.valueOf(variantName).ordinal());
         	}
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 2, variant.ordinal()),
-                    "YYY",
-                    " X ",
-                    "YYY",
-                    'X', crateIngredient,
-                    'Y', grillIngredient
+                "YYY",
+                " X ",
+                "YYY",
+                'X', crateIngredient,
+                'Y', grillIngredient
             ));
         }
                 

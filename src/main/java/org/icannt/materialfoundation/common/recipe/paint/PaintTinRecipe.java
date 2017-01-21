@@ -55,7 +55,7 @@ public class PaintTinRecipe implements IRecipe {
     public boolean matches(InventoryCrafting inv, World worldIn) {
 
         List<Object> inputs = new LinkedList<>();
-        inputs.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY)); // Check for safety
+        inputs.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY));
         inputs.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
         inputs.add(new ItemStack(Items.WATER_BUCKET));
 
