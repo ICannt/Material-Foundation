@@ -1,10 +1,11 @@
 package org.icannt.materialfoundation.client.model.mesher;
 
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
+
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.ItemStack;
-import org.icannt.materialfoundation.common.init.ModItems;
-import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 
 /**
  * Created by ICannt on 31/12/16.

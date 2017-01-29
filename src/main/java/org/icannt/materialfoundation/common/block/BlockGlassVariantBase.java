@@ -1,11 +1,12 @@
 package org.icannt.materialfoundation.common.block;
 
-import net.minecraft.block.BlockGlass;
-import net.minecraft.block.material.Material;
+import java.util.Random;
+
 import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
 
-import java.util.Random;
+import net.minecraft.block.BlockGlass;
+import net.minecraft.block.material.Material;
 
 /**
  * Created by ICannt on 14/1/17.

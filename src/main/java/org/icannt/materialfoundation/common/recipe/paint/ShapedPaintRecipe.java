@@ -1,5 +1,14 @@
 package org.icannt.materialfoundation.common.recipe.paint;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nullable;
+
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
+
 import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
@@ -8,13 +17,6 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.oredict.OreDictionary;
-import org.icannt.materialfoundation.common.init.ModItems;
-import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
-import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by ICannt on 16/1/17.

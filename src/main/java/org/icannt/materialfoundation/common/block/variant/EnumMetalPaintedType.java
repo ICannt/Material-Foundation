@@ -1,8 +1,9 @@
 package org.icannt.materialfoundation.common.block.variant;
 
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
+
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
-import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
 
 /**
  * Created by ICannt on 25/12/16.

@@ -1,0 +1,80 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "all": "materialfoundation:blocks/metal_crate_with_grill_dark_steel_gold"
+    },
+    "model": "cube_all"
+  },
+  "variants": {
+    "inventory": [{}],
+    "normal": [{}],
+    "metal": {
+       "dark_steel_gold": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_dark_steel_gold"
+          }
+        },
+       "dark_steel_iron": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_dark_steel_iron"
+          }
+        },
+       "fluxed_blaze": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_fluxed_blaze"
+          }
+        },
+       "fluxed_iron": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_fluxed_iron"
+          }
+        },
+       "fluxed_lapis": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_fluxed_lapis"
+          }
+        },
+       "fluxed_slime": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_fluxed_slime"
+          }
+        },
+       "iron_blaze": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_iron_blaze"
+          }
+        },
+       "iron_lapis": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_iron_lapis"
+          }
+        },
+       "iron_slime": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_iron_slime"
+          }
+        },
+       "tin_blaze": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_tin_blaze"
+          }
+        },
+       "tin_gold": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_tin_gold"
+          }
+        },
+       "tin_lapis": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_tin_lapis"
+          }
+        },
+       "tin_slime": {
+          "textures": {
+            "all": "materialfoundation:blocks/metal_crate_with_grill_tin_slime"
+          }
+        }
+      }
+    }
+  }

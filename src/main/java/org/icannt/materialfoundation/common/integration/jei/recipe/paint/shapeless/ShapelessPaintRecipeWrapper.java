@@ -1,18 +1,20 @@
 package org.icannt.materialfoundation.common.integration.jei.recipe.paint.shapeless;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import javax.annotation.Nullable;
+
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
+
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
-import org.icannt.materialfoundation.common.init.ModItems;
-import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
-import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by ICannt on 17/1/17.

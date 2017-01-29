@@ -1,9 +1,10 @@
 package org.icannt.materialfoundation.common.integration.jei.recipe.paint.shapeless;
 
+import org.icannt.materialfoundation.common.recipe.paint.ShapelessPaintRecipe;
+
 import mezz.jei.api.recipe.IRecipeHandler;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
-import org.icannt.materialfoundation.common.recipe.paint.ShapelessPaintRecipe;
 
 /**
  * Created by ICannt on 17/1/17.

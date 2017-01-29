@@ -1,14 +1,15 @@
 package org.icannt.materialfoundation.common.init;
 
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
 import org.icannt.materialfoundation.common.item.ItemGeneric;
 import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
 import org.icannt.materialfoundation.common.item.ItemMetalTinPaintEmpty;
 import org.icannt.materialfoundation.common.item.ItemToolFabricator;
 import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
+
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 /**
  * Created by ICannt on 29/12/16.

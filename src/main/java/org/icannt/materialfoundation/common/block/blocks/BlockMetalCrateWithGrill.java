@@ -1,5 +1,11 @@
 package org.icannt.materialfoundation.common.block.blocks;
 
+import java.util.List;
+import java.util.Map;
+
+import org.icannt.materialfoundation.common.block.BlockVariantBase;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
+
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
@@ -19,11 +25,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.icannt.materialfoundation.common.block.BlockVariantBase;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by ICannt on 30/12/16.

@@ -1,5 +1,24 @@
 package org.icannt.materialfoundation.common.recipe;
 
+import java.util.Locale;
+
+import org.apache.commons.lang3.text.WordUtils;
+import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiExtraType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalPaintedType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalPlateCrateType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
+import org.icannt.materialfoundation.common.init.ModBlocks;
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
+import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
+import org.icannt.materialfoundation.common.recipe.paint.PaintTinRecipe;
+import org.icannt.materialfoundation.common.recipe.paint.ShapedPaintRecipe;
+import org.icannt.materialfoundation.common.recipe.paint.ShapelessPaintRecipe;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -10,18 +29,6 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.RecipeSorter;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import org.apache.commons.lang3.text.WordUtils;
-import org.icannt.materialfoundation.common.block.variant.*;
-import org.icannt.materialfoundation.common.init.ModBlocks;
-import org.icannt.materialfoundation.common.init.ModItems;
-import org.icannt.materialfoundation.common.item.ItemMetalTinPaint;
-import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
-import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
-import org.icannt.materialfoundation.common.recipe.paint.PaintTinRecipe;
-import org.icannt.materialfoundation.common.recipe.paint.ShapedPaintRecipe;
-import org.icannt.materialfoundation.common.recipe.paint.ShapelessPaintRecipe;
-
-import java.util.Locale;
 
 /**
  * Created by ICannt on 23/12/16.
@@ -247,34 +254,25 @@ public class ModRecipes {
         	}
         }
 
-        // Metal Crate with Grill - Crafting Bench Shaped
+        // Metal Crate With Grill - Crafting Bench Shaped
         resultBlock = ModBlocks.METAL_CRATE_WITH_GRILL;
         for (EnumMetalMultiType variant : EnumMetalMultiType.values()) {
-        	variantName = variant.getName();
-        	switch (variantName) {
-        		case "iron":
-        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal());
-        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal());
-        			break;
-        		case "iron_gold":
-        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.IRON.ordinal());
-        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_GOLD.ordinal());
-        			break;
-        		case "tin_iron":
-        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.TIN.ordinal());
-        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_IRON.ordinal());
-        			break;
-        		case "fluxed_gold":
-        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.FLUXED.ordinal());
-        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.ROUND_OFFSET_GOLD.ordinal());
-        			break;
-        		case "dark_steel_blaze":
-        		case "dark_steel_lapis":
-        		case "dark_steel_slime":
-        			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.DARK_STEEL.ordinal());
-        			variantName = variantName.replace("dark_steel_", "round_offset_").toUpperCase(Locale.ENGLISH);
-        			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.valueOf(variantName).ordinal());
-        	}
+			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.valueOf(variant.getPlateName()).ordinal());
+			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.valueOf(variant.getGrillName()).ordinal());
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, variant.ordinal()),
+                "YYY",
+                " X ",
+                "YYY",
+                'X', crateIngredient,
+                'Y', grillIngredient
+            ));
+        }
+        
+        // Metal Crate With Grill Extra - Crafting Bench Shaped
+        resultBlock = ModBlocks.METAL_CRATE_WITH_GRILL_EXTRA;
+        for (EnumMetalMultiExtraType variant : EnumMetalMultiExtraType.values()) {
+			crateIngredient = new ItemStack(ModBlocks.METAL_PLATE_CRATE, 1, EnumMetalPlateCrateType.valueOf(variant.getPlateName()).ordinal());
+			grillIngredient = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.valueOf(variant.getGrillName()).ordinal());
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 1, variant.ordinal()),
                 "YYY",
                 " X ",

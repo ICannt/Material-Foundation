@@ -1,5 +1,12 @@
 package org.icannt.materialfoundation.common.block.blocks;
 
+import java.util.List;
+
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
+import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
+import org.icannt.materialfoundation.common.init.ModBlocks;
+
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -19,12 +26,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
-import org.icannt.materialfoundation.common.creativetab.TabMaterialFoundation;
-import org.icannt.materialfoundation.common.init.ModBlocks;
-
-import java.util.List;
 
 /**
  * Created by ICannt on 04/01/17.

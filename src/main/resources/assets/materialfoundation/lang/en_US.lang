@@ -55,6 +55,20 @@ tile.materialfoundation:metal_crate_with_grill.dark_steel_blaze.name=Dark Steel 
 tile.materialfoundation:metal_crate_with_grill.dark_steel_lapis.name=Dark Steel Crate With Lapis Grill
 tile.materialfoundation:metal_crate_with_grill.dark_steel_slime.name=Dark Steel Crate With Slime Grill
 tile.materialfoundation:metal_crate_with_grill.fluxed_gold.name=Fluxed Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill_extra.dark_steel_gold.name=Dark Steel Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill_extra.dark_steel_iron.name=Dark Steel Crate With Iron Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_blaze.name=Fluxed Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_iron.name=Fluxed Crate With Iron Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_lapis.name=Fluxed Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_slime.name=Fluxed Crate With Slime Grill
+tile.materialfoundation:metal_crate_with_grill_extra.iron_blaze.name=Iron Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill_extra.iron_lapis.name=Iron Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill_extra.iron_slime.name=Iron Crate With Slime Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_blaze.name=Tin Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_gold.name=Tin Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_lapis.name=Tin Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_slime.name=Tin Crate With Slime Grill
+
 
 # Metal Grill
 tile.materialfoundation:metal_grill.round_offset_blaze.name=Blaze Offset Round Grill

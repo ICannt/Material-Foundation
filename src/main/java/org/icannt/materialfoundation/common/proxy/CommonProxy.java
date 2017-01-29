@@ -1,11 +1,12 @@
 package org.icannt.materialfoundation.common.proxy;
 
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.icannt.materialfoundation.common.init.ModBlocks;
 import org.icannt.materialfoundation.common.init.ModItems;
 import org.icannt.materialfoundation.common.recipe.ModRecipes;
+
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
  * Created by ICannt on 20/12/16.

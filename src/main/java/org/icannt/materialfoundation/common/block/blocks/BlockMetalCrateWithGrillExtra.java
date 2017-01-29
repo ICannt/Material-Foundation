@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.icannt.materialfoundation.common.block.BlockVariantBase;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalType;
+import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiExtraType;
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -27,14 +27,14 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by ICannt on 25/12/16.
+ * Created by ICannt on 29/01/17.
  */
-public class BlockMetalPlateWallStudded extends BlockVariantBase {
+public class BlockMetalCrateWithGrillExtra extends BlockVariantBase {
 
-    private static final PropertyEnum<EnumMetalType> VARIANT = PropertyEnum.create("metal", EnumMetalType.class);
+    private static final PropertyEnum<EnumMetalMultiExtraType> VARIANT = PropertyEnum.create("metal", EnumMetalMultiExtraType.class);
 
-    public BlockMetalPlateWallStudded() {
-        super(Material.IRON, MapColor.IRON, "metal_plate_wall_studded");
+    public BlockMetalCrateWithGrillExtra() {
+        super(Material.IRON, MapColor.IRON, "metal_crate_with_grill_extra");
     }
 
     @Override
@@ -44,7 +44,7 @@ public class BlockMetalPlateWallStudded extends BlockVariantBase {
 
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list) {
-        for (EnumMetalType type : EnumMetalType.values()) {
+        for (EnumMetalMultiExtraType type : EnumMetalMultiExtraType.values()) {
             list.add(new ItemStack(this, 1, type.ordinal()));
         }
     }
@@ -52,7 +52,7 @@ public class BlockMetalPlateWallStudded extends BlockVariantBase {
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumMetalType.values()[meta]);
+        return getDefaultState().withProperty(VARIANT, EnumMetalMultiExtraType.values()[meta]);
     }
 
     @Override
@@ -86,10 +86,10 @@ public class BlockMetalPlateWallStudded extends BlockVariantBase {
         ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
             int meta = stack.getMetadata();
 
-            EnumMetalType metal = EnumMetalType.values()[meta];
+            EnumMetalMultiExtraType metal = EnumMetalMultiExtraType.values()[meta];
             BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPlateWallStudded.this);
-            return variants.get(BlockMetalPlateWallStudded.this.getDefaultState().withProperty(VARIANT, metal));
+            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalCrateWithGrillExtra.this);
+            return variants.get(BlockMetalCrateWithGrillExtra.this.getDefaultState().withProperty(VARIANT, metal));
         });
     }
 }

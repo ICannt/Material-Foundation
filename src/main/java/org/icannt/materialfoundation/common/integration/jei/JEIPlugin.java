@@ -1,14 +1,15 @@
 package org.icannt.materialfoundation.common.integration.jei;
 
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.integration.jei.recipe.paint.base.ShapelessPaintTinRecipeHandler;
+import org.icannt.materialfoundation.common.integration.jei.recipe.paint.shaped.ShapedPaintRecipeHandler;
+import org.icannt.materialfoundation.common.integration.jei.recipe.paint.shapeless.ShapelessPaintRecipeHandler;
+
 import mezz.jei.api.IJeiRuntime;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.ISubtypeRegistry;
 import mezz.jei.api.ingredients.IModIngredientRegistration;
-import org.icannt.materialfoundation.common.init.ModItems;
-import org.icannt.materialfoundation.common.integration.jei.recipe.paint.base.ShapelessPaintTinRecipeHandler;
-import org.icannt.materialfoundation.common.integration.jei.recipe.paint.shaped.ShapedPaintRecipeHandler;
-import org.icannt.materialfoundation.common.integration.jei.recipe.paint.shapeless.ShapelessPaintRecipeHandler;
 
 /**
  * Created by ICannt on 17/1/17.

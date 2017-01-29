@@ -1,13 +1,30 @@
 package org.icannt.materialfoundation.common.init;
 
+import java.lang.reflect.InvocationTargetException;
+
+import org.icannt.materialfoundation.common.MaterialFoundation;
+import org.icannt.materialfoundation.common.block.blocks.BlockCompositeConcrete;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrill;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrillExtra;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalGrill;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateChecker;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateScale;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateWallStudded;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateChecker;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateCrate;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateScale;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateWallStudded;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalGrill;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalMulti;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalMultiExtra;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPainted;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalPlateCrate;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import org.icannt.materialfoundation.common.MaterialFoundation;
-import org.icannt.materialfoundation.common.block.blocks.*;
-import org.icannt.materialfoundation.common.block.itemblock.*;
-
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * Created by ICannt on 29/12/16.
@@ -24,6 +41,7 @@ public class ModBlocks {
     public static final BlockMetalGrill METAL_GRILL = new BlockMetalGrill();
     public static final BlockMetalPlateCrate METAL_PLATE_CRATE = new BlockMetalPlateCrate();
     public static final BlockMetalCrateWithGrill METAL_CRATE_WITH_GRILL = new BlockMetalCrateWithGrill();
+    public static final BlockMetalCrateWithGrillExtra METAL_CRATE_WITH_GRILL_EXTRA = new BlockMetalCrateWithGrillExtra();
     
     public static void init() {
     	
@@ -38,6 +56,7 @@ public class ModBlocks {
         GameRegistry.register(METAL_GRILL);
         GameRegistry.register(METAL_PLATE_CRATE);
         GameRegistry.register(METAL_CRATE_WITH_GRILL);
+        GameRegistry.register(METAL_CRATE_WITH_GRILL_EXTRA);
 
         // ItemBlocks
         registerItemBlock(COMPOSITE_CONCRETE, ItemBlockComposite.class);
@@ -50,6 +69,7 @@ public class ModBlocks {
         registerItemBlock(METAL_GRILL, ItemBlockMetalGrill.class);
         registerItemBlock(METAL_PLATE_CRATE, ItemBlockMetalPlateCrate.class);
         registerItemBlock(METAL_CRATE_WITH_GRILL, ItemBlockMetalMulti.class);
+        registerItemBlock(METAL_CRATE_WITH_GRILL_EXTRA, ItemBlockMetalMultiExtra.class);
 
     }
 

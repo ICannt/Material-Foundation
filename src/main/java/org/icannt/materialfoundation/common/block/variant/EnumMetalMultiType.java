@@ -8,22 +8,26 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumMetalMultiType implements IStringSerializable {
 
-	IRON ("iron", 0, 5, 30, EnumRarity.COMMON),
-	IRON_GOLD ("iron_gold", 0, 5, 30, EnumRarity.COMMON),
-	TIN_IRON ("tin_iron", 0, 5, 30, EnumRarity.COMMON),
-	DARK_STEEL_BLAZE ("dark_steel_blaze", 0, 5, 30, EnumRarity.COMMON),
-	DARK_STEEL_LAPIS ("dark_steel_lapis", 0, 5, 30, EnumRarity.COMMON),
-	DARK_STEEL_SLIME ("dark_steel_slime", 0, 5, 30, EnumRarity.COMMON),
-	FLUXED_GOLD ("fluxed_gold", 0, 5, 30, EnumRarity.COMMON);
+	IRON ("iron", "IRON", "ROUND_OFFSET_IRON", 0, 5, 30, EnumRarity.COMMON),
+	IRON_GOLD ("iron_gold", "IRON", "ROUND_OFFSET_GOLD", 0, 5, 30, EnumRarity.COMMON),
+	TIN_IRON ("tin_iron", "TIN", "ROUND_OFFSET_IRON", 0, 5, 30, EnumRarity.COMMON),
+	DARK_STEEL_BLAZE ("dark_steel_blaze", "DARK_STEEL", "ROUND_OFFSET_BLAZE", 0, 5, 30, EnumRarity.COMMON),
+	DARK_STEEL_LAPIS ("dark_steel_lapis", "DARK_STEEL", "ROUND_OFFSET_LAPIS", 0, 5, 30, EnumRarity.COMMON),
+	DARK_STEEL_SLIME ("dark_steel_slime", "DARK_STEEL", "ROUND_OFFSET_SLIME", 0, 5, 30, EnumRarity.COMMON),
+	FLUXED_GOLD ("fluxed_gold", "FLUXED", "ROUND_OFFSET_GOLD", 0, 5, 30, EnumRarity.COMMON);
 
     private String name;
+    private String plateName;
+    private String grillName;
     private int light;
     private float hardness;
     private float resistance;
     private EnumRarity rarity;
 
-    EnumMetalMultiType(String name, int light, float hardness, float resistance, EnumRarity rarity) {
+    EnumMetalMultiType(String name, String plateName, String grillName, int light, float hardness, float resistance, EnumRarity rarity) {
         this.name = name;
+        this.plateName = plateName;
+        this.grillName = grillName;
         this.light = light;
         this.hardness = hardness;
         this.resistance = resistance;
@@ -35,6 +39,14 @@ public enum EnumMetalMultiType implements IStringSerializable {
         return name;
     }
 
+    public String getPlateName() {
+        return plateName;
+    }
+    
+    public String getGrillName() {
+        return grillName;
+    }
+    
     public int getLight() {
         return light;
     }

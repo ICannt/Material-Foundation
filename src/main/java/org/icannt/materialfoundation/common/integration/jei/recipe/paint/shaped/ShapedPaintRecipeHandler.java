@@ -1,10 +1,11 @@
 package org.icannt.materialfoundation.common.integration.jei.recipe.paint.shaped;
 
+import org.icannt.materialfoundation.common.recipe.paint.ShapedPaintRecipe;
+
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.recipe.IRecipeHandler;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
-import org.icannt.materialfoundation.common.recipe.paint.ShapedPaintRecipe;
 
 /**
  * Created by ICannt on 17/1/17.
