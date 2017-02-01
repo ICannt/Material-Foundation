@@ -21,6 +21,6 @@ Illustrator CC
 Filter Forge 4
 
 Most materials are highly modified Filter Forge presets.
-All source materials are 512x512 px and a HD texture pack can be made (just ask!)
+All source materials are 512x512 px and texture packs could be made from the source files: https://github.com/ICannt/Material-Foundation-Textures
 
 Was formerly an unreleased add on mod for Thermal Foundation.
