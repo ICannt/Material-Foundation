@@ -8,11 +8,11 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumMetalType implements IStringSerializable {
 
-	IRON ("iron", 0, 5, 30, EnumRarity.COMMON),
-	GOLD ("gold", 0, 5, 30, EnumRarity.COMMON),
-	COPPER ("copper", 0, 5, 30, EnumRarity.COMMON),
-	TIN ("tin", 0, 5, 30, EnumRarity.COMMON),
-	BRONZE ("bronze", 0, 5, 30, EnumRarity.COMMON);
+	IRON ("iron", 0, 2, 30, EnumRarity.COMMON),
+	GOLD ("gold", 0, 2, 30, EnumRarity.COMMON),
+	COPPER ("copper", 0, 2, 30, EnumRarity.COMMON),
+	TIN ("tin", 0, 2, 30, EnumRarity.COMMON),
+	BRONZE ("bronze", 0, 2, 30, EnumRarity.COMMON);
 
     private String name;
     private int light;

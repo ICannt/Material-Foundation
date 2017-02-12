@@ -8,13 +8,13 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumMetalMultiType implements IStringSerializable {
 
-	IRON ("iron", "IRON", "ROUND_OFFSET_IRON", 0, 5, 30, EnumRarity.COMMON),
-	IRON_GOLD ("iron_gold", "IRON", "ROUND_OFFSET_GOLD", 0, 5, 30, EnumRarity.COMMON),
-	TIN_IRON ("tin_iron", "TIN", "ROUND_OFFSET_IRON", 0, 5, 30, EnumRarity.COMMON),
-	DARK_STEEL_BLAZE ("dark_steel_blaze", "DARK_STEEL", "ROUND_OFFSET_BLAZE", 0, 5, 30, EnumRarity.COMMON),
-	DARK_STEEL_LAPIS ("dark_steel_lapis", "DARK_STEEL", "ROUND_OFFSET_LAPIS", 0, 5, 30, EnumRarity.COMMON),
-	DARK_STEEL_SLIME ("dark_steel_slime", "DARK_STEEL", "ROUND_OFFSET_SLIME", 0, 5, 30, EnumRarity.COMMON),
-	FLUXED_GOLD ("fluxed_gold", "FLUXED", "ROUND_OFFSET_GOLD", 0, 5, 30, EnumRarity.COMMON);
+	IRON ("iron", "IRON", "ROUND_OFFSET_IRON", 0, 2, 30, EnumRarity.COMMON),
+	IRON_GOLD ("iron_gold", "IRON", "ROUND_OFFSET_GOLD", 0, 2, 30, EnumRarity.COMMON),
+	TIN_IRON ("tin_iron", "TIN", "ROUND_OFFSET_IRON", 0, 2, 30, EnumRarity.COMMON),
+	DARK_STEEL_BLAZE ("dark_steel_blaze", "DARK_STEEL", "ROUND_OFFSET_BLAZE", 0, 2, 30, EnumRarity.COMMON),
+	DARK_STEEL_LAPIS ("dark_steel_lapis", "DARK_STEEL", "ROUND_OFFSET_LAPIS", 0, 2, 30, EnumRarity.COMMON),
+	DARK_STEEL_SLIME ("dark_steel_slime", "DARK_STEEL", "ROUND_OFFSET_SLIME", 0, 2, 30, EnumRarity.COMMON),
+	FLUXED_GOLD ("fluxed_gold", "FLUXED", "ROUND_OFFSET_GOLD", 0, 2, 30, EnumRarity.COMMON);
 
     private String name;
     private String plateName;

@@ -78,7 +78,7 @@ public class BlockMetalPlateScale extends BlockVariantBase {
 
     @Override
     public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
-        return world.getBlockState(pos).getValue(VARIANT).getResistance();
+        return world.getBlockState(pos).getValue(VARIANT).getResistance() / 5F;
     }
 
     @SideOnly(Side.CLIENT)
