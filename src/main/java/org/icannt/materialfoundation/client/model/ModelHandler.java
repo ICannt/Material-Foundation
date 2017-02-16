@@ -48,6 +48,8 @@ public class ModelHandler {
 
     public static void initBlockModels() {
         ModBlocks.COMPOSITE_CONCRETE.initClient();
+        ModBlocks.COMPOSITE_WALL_PLASTER.initClient();
+        ModBlocks.COMPOSITE_WALL_PLASTER_COMBO_01.initClient();
         ModBlocks.METAL_PLATE_CHECKER.initClient();
         ModBlocks.METAL_PAINTED_PLATE_CHECKER.initClient();
         ModBlocks.METAL_PLATE_SCALE.initClient();

@@ -4,6 +4,8 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.icannt.materialfoundation.common.MaterialFoundation;
 import org.icannt.materialfoundation.common.block.blocks.BlockCompositeConcrete;
+import org.icannt.materialfoundation.common.block.blocks.BlockCompositeWallPlaster;
+import org.icannt.materialfoundation.common.block.blocks.BlockCompositeWallPlasterCombo01;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrill;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrillExtra;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalGrill;
@@ -15,6 +17,8 @@ import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateCrate;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateScale;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPlateWallStudded;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockComposite;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockCompositeWallPlaster;
+import org.icannt.materialfoundation.common.block.itemblock.ItemBlockCompositeWallPlasterCombo01;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetal;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalGrill;
 import org.icannt.materialfoundation.common.block.itemblock.ItemBlockMetalMulti;
@@ -32,6 +36,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBlocks {
 
     public static final BlockCompositeConcrete COMPOSITE_CONCRETE = new BlockCompositeConcrete();
+    public static final BlockCompositeWallPlaster COMPOSITE_WALL_PLASTER = new BlockCompositeWallPlaster();
+    public static final BlockCompositeWallPlasterCombo01 COMPOSITE_WALL_PLASTER_COMBO_01 = new BlockCompositeWallPlasterCombo01();
     public static final BlockMetalPlateChecker METAL_PLATE_CHECKER = new BlockMetalPlateChecker();
     public static final BlockMetalPaintedPlateChecker METAL_PAINTED_PLATE_CHECKER = new BlockMetalPaintedPlateChecker();
     public static final BlockMetalPlateScale METAL_PLATE_SCALE = new BlockMetalPlateScale();
@@ -47,6 +53,8 @@ public class ModBlocks {
     	
         // Blocks
         GameRegistry.register(COMPOSITE_CONCRETE);
+        GameRegistry.register(COMPOSITE_WALL_PLASTER);
+        GameRegistry.register(COMPOSITE_WALL_PLASTER_COMBO_01);
         GameRegistry.register(METAL_PLATE_CHECKER);
         GameRegistry.register(METAL_PAINTED_PLATE_CHECKER);
         GameRegistry.register(METAL_PLATE_SCALE);
@@ -60,6 +68,8 @@ public class ModBlocks {
 
         // ItemBlocks
         registerItemBlock(COMPOSITE_CONCRETE, ItemBlockComposite.class);
+        registerItemBlock(COMPOSITE_WALL_PLASTER, ItemBlockCompositeWallPlaster.class);
+        registerItemBlock(COMPOSITE_WALL_PLASTER_COMBO_01, ItemBlockCompositeWallPlasterCombo01.class);
         registerItemBlock(METAL_PLATE_CHECKER, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_CHECKER, ItemBlockMetalPainted.class);
         registerItemBlock(METAL_PLATE_SCALE, ItemBlockMetal.class);

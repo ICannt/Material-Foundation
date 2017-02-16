@@ -1,0 +1,100 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01a",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01a",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+    },
+    "model": "materialfoundation:orientable_2_point"
+  },
+  "variants": {
+    "inventory": [{}],
+    "normal": [{}],
+    "composite": {
+        "wall_plaster_combo_normal_stairwell_01a": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01a",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01a",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        },
+       "wall_plaster_combo_normal_stairwell_01b": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01b",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01b",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        },
+       "wall_plaster_combo_normal_stairwell_01c": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01c",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01c",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        },
+       "wall_plaster_combo_normal_stairwell_01d": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01d",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01d",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        },
+       "wall_plaster_combo_flipped_stairwell_01a": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01a",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01a",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        },
+       "wall_plaster_combo_flipped_stairwell_01b": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01b",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01b",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        },
+       "wall_plaster_combo_flipped_stairwell_01c": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01c",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01c",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        },
+       "wall_plaster_combo_flipped_stairwell_01d": {
+          "textures": {
+            "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+            "front": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01d",
+            "back": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01d",
+            "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+            "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+          }
+        }
+    }
+  }
+}
