@@ -8,6 +8,8 @@ import org.icannt.materialfoundation.common.block.variant.EnumCompositeWallPlast
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -16,8 +18,10 @@ import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
@@ -32,6 +36,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockCompositeWallPlasterCombo01 extends BlockVariantBase {
 
     private static final PropertyEnum<EnumCompositeWallPlasterCombo01Type> VARIANT = PropertyEnum.create("composite", EnumCompositeWallPlasterCombo01Type.class);
+    public static final PropertyDirection PROPERTYFACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     public BlockCompositeWallPlasterCombo01() {
         super(Material.ROCK, MapColor.GRAY, "composite_wall_plaster_combo_01");
@@ -39,7 +44,7 @@ public class BlockCompositeWallPlasterCombo01 extends BlockVariantBase {
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, VARIANT);
+    	return new BlockStateContainer(this, new IProperty[] {PROPERTYFACING,VARIANT});
     }
 
     @Override
@@ -48,13 +53,28 @@ public class BlockCompositeWallPlasterCombo01 extends BlockVariantBase {
             list.add(new ItemStack(this, 1, type.ordinal()));
         }
     }
-    
+      
     @SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumCompositeWallPlasterCombo01Type.values()[meta]);
+    	EnumFacing facing = EnumFacing.getHorizontal(meta);
+    	System.out.println(facing);
+    	System.out.println(meta);
+        return getDefaultState().withProperty(VARIANT, EnumCompositeWallPlasterCombo01Type.values()[meta]).withProperty(PROPERTYFACING, facing);
     }
 
+    @Override
+    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    {
+      // find the quadrant the player is facing
+    	
+    	System.out.println(meta);
+      EnumFacing enumfacing = (placer == null) ? EnumFacing.NORTH : EnumFacing.fromAngle(placer.rotationYaw);
+      System.out.println(enumfacing);
+      
+      return this.getDefaultState();
+    }
+    
     @Override
     public int getMetaFromState(IBlockState state) {
         return state.getValue(VARIANT).ordinal();
