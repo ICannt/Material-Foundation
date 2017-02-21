@@ -37,7 +37,7 @@ public class ModBlocks {
 
     public static final BlockCompositeConcrete COMPOSITE_CONCRETE = new BlockCompositeConcrete();
     public static final BlockCompositeWallPlaster COMPOSITE_WALL_PLASTER = new BlockCompositeWallPlaster();
-    public static final BlockCompositeWallPlasterCombo01 COMPOSITE_WALL_PLASTER_COMBO_01 = new BlockCompositeWallPlasterCombo01();
+    // public static final BlockCompositeWallPlasterCombo01 COMPOSITE_WALL_PLASTER_COMBO_01 = new BlockCompositeWallPlasterCombo01(); // TODO: Implement stairwell blocks
     public static final BlockMetalPlateChecker METAL_PLATE_CHECKER = new BlockMetalPlateChecker();
     public static final BlockMetalPaintedPlateChecker METAL_PAINTED_PLATE_CHECKER = new BlockMetalPaintedPlateChecker();
     public static final BlockMetalPlateScale METAL_PLATE_SCALE = new BlockMetalPlateScale();
@@ -54,7 +54,7 @@ public class ModBlocks {
         // Blocks
         GameRegistry.register(COMPOSITE_CONCRETE);
         GameRegistry.register(COMPOSITE_WALL_PLASTER);
-        GameRegistry.register(COMPOSITE_WALL_PLASTER_COMBO_01);
+        // GameRegistry.register(COMPOSITE_WALL_PLASTER_COMBO_01); // TODO: Implement stairwell blocks
         GameRegistry.register(METAL_PLATE_CHECKER);
         GameRegistry.register(METAL_PAINTED_PLATE_CHECKER);
         GameRegistry.register(METAL_PLATE_SCALE);
@@ -69,7 +69,7 @@ public class ModBlocks {
         // ItemBlocks
         registerItemBlock(COMPOSITE_CONCRETE, ItemBlockComposite.class);
         registerItemBlock(COMPOSITE_WALL_PLASTER, ItemBlockCompositeWallPlaster.class);
-        registerItemBlock(COMPOSITE_WALL_PLASTER_COMBO_01, ItemBlockCompositeWallPlasterCombo01.class);
+        // registerItemBlock(COMPOSITE_WALL_PLASTER_COMBO_01, ItemBlockCompositeWallPlasterCombo01.class); // TODO: Implement stairwell blocks
         registerItemBlock(METAL_PLATE_CHECKER, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_CHECKER, ItemBlockMetalPainted.class);
         registerItemBlock(METAL_PLATE_SCALE, ItemBlockMetal.class);
