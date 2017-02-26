@@ -3,7 +3,6 @@ package org.icannt.materialfoundation.common.recipe;
 import java.util.Locale;
 
 import org.apache.commons.lang3.text.WordUtils;
-import org.icannt.materialfoundation.common.block.variant.EnumCompositeType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalGrillType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiExtraType;
 import org.icannt.materialfoundation.common.block.variant.EnumMetalMultiType;
@@ -21,7 +20,6 @@ import org.icannt.materialfoundation.common.recipe.paint.ShapelessPaintRecipe;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -283,39 +281,39 @@ public class ModRecipes {
         }
                 
         // Composite Concrete - Crafting Bench Shaped and Shapeless
-        resultBlock = ModBlocks.COMPOSITE_CONCRETE;
-        for (EnumCompositeType variant : EnumCompositeType.values()) {
-            line1 = "SQS";
-            switch (variant) {
-                case REINFORCED_GRATING_DARK:
-                    specialItem = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.SQUARE_ANGLED_DARK.ordinal());
-                    break;
-                case REINFORCED_GRATING_LIGHT:
-                    specialItem = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.SQUARE_ANGLED_LIGHT.ordinal());
-                    break;
-                default:
-                    specialItem = new ItemStack(Blocks.AIR);
-                    line1 = "S S";
-                    break;
-            }
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, variant.ordinal()),
-            	line1,
-            	"BWB",
-                "GCG",
-                'Q', specialItem,
-                'W', Items.WATER_BUCKET,
-                'S', "sand",
-                'G', "gravel",
-                'C', Items.CLAY_BALL,
-                'B', "dustBurntLime"
-            ));            
-            if (variant == EnumCompositeType.BASE)
-                continue;
-            // Shapeless with concrete and already made square grill
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.COMPOSITE_CONCRETE, 1, variant.ordinal()),
-            	new ItemStack(ModBlocks.COMPOSITE_CONCRETE, 1, EnumCompositeType.BASE.ordinal()),
-            	specialItem
-            ));
-        }
+//        resultBlock = ModBlocks.COMPOSITE_CONCRETE;
+//        for (EnumCompositeType variant : EnumCompositeType.values()) {
+//            line1 = "SQS";
+//            switch (variant) {
+//                case REINFORCED_GRATING_DARK:
+//                    specialItem = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.SQUARE_ANGLED_DARK.ordinal());
+//                    break;
+//                case REINFORCED_GRATING_LIGHT:
+//                    specialItem = new ItemStack(ModBlocks.METAL_GRILL, 1, EnumMetalGrillType.SQUARE_ANGLED_LIGHT.ordinal());
+//                    break;
+//                default:
+//                    specialItem = new ItemStack(Blocks.AIR);
+//                    line1 = "S S";
+//                    break;
+//            }
+//            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(resultBlock, 12, variant.ordinal()),
+//            	line1,
+//            	"BWB",
+//                "GCG",
+//                'Q', specialItem,
+//                'W', Items.WATER_BUCKET,
+//                'S', "sand",
+//                'G', "gravel",
+//                'C', Items.CLAY_BALL,
+//                'B', "dustBurntLime"
+//            ));            
+//            if (variant == EnumCompositeType.BASE)
+//                continue;
+//            // Shapeless with concrete and already made square grill
+//            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.COMPOSITE_CONCRETE, 1, variant.ordinal()),
+//            	new ItemStack(ModBlocks.COMPOSITE_CONCRETE, 1, EnumCompositeType.BASE.ordinal()),
+//            	specialItem
+//            ));
+//        }
     }
 }

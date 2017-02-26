@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "materialfoundation:blocks/metal_grill_square_angled_dark"
-  }
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "materialfoundation:blocks/metal_grill_square_angled_dark"
+    }
 }

@@ -1,0 +1,11 @@
+{
+    "parent": "materialfoundation:orientable_2_point",
+    "textures": {
+        "top": "materialfoundation:blocks/composite_wall_plaster_cream",
+        "bottom": "materialfoundation:blocks/composite_wall_plaster_terra_cotta",
+        "front": "materialfoundation:blocks/composite_wall_plaster_combo_normal_stairwell_01c",
+        "back": "materialfoundation:blocks/composite_wall_plaster_combo_flipped_stairwell_01c",
+        "left": "materialfoundation:blocks/composite_wall_plaster_cream",
+        "right": "materialfoundation:blocks/composite_wall_plaster_terra_cotta"
+    }
+}

@@ -8,9 +8,9 @@ import net.minecraft.util.IStringSerializable;
  */
 public enum EnumCompositeWallPlasterType implements IStringSerializable {
 	
-	WALL_PLASTER_COMBO_01 ("wall_plaster_combo_01", 0, 2, 10, EnumRarity.COMMON),
-	WALL_PLASTER_CREAM ("wall_plaster_cream", 0, 2, 30, EnumRarity.COMMON),
-	WALL_PLASTER_TERRA_COTTA ("wall_plaster_terra_cotta", 0, 2, 30, EnumRarity.COMMON);
+	HEATHERED_GRAY ("heathered_gray", 0, 2, 10, EnumRarity.COMMON),
+	IRONSTONE ("ironstone", 0, 2, 10, EnumRarity.COMMON),
+	KEPPEL ("keppel", 0, 2, 10, EnumRarity.COMMON);
 
     private String name;
     private int light;

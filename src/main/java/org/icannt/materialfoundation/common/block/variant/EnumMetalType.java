@@ -10,9 +10,20 @@ public enum EnumMetalType implements IStringSerializable {
 
 	IRON ("iron", 0, 2, 30, EnumRarity.COMMON),
 	GOLD ("gold", 0, 2, 30, EnumRarity.COMMON),
-	COPPER ("copper", 0, 2, 30, EnumRarity.COMMON),
 	TIN ("tin", 0, 2, 30, EnumRarity.COMMON),
-	BRONZE ("bronze", 0, 2, 30, EnumRarity.COMMON);
+	COPPER ("copper", 0, 2, 30, EnumRarity.COMMON),
+	BRONZE ("bronze", 0, 2, 30, EnumRarity.COMMON),
+	DARK_STEEL ("dark_steel", 0, 2, 30, EnumRarity.COMMON),
+	PULSATING_IRON ("pulsating_iron", 0, 2, 30, EnumRarity.COMMON),
+	REDSTONE_ALLOY ("redstone_alloy", 0, 2, 30, EnumRarity.COMMON),
+	VIBRANT_ALLOY ("vibrant_alloy", 0, 2, 30, EnumRarity.COMMON),
+	ARDITE ("ardite", 0, 2, 30, EnumRarity.COMMON),
+	COBALT ("cobalt", 0, 2, 30, EnumRarity.COMMON),
+	MANYULLYN ("manyullyn", 0, 2, 30, EnumRarity.COMMON),
+	OSMIUM ("osmium", 0, 2, 30, EnumRarity.COMMON),
+	REFINED_OBSIDIAN ("refined_obsidian", 0, 2, 500, EnumRarity.COMMON),
+	REFINED_GLOWSTONE_UNLIT ("refined_glowstone_unlit", 0, 2, 30, EnumRarity.COMMON),
+	REFINED_GLOWSTONE_LIT ("refined_glowstone_lit", 15, 2, 30, EnumRarity.COMMON);
 
     private String name;
     private int light;

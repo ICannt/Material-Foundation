@@ -1,30 +1,37 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "all": "materialfoundation:blocks/composite_concrete_base"
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "all": "materialfoundation:blocks/composite_concrete_base"
+        },
+        "model": "cube_all"
     },
-    "model": "cube_all"
-  },
-  "variants": {
-    "inventory": [{}],
-    "normal": [{}],
-    "composite": {
-      "base": {
-        "textures": {
-          "all": "materialfoundation:blocks/composite_concrete_base"
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "composite": {
+            "base": {
+                "textures": {
+                    "all": "materialfoundation:blocks/composite_concrete_base"
+                }
+            },
+            "reinforced_grating_dark": {
+                "textures": {
+                    "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_dark"
+                }
+            },
+            "reinforced_grating_light": {
+                "textures": {
+                    "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_light"
+                }
+            },
+            "reinforced_plated_armor_iron": {
+                "textures": {
+                    "side": "materialfoundation:blocks/composite_concrete_reinforced_plated_armor_sides_iron",
+                    "end": "materialfoundation:blocks/composite_concrete_reinforced_plated_armor_topbottom_iron"
+                },
+                "model": "cube_column"
+            }
         }
-      },
-      "reinforced_grating_dark": {
-        "textures": {
-          "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_dark"
-        }
-      },
-      "reinforced_grating_light": {
-        "textures": {
-          "all": "materialfoundation:blocks/composite_concrete_reinforced_grating_light"
-        }
-      }
     }
-  }
 }

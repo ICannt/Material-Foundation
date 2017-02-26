@@ -1,0 +1,24 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "bottom": "materialfoundation:blocks/composite_wall_plaster_ironstone",
+            "top": "materialfoundation:blocks/composite_wall_plaster_heathered_gray",
+            "side": "materialfoundation:blocks/composite_wall_plaster_combo_01"
+        },
+        "model": "cube_bottom_top"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "composite": {
+            "combo_01": {
+                "textures": {
+                    "bottom": "materialfoundation:blocks/composite_wall_plaster_ironstone",
+                    "top": "materialfoundation:blocks/composite_wall_plaster_heathered_gray",
+                    "side": "materialfoundation:blocks/composite_wall_plaster_combo_01"
+                }
+            }
+        }
+    }
+}

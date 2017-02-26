@@ -1,46 +1,112 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_iron",
-      "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_iron"
-    },
-    "model": "cube_column"
-  },
-  "variants": {
-    "inventory": [{}],
-    "normal": [{}],
-    "metal": {
-        "iron": {
-          "textures": {
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
             "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_iron",
             "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_iron"
-          }
         },
-        "gold": {
-          "textures": {
-            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_gold",
-            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_gold"
-          }
-        },
-        "copper": {
-          "textures": {
-            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_copper",
-            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_copper"
-          }
-        },
-        "tin": {
-          "textures": {
-            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_tin",
-            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_tin"
-          }
-        },
-        "bronze": {
-          "textures": {
-            "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_bronze",
-            "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_bronze"
-          }
+        "model": "cube_column"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "metal": {
+            "iron": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_iron",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_iron"
+                }
+            },
+            "gold": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_gold",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_gold"
+                }
+            },
+            "tin": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_tin",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_tin"
+                }
+            },
+            "copper": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_copper",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_copper"
+                }
+            },
+            "bronze": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_bronze",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_bronze"
+                }
+            },
+            "dark_steel": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_dark_steel",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_dark_steel"
+                }
+            },
+            "pulsating_iron": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_pulsating_iron",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_pulsating_iron"
+                }
+            },
+            "redstone_alloy": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_redstone_alloy",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_redstone_alloy"
+                }
+            },
+            "vibrant_alloy": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_vibrant_alloy",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_vibrant_alloy"
+                }
+            },
+            "ardite": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_ardite",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_ardite"
+                }
+            },
+            "cobalt": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_cobalt",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_cobalt"
+                }
+            },
+            "manyullyn": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_manyullyn",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_manyullyn"
+                }
+            },
+            "osmium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_osmium",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_osmium"
+                }
+            },
+            "refined_obsidian": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_refined_obsidian",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_refined_obsidian"
+                }
+            },
+            "refined_glowstone_unlit": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_refined_glowstone",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_refined_glowstone"
+                }
+            },
+            "refined_glowstone_lit": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_wall_studded_sides_refined_glowstone",
+                    "end": "materialfoundation:blocks/metal_plate_wall_studded_topbottom_refined_glowstone"
+                }
+            }
         }
-      }
     }
-  }
+}

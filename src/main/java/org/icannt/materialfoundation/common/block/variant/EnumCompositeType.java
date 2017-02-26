@@ -10,7 +10,8 @@ public enum EnumCompositeType implements IStringSerializable {
 	
     BASE ("base", 0, 2, 30, EnumRarity.COMMON),
     REINFORCED_GRATING_DARK ("reinforced_grating_dark", 0, 2, 100, EnumRarity.COMMON),
-    REINFORCED_GRATING_LIGHT ("reinforced_grating_light", 0, 2, 100, EnumRarity.COMMON);
+    REINFORCED_GRATING_LIGHT ("reinforced_grating_light", 0, 2, 100, EnumRarity.COMMON),
+    REINFORCED_PLATED_ARMOR_IRON ("reinforced_plated_armor_iron", 0, 2, 200, EnumRarity.COMMON);
 
     private String name;
     private int light;

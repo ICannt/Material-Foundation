@@ -49,11 +49,18 @@ public class ModelHandler {
     public static void initBlockModels() {
         ModBlocks.COMPOSITE_CONCRETE.initClient();
         ModBlocks.COMPOSITE_WALL_PLASTER.initClient();
+        ModBlocks.COMPOSITE_WALL_PLASTER_COMBO.initClient();
         // ModBlocks.COMPOSITE_WALL_PLASTER_COMBO_01.initClient();
         ModBlocks.METAL_PLATE_CHECKER.initClient();
         ModBlocks.METAL_PAINTED_PLATE_CHECKER.initClient();
         ModBlocks.METAL_PLATE_SCALE.initClient();
         ModBlocks.METAL_PAINTED_PLATE_SCALE.initClient();
+        ModBlocks.METAL_PLATE_FLOOR_STUDDED_SMALL.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_FLOOR_STUDDED_SMALL.initClient();
+        ModBlocks.METAL_PLATE_FLOOR_STUDDED_MEDIUM.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_FLOOR_STUDDED_MEDIUM.initClient();
+        ModBlocks.METAL_PLATE_FLOOR_STUDDED_LARGE.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_FLOOR_STUDDED_LARGE.initClient();
         ModBlocks.METAL_PLATE_WALL_STUDDED.initClient();
         ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED.initClient();
         ModBlocks.METAL_CRATE_WITH_GRILL.initClient();

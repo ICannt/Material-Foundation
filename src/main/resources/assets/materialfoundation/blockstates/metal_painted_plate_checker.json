@@ -1,95 +1,95 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "all": "materialfoundation:blocks/metal_plate_checker_white"
-    },
-    "model": "cube_all"
-  },
-  "variants": {
-    "inventory": [{}],
-    "normal": [{}],
-    "metal": {
-       "white": {
-          "textures": {
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
             "all": "materialfoundation:blocks/metal_plate_checker_white"
-          }
         },
-       "orange": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_orange"
-          }
-        },
-       "magenta": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_magenta"
-          }
-        },
-       "light_blue": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_light_blue"
-          }
-        },
-       "yellow": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_yellow"
-          }
-        },
-       "lime": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_lime"
-          }
-        },
-       "pink": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_pink"
-          }
-        },
-       "gray": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_gray"
-          }
-        },
-       "silver": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_silver"
-          }
-        },
-       "cyan": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_cyan"
-          }
-        },
-       "purple": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_purple"
-          }
-        },
-       "blue": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_blue"
-          }
-        },
-       "brown": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_brown"
-          }
-        },
-       "green": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_green"
-          }
-        },
-       "red": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_red"
-          }
-        },
-       "black": {
-          "textures": {
-            "all": "materialfoundation:blocks/metal_plate_checker_black"
-          }
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "metal": {
+            "white": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_white"
+                  }
+            },
+            "orange": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_orange"
+                  }
+            },
+            "magenta": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_magenta"
+                  }
+            },
+            "light_blue": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_light_blue"
+                  }
+            },
+            "yellow": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_yellow"
+                  }
+            },
+            "lime": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_lime"
+                  }
+            },
+            "pink": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_pink"
+                  }
+            },
+            "gray": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_gray"
+                  }
+            },
+            "silver": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_silver"
+                  }
+            },
+            "cyan": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_cyan"
+                  }
+            },
+            "purple": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_purple"
+                  }
+            },
+            "blue": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_blue"
+                  }
+            },
+            "brown": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_brown"
+                  }
+            },
+            "green": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_green"
+                  }
+            },
+            "red": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_red"
+                  }
+            },
+            "black": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_black"
+                }
+            }
         }
-      }
     }
-  }
+}
