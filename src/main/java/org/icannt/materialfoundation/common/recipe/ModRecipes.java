@@ -89,14 +89,28 @@ public class ModRecipes {
             GameRegistry.addRecipe(new PaintTinRecipe(colour));
         }
 
-        // Minerals (Besides Burnt Lime) - Crafting Bench Shapeless
+        // Minerals (Besides Burnt Lime & Cement Clinker) - Crafting Bench Shapeless
         for (EnumGenericType variant : EnumGenericType.values()) {
-            if (variant == EnumGenericType.MINERAL_LIME_BURNT)
-                continue;
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 2, variant.ordinal()),
-            	variant.getCraftWith(),
-            	"dustBurntLime"
-            ));
+        	variantName = variant.getName();
+        	switch (variantName) {
+        		case "mineral_burnt_lime":
+        		case "mineral_clinker_cement":
+        			continue;
+        		case "mineral_cement_portland":
+                    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.GENERIC, 1, variant.ordinal()),
+                    	"XYX",
+                    	"XXX",
+                    	"XXX",
+                    	'X', "dustCementClinker",
+                    	'Y', crafter
+                    ));
+	                break;	                
+                default:
+		            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.GENERIC, 2, variant.ordinal()),
+		            	variant.getCraftWith(),
+		            	"dustBurntLime"
+		            ));
+        	}
         }
         
         // Burnt Lime - Furnace
@@ -105,6 +119,10 @@ public class ModRecipes {
         	GameRegistry.addSmelting(stack, new ItemStack(ModItems.GENERIC, 6, EnumGenericType.MINERAL_LIME_BURNT.ordinal()), 0.1F);
         }
 
+        // Cement Clinker - Furnace
+        GameRegistry.addSmelting(Blocks.HARDENED_CLAY, new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_CLINKER_CEMENT.ordinal()), 0.1F);
+        GameRegistry.addSmelting(Blocks.STAINED_HARDENED_CLAY, new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_CLINKER_CEMENT.ordinal()), 0.1F);
+        
         
         /*****************
          * Block Recipes *
