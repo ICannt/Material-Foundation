@@ -9,6 +9,7 @@ import org.icannt.materialfoundation.common.block.blocks.BlockCompositeWallPlast
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrill;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalCrateWithGrillExtra;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalGrill;
+import org.icannt.materialfoundation.common.block.blocks.BlockMetalGrillBox;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateChecker;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateFloorStuddedLarge;
 import org.icannt.materialfoundation.common.block.blocks.BlockMetalPaintedPlateFloorStuddedMedium;
@@ -58,6 +59,7 @@ public class ModBlocks {
     public static final BlockMetalPlateWallStudded METAL_PLATE_WALL_STUDDED = new BlockMetalPlateWallStudded();
     public static final BlockMetalPaintedPlateWallStudded METAL_PAINTED_PLATE_WALL_STUDDED = new BlockMetalPaintedPlateWallStudded();
     public static final BlockMetalGrill METAL_GRILL = new BlockMetalGrill();
+    public static final BlockMetalGrillBox METAL_GRILL_BOX = new BlockMetalGrillBox();
     public static final BlockMetalPlateCrate METAL_PLATE_CRATE = new BlockMetalPlateCrate();
     public static final BlockMetalCrateWithGrill METAL_CRATE_WITH_GRILL = new BlockMetalCrateWithGrill();
     public static final BlockMetalCrateWithGrillExtra METAL_CRATE_WITH_GRILL_EXTRA = new BlockMetalCrateWithGrillExtra();
@@ -82,6 +84,7 @@ public class ModBlocks {
         GameRegistry.register(METAL_PLATE_WALL_STUDDED);
         GameRegistry.register(METAL_PAINTED_PLATE_WALL_STUDDED);
         GameRegistry.register(METAL_GRILL);
+        GameRegistry.register(METAL_GRILL_BOX);
         GameRegistry.register(METAL_PLATE_CRATE);
         GameRegistry.register(METAL_CRATE_WITH_GRILL);
         GameRegistry.register(METAL_CRATE_WITH_GRILL_EXTRA);
@@ -104,6 +107,7 @@ public class ModBlocks {
         registerItemBlock(METAL_PLATE_WALL_STUDDED, ItemBlockMetal.class);
         registerItemBlock(METAL_PAINTED_PLATE_WALL_STUDDED, ItemBlockMetalPainted.class);
         registerItemBlock(METAL_GRILL, ItemBlockMetalGrill.class);
+        registerItemBlock(METAL_GRILL_BOX, ItemBlockMetalGrill.class);
         registerItemBlock(METAL_PLATE_CRATE, ItemBlockMetalPlateCrate.class);
         registerItemBlock(METAL_CRATE_WITH_GRILL, ItemBlockMetalMulti.class);
         registerItemBlock(METAL_CRATE_WITH_GRILL_EXTRA, ItemBlockMetalMultiExtra.class);

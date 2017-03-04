@@ -66,6 +66,7 @@ public class ModelHandler {
         ModBlocks.METAL_CRATE_WITH_GRILL.initClient();
         ModBlocks.METAL_CRATE_WITH_GRILL_EXTRA.initClient();
         ModBlocks.METAL_GRILL.initClient();
+        ModBlocks.METAL_GRILL_BOX.initClient();
         ModBlocks.METAL_PLATE_CRATE.initClient();
     }
 }
