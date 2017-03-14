@@ -12,7 +12,7 @@ public enum EnumGenericType implements IStringSerializable {
 	MINERAL_LIME_FLUXED ("mineral_lime_fluxed","dustFluxedLime","dustRedstone"),
 	MINERAL_LIME_SLIME ("mineral_lime_slime","dustSlimeLime","slimeball"),
 	MINERAL_CLINKER_CEMENT ("mineral_clinker_cement","dustCementClinker","dustCementClinker"),
-	MINERAL_CEMENT_PORTLAND ("mineral_cement_portland","dustPortlandCement","dustCementClinker");
+	MINERAL_BAG_CEMENT_PORTLAND ("mineral_bag_cement_portland","bagPortlandCement","dustCementClinker");
 
     private String name;
     private String oreDict;
