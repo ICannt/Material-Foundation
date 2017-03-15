@@ -100,9 +100,9 @@ public class ModRecipes {
         			continue;
         		case "mineral_bag_cement_portland":
                     GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.GENERIC, 1, variant.ordinal()),
-                    	"XYX",
-                    	"XXX",
-                    	"XZX",
+                    	" Y ",
+                    	"XX ",
+                    	"XXZ",
                     	'X', "dustCementClinker",
                     	'Y', crafter,
                     	'Z', "paper"

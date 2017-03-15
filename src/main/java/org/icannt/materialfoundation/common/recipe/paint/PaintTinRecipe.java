@@ -34,43 +34,64 @@ public class PaintTinRecipe implements IRecipe {
 
     private EnumPaintType paint;
 
+    private boolean foundCement;
+    
     public PaintTinRecipe(EnumPaintType paint) {
         this.paint = paint;
-        this.input.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY));
-        this.input.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
-        this.input.add(new ItemStack(Items.WATER_BUCKET));
-
+        
+        foundCement = false;
+        
         ArrayList<ItemStack> catalysts = new ArrayList<>();
         Stream.of(paint.getRecipeCatalyst()).forEach(catalyst -> {
             if (catalyst instanceof String) {
+            	if (catalyst == "bagPortlandCement")
+            		foundCement = true;
                 catalysts.addAll(OreDictionary.getOres((String) catalyst));
             } else if (catalyst instanceof ItemStack) {
                 catalysts.add((ItemStack) catalyst);
             }
         });
+        
+        this.input.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY));
+        if (foundCement == false) {
+        	this.input.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
+        } else {
+        	this.input.add(catalysts);
+        }
+        this.input.add(new ItemStack(Items.WATER_BUCKET));
         this.input.add(catalysts);
+        
         this.output = ItemMetalTinPaint.create(paint);
     }
 
     @SuppressWarnings("unchecked")
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
-
+   	
         List<Object> inputs = new LinkedList<>();
-        inputs.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY));
-        inputs.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
-        inputs.add(new ItemStack(Items.WATER_BUCKET));
-
+        
+        foundCement = false;
+        
         ArrayList<ItemStack> catalysts = new ArrayList<>();
         Stream.of(paint.getRecipeCatalyst()).forEach(catalyst -> {
-            if (catalyst instanceof String) {
+            if (catalyst instanceof String) {            	
+            	if (catalyst == "bagPortlandCement")
+            		foundCement = true;
                 catalysts.addAll(OreDictionary.getOres((String) catalyst));
             } else if (catalyst instanceof ItemStack) {
                 catalysts.add((ItemStack) catalyst);
             }
         });
+        
+        inputs.add(new ItemStack(ModItems.METAL_TIN_PAINT_EMPTY));
+        if (foundCement == false) {
+        	inputs.add(new ItemStack(ModItems.GENERIC, 1, EnumGenericType.MINERAL_LIME_BURNT.ordinal()));
+        } else {
+        	inputs.add(catalysts);
+        }
+        inputs.add(new ItemStack(Items.WATER_BUCKET));
         inputs.add(catalysts);
-
+        
         final int expected = inputs.size();
         int found = 0;
 
@@ -83,6 +104,7 @@ public class PaintTinRecipe implements IRecipe {
             found++;
 
             for (Object input : inputs) {
+            	            	
                 if (input instanceof ItemStack) {
                 	if (((ItemStack) input).getItem() == ModItems.METAL_TIN_PAINT_EMPTY) {
                         inputs.remove(input);
