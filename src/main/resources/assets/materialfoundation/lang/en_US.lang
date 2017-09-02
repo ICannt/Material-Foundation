@@ -12,6 +12,11 @@ item.materialfoundation:generic.mineral_lime_blaze.name=Blaze Lime
 item.materialfoundation:generic.mineral_lime_burnt.name=Burnt Lime
 item.materialfoundation:generic.mineral_lime_fluxed.name=Fluxed Lime
 item.materialfoundation:generic.mineral_lime_slime.name=Slime Lime
+item.materialfoundation:generic.mineral_clinker_cement.name=Cement Clinker
+
+# Bag of Minerals
+item.materialfoundation:generic.mineral_bag_cement_portland.name=Portland Cement Bag
+
 
 # Empty Paint Tin
 item.materialfoundation:metal_tin_paint_empty.name=Paint Tin
@@ -38,6 +43,9 @@ item.materialfoundation:metal_tin_paint.white.name=White Paint Tin
 item.materialfoundation:metal_tin_paint.blaze.name=Blaze Paint Tin
 item.materialfoundation:metal_tin_paint.fluxed.name=Fluxed Paint Tin
 item.materialfoundation:metal_tin_paint.slime.name=Slime Paint Tin
+
+# Not Exactly Paint Tins
+item.materialfoundation:metal_tin_paint.slurry_cement.name=Slurry Cement Tin
 
 
 ### Blocks ###
@@ -86,6 +94,15 @@ tile.materialfoundation:metal_grill.round_offset_lapis.name=Lapis Offset Round G
 tile.materialfoundation:metal_grill.round_offset_slime.name=Slime Offset Round Grill
 tile.materialfoundation:metal_grill.square_angled_dark.name=Dark Angled Square Grill
 tile.materialfoundation:metal_grill.square_angled_light.name=Light Angled Square Grill
+
+# Metal Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_blaze.name=Blaze Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_gold.name=Gold Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_iron.name=Iron Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_lapis.name=Lapis Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_slime.name=Slime Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.square_angled_dark.name=Dark Angled Square Grill Box
+tile.materialfoundation:metal_grill_box.square_angled_light.name=Light Angled Square Grill Box
 
 # Metal Crate Plate
 tile.materialfoundation:metal_plate_crate.dark_steel.name=Dark Steel Crate Plate
