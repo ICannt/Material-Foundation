@@ -10,7 +10,7 @@
     "variants": {
         "inventory": [{}],
         "normal": [{}],
-        "metal": {
+        "blocks": {
             "white": {
                 "textures": {
                     "side": "materialfoundation:blocks/metal_plate_scale_sides_white",
@@ -59,10 +59,10 @@
                     "end": "materialfoundation:blocks/metal_plate_scale_topbottom_gray"
                 }
             },
-            "silver": {
+            "light_gray": {
                 "textures": {
-                    "side": "materialfoundation:blocks/metal_plate_scale_sides_silver",
-                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_silver"
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_light_gray",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_light_gray"
                 }
             },
             "cyan": {

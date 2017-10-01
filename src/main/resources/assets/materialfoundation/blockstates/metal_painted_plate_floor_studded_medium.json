@@ -9,7 +9,7 @@
     "variants": {
         "inventory": [{}],
         "normal": [{}],
-        "metal": {
+        "blocks": {
             "white": {
                 "textures": {
                     "all": "materialfoundation:blocks/metal_plate_floor_studded_medium_white"
@@ -50,9 +50,9 @@
                     "all": "materialfoundation:blocks/metal_plate_floor_studded_medium_gray"
                   }
             },
-            "silver": {
+            "light_gray": {
                 "textures": {
-                    "all": "materialfoundation:blocks/metal_plate_floor_studded_medium_silver"
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_medium_light_gray"
                   }
             },
             "cyan": {

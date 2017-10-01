@@ -1,0 +1,108 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_column"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "iron": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_iron",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_iron"
+                }
+            },
+            "gold": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_gold",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_gold"
+                }
+            },
+            "copper": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_copper",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_copper"
+                }
+            },
+            "tin": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_tin",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_tin"
+                }
+            },
+            "silver": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_silver",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_silver"
+                }
+            },
+            "lead": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_lead",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_lead"
+                }
+            },
+            "aluminum": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_aluminum",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_aluminum"
+                }
+            },
+            "nickel": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_nickel",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_nickel"
+                }
+            },
+            "platinum": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_platinum",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_platinum"
+                }
+            },
+            "iridium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_iridium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_iridium"
+                }
+            },
+            "mithril": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_mithril",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_mithril"
+                }
+            },
+            "ardite": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_ardite",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_ardite"
+                }
+            },
+            "cobalt": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_cobalt",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_cobalt"
+                }
+            },
+            "osmium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_osmium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_osmium"
+                }
+            },
+            "yellorium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_yellorium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_yellorium"
+                }
+            },
+            "uranium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_uranium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_uranium"
+                }
+            }
+        }
+    }
+}

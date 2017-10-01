@@ -1,0 +1,62 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "electrical_steel": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_electrical_steel"
+                }
+            },
+            "energetic_alloy": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_energetic_alloy"
+                }
+            },
+            "vibrant_alloy": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_vibrant_alloy"
+                }
+            },
+            "redstone_alloy": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_redstone_alloy"
+                }
+            },
+            "conductive_iron": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_conductive_iron"
+                }
+            },
+            "pulsating_iron": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_pulsating_iron"
+                }
+            },
+            "dark_steel": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_dark_steel"
+                }
+            },
+            "soularium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_soularium"
+                }
+            },
+            "refined_obsidian": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_refined_obsidian"
+                }
+            },
+            "refined_glowstone": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_refined_glowstone"
+                }
+            }
+        }
+    }
+}

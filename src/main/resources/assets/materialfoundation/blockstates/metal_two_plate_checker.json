@@ -1,0 +1,95 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "all": "materialfoundation:blocks/metal_plate_checker_iron"
+        },
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "steel": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_steel"
+                }
+            },
+            "electrum": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_electrum"
+                }
+            },
+            "invar": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_invar"
+                }
+            },
+            "bronze": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_bronze"
+                }
+            },
+            "constantan": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_constantan"
+                }
+            },
+            "signalum": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_signalum"
+                }
+            },
+            "lumium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_lumium"
+                }
+            },
+            "enderium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_enderium"
+                }
+            },
+            "manyullyn": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_manyullyn"
+                }
+            },
+            "knightslime": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_knightslime"
+                }
+            },
+            "pigiron": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_pigiron"
+                }
+            },
+            "aluminum_brass": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_aluminum_brass"
+                }
+            },
+            "cyanite": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_cyanite"
+                }
+            },
+            "graphite": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_graphite"
+                }
+            },
+            "blutonium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_blutonium"
+                }
+            },
+            "ludicrite": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_ludicrite"
+                }
+            }
+        }
+    }
+}

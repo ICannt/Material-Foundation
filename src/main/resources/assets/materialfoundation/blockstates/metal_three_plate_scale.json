@@ -1,0 +1,72 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_column"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "electrical_steel": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_electrical_steel",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_electrical_steel"
+                }
+            },
+            "energetic_alloy": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_energetic_alloy",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_energetic_alloy"
+                }
+            },
+            "vibrant_alloy": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_vibrant_alloy",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_vibrant_alloy"
+                }
+            },
+            "redstone_alloy": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_redstone_alloy",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_redstone_alloy"
+                }
+            },
+            "conductive_iron": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_conductive_iron",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_conductive_iron"
+                }
+            },
+            "pulsating_iron": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_pulsating_iron",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_pulsating_iron"
+                }
+            },
+            "dark_steel": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_dark_steel",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_dark_steel"
+                }
+            },
+            "soularium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_soularium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_soularium"
+                }
+            },
+            "refined_obsidian": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_refined_obsidian",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_refined_obsidian"
+                }
+            },
+            "refined_glowstone": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_refined_glowstone",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_refined_glowstone"
+                }
+            }
+        }
+    }
+}

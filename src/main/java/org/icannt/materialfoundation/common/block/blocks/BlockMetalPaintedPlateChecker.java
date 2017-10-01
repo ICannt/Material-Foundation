@@ -1,23 +1,19 @@
 package org.icannt.materialfoundation.common.block.blocks;
 
-import java.util.List;
-import java.util.Map;
-
 import org.icannt.materialfoundation.common.block.BlockVariantBase;
-import org.icannt.materialfoundation.common.block.variant.EnumMetalPaintedType;
+import org.icannt.materialfoundation.common.block.metadata.EnumMetalPainted;
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
@@ -27,42 +23,51 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by ICannt on 25/12/16.
+ * Created by ICannt on 01/10/17.
  */
 public class BlockMetalPaintedPlateChecker extends BlockVariantBase {
-
-    private static final PropertyEnum<EnumMetalPaintedType> VARIANT = PropertyEnum.create("metal", EnumMetalPaintedType.class);
-
+	
+    private static final PropertyEnum<EnumMetalPainted> VARIANT = PropertyEnum.create("blocks", EnumMetalPainted.class);
+    
     public BlockMetalPaintedPlateChecker() {
-        super(Material.IRON, MapColor.IRON, "metal_painted_plate_checker");
+        super(Material.ROCK, MapColor.GRAY, "metal_painted_plate_checker");
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, VARIANT);
+    }   
+    
+	@Override
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
+	{
+		for (EnumMetalPainted type : EnumMetalPainted.values()) {
+			list.add(new ItemStack(this, 1, type.ordinal()));
+		}
     }
-
-    @Override
-    public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list) {
-        for (EnumMetalPaintedType type : EnumMetalPaintedType.values()) {
-            list.add(new ItemStack(this, 1, type.ordinal()));
-        }
-    }
-
-    @SuppressWarnings("deprecation")
+    
+	@SuppressWarnings("deprecation")
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumMetalPaintedType.values()[meta]);
+        return getDefaultState().withProperty(VARIANT, EnumMetalPainted.values()[meta]);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
         return state.getValue(VARIANT).ordinal();
     }
-
+    
     @Override
     public int damageDropped(IBlockState state) {
         return getMetaFromState(state);
+    }
+    
+    public String getRecipeOreDict(IBlockState state) {
+    	return state.getValue(VARIANT).getRecipeOreDict();
+    }
+    
+    public String getFurnaceOreDict(IBlockState state) {
+    	return state.getValue(VARIANT).getFurnaceOreDict();
     }
 
     @Override
@@ -70,26 +75,27 @@ public class BlockMetalPaintedPlateChecker extends BlockVariantBase {
         return state.getValue(VARIANT).getLight();
     }
 
-    @SuppressWarnings("deprecation")
     @Override
-    public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
+    public int getHarvestLevel(IBlockState state) {
+        return state.getValue(VARIANT).getHarvestLevel();
+    }
+    
+    @Override
+    public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
         return state.getValue(VARIANT).getHardness();
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
         return world.getBlockState(pos).getValue(VARIANT).getResistance() / 5F;
     }
-
+    
     @SideOnly(Side.CLIENT)
-    public void initClient() {
-        ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(this), stack -> {
-            int meta = stack.getMetadata();
-
-            EnumMetalPaintedType metal = EnumMetalPaintedType.values()[meta];
-            BlockRendererDispatcher dispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
-            Map<IBlockState, ModelResourceLocation> variants = dispatcher.getBlockModelShapes().getBlockStateMapper().getVariants(BlockMetalPaintedPlateChecker.this);
-            return variants.get(BlockMetalPaintedPlateChecker.this.getDefaultState().withProperty(VARIANT, metal));
-        });
+    public void initItemBlockModels() {
+    	for (EnumMetalPainted variant : EnumMetalPainted.values()) {
+    		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), variant.ordinal(), new ModelResourceLocation(Item.getItemFromBlock(this).getRegistryName(), "blocks=" + variant.getName()));
+    	}
     }
+    
 }

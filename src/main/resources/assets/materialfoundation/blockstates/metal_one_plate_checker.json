@@ -1,0 +1,92 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "iron": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_iron"
+                }
+            },
+            "gold": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_gold"
+                }
+            },
+            "copper": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_copper"
+                }
+            },
+            "tin": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_tin"
+                }
+            },
+            "silver": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_silver"
+                }
+            },
+            "lead": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_lead"
+                }
+            },
+            "aluminum": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_aluminum"
+                }
+            },
+            "nickel": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_nickel"
+                }
+            },
+            "platinum": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_platinum"
+                }
+            },
+            "iridium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_iridium"
+                }
+            },
+            "mithril": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_mithril"
+                }
+            },
+            "ardite": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_ardite"
+                }
+            },
+            "cobalt": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_cobalt"
+                }
+            },
+            "osmium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_osmium"
+                }
+            },
+            "yellorium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_yellorium"
+                }
+            },
+            "uranium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_checker_uranium"
+                }
+            }
+        }
+    }
+}

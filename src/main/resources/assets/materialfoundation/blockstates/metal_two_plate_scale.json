@@ -1,0 +1,108 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cube_column"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "steel": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_steel",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_steel"
+                }
+            },
+            "electrum": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_electrum",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_electrum"
+                }
+            },
+            "invar": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_invar",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_invar"
+                }
+            },
+            "bronze": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_bronze",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_bronze"
+                }
+            },
+            "constantan": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_constantan",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_constantan"
+                }
+            },
+            "signalum": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_signalum",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_signalum"
+                }
+            },
+            "lumium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_lumium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_lumium"
+                }
+            },
+            "enderium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_enderium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_enderium"
+                }
+            },
+            "manyullyn": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_manyullyn",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_manyullyn"
+                }
+            },
+            "knightslime": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_knightslime",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_knightslime"
+                }
+            },
+            "pigiron": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_pigiron",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_pigiron"
+                }
+            },
+            "aluminum_brass": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_aluminum_brass",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_aluminum_brass"
+                }
+            },
+            "cyanite": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_cyanite",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_cyanite"
+                }
+            },
+            "graphite": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_graphite",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_graphite"
+                }
+            },
+            "blutonium": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_blutonium",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_blutonium"
+                }
+            },
+            "ludicrite": {
+                "textures": {
+                    "side": "materialfoundation:blocks/metal_plate_scale_sides_ludicrite",
+                    "end": "materialfoundation:blocks/metal_plate_scale_topbottom_ludicrite"
+                }
+            }
+        }
+    }
+}
