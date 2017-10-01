@@ -1,6 +1,6 @@
 ![material_foundation](https://raw.githubusercontent.com/ICannt/Material-Foundation-Textures/master/screenshots/MF-All-Content-With-Logo-2.0.1.jpg)
 
-Material Foundation 2
+Material Foundation 3
 =====================
 
 High Quality, clean metal and composite materials put into a mod.
