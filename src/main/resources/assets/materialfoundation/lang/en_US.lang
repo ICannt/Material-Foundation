@@ -1,65 +1,327 @@
-# Creative Tab
+### Creative Tab ###
 itemGroup.materialfoundation=Material Foundation
 
 
-# Items
+### Items ###
 
-item.materialfoundation:fabricator.name=MF Block Fabricator
-item.materialfoundation:burnt_lime.name=Burnt Lime
+# Tools
+item.materialfoundation:tool_fabricator.name=MF Fabricator
+
+# Minerals
+item.materialfoundation:generic.mineral_lime_blaze.name=Blaze Lime
+item.materialfoundation:generic.mineral_lime_burnt.name=Burnt Lime
+item.materialfoundation:generic.mineral_lime_fluxed.name=Fluxed Lime
+item.materialfoundation:generic.mineral_lime_slime.name=Slime Lime
+item.materialfoundation:generic.mineral_clinker_cement.name=Cement Clinker
+
+# Bag of Minerals
+item.materialfoundation:generic.mineral_bag_cement_portland.name=Portland Cement Bag
 
 
-# Blocks
+# Empty Paint Tin
+item.materialfoundation:metal_tin_paint_empty.name=Paint Tin
+
+# Basic Color Paint Tins
+item.materialfoundation:metal_tin_paint.black.name=Black Paint Tin
+item.materialfoundation:metal_tin_paint.red.name=Red Paint Tin
+item.materialfoundation:metal_tin_paint.green.name=Green Paint Tin
+item.materialfoundation:metal_tin_paint.brown.name=Brown Paint Tin
+item.materialfoundation:metal_tin_paint.blue.name=Blue Paint Tin
+item.materialfoundation:metal_tin_paint.purple.name=Purple Paint Tin
+item.materialfoundation:metal_tin_paint.cyan.name=Cyan Paint Tin
+item.materialfoundation:metal_tin_paint.silver.name=Light Gray Paint Tin
+item.materialfoundation:metal_tin_paint.gray.name=Gray Paint Tin
+item.materialfoundation:metal_tin_paint.pink.name=Pink Paint Tin
+item.materialfoundation:metal_tin_paint.lime.name=Lime Paint Tin
+item.materialfoundation:metal_tin_paint.yellow.name=Yellow Paint Tin
+item.materialfoundation:metal_tin_paint.light_blue.name=Light Blue Paint Tin
+item.materialfoundation:metal_tin_paint.magenta.name=Magenta Paint Tin
+item.materialfoundation:metal_tin_paint.orange.name=Orange Paint Tin
+item.materialfoundation:metal_tin_paint.white.name=White Paint Tin
+
+# Special Color Paint Tins
+item.materialfoundation:metal_tin_paint.blaze.name=Blaze Paint Tin
+item.materialfoundation:metal_tin_paint.fluxed.name=Fluxed Paint Tin
+item.materialfoundation:metal_tin_paint.slime.name=Slime Paint Tin
+
+# Not Exactly Paint Tins
+item.materialfoundation:metal_tin_paint.slurry_cement.name=Slurry Cement Tin
+
+
+### Blocks ###
+
+# Composite Concrete
+tile.materialfoundation:composite_concrete.base.name=Base Concrete
+tile.materialfoundation:composite_concrete.reinforced_grating_dark.name=Dark Grating Reinforced Concrete
+tile.materialfoundation:composite_concrete.reinforced_grating_light.name=Light Grating Reinforced Concrete
+tile.materialfoundation:composite_concrete.reinforced_plated_armor_iron.name=Iron Armor Plated Reinforced Concrete
+
+# Composite Plaster Wall
+tile.materialfoundation:composite_wall_plaster.heathered_gray.name=Heathered Gray Plaster Wall
+tile.materialfoundation:composite_wall_plaster.ironstone.name=Ironstone Plaster Wall
+tile.materialfoundation:composite_wall_plaster.keppel.name=Keppel Plaster Wall
+
+# Composite Combo Plaster Wall
+tile.materialfoundation:composite_wall_plaster_combo.combo_01.name=Combo Plaster Wall 1
+
+# Metal Crate With Grill
+tile.materialfoundation:metal_crate_with_grill.iron.name=Iron Crate With Grill
+tile.materialfoundation:metal_crate_with_grill.iron_gold.name=Iron Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill.tin_iron.name=Tin Crate With Iron Grill
+tile.materialfoundation:metal_crate_with_grill.dark_steel_blaze.name=Dark Steel Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill.dark_steel_lapis.name=Dark Steel Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill.dark_steel_slime.name=Dark Steel Crate With Slime Grill
+tile.materialfoundation:metal_crate_with_grill.fluxed_gold.name=Fluxed Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill_extra.dark_steel_gold.name=Dark Steel Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill_extra.dark_steel_iron.name=Dark Steel Crate With Iron Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_blaze.name=Fluxed Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_iron.name=Fluxed Crate With Iron Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_lapis.name=Fluxed Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill_extra.fluxed_slime.name=Fluxed Crate With Slime Grill
+tile.materialfoundation:metal_crate_with_grill_extra.iron_blaze.name=Iron Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill_extra.iron_lapis.name=Iron Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill_extra.iron_slime.name=Iron Crate With Slime Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_blaze.name=Tin Crate With Blaze Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_gold.name=Tin Crate With Gold Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_lapis.name=Tin Crate With Lapis Grill
+tile.materialfoundation:metal_crate_with_grill_extra.tin_slime.name=Tin Crate With Slime Grill
+
+# Metal Grill
+tile.materialfoundation:metal_grill.round_offset_blaze.name=Blaze Offset Round Grill
+tile.materialfoundation:metal_grill.round_offset_gold.name=Gold Offset Round Grill
+tile.materialfoundation:metal_grill.round_offset_iron.name=Iron Offset Round Grill
+tile.materialfoundation:metal_grill.round_offset_lapis.name=Lapis Offset Round Grill
+tile.materialfoundation:metal_grill.round_offset_slime.name=Slime Offset Round Grill
+tile.materialfoundation:metal_grill.square_angled_dark.name=Dark Angled Square Grill
+tile.materialfoundation:metal_grill.square_angled_light.name=Light Angled Square Grill
+
+# Metal Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_blaze.name=Blaze Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_gold.name=Gold Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_iron.name=Iron Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_lapis.name=Lapis Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.round_offset_slime.name=Slime Offset Round Grill Box
+tile.materialfoundation:metal_grill_box.square_angled_dark.name=Dark Angled Square Grill Box
+tile.materialfoundation:metal_grill_box.square_angled_light.name=Light Angled Square Grill Box
+
+# Metal Crate Plate
+tile.materialfoundation:metal_plate_crate.dark_steel.name=Dark Steel Crate Plate
+tile.materialfoundation:metal_plate_crate.fluxed.name=Fluxed Crate Plate
+tile.materialfoundation:metal_plate_crate.iron.name=Iron Crate Plate
+tile.materialfoundation:metal_plate_crate.tin.name=Tin Crate Plate
 
 # Metal Checker Plate
-tile.materialfoundation:metal_checker.iron.name=Iron Checker Plate
-tile.materialfoundation:metal_checker.gold.name=Gold Checker Plate
-tile.materialfoundation:metal_checker.copper.name=Copper Checker Plate
-tile.materialfoundation:metal_checker.tin.name=Tin Checker Plate
-tile.materialfoundation:metal_checker.silver.name=Silver Checker Plate
-tile.materialfoundation:metal_checker.lead.name=Lead Checker Plate
-tile.materialfoundation:metal_checker.nickel.name=Ferrous Checker Plate
-tile.materialfoundation:metal_checker.platinum.name=Shiny Checker Plate
-tile.materialfoundation:metal_checker.mithril.name=Mana Infused Checker Plate
-tile.materialfoundation:metal_checker.electrum.name=Electrum Checker Plate
-tile.materialfoundation:metal_checker.invar.name=Invar Checker Plate
-tile.materialfoundation:metal_checker.bronze.name=Tinker's Alloy Checker Plate
-tile.materialfoundation:metal_checker.signalum.name=Signalum Checker Plate
-tile.materialfoundation:metal_checker.lumium.name=Lumium Checker Plate
-tile.materialfoundation:metal_checker.enderium.name=Enderium Checker Plate
+tile.materialfoundation:metal_plate_checker.iron.name=Iron Checker Plate
+tile.materialfoundation:metal_plate_checker.gold.name=Gold Checker Plate
+tile.materialfoundation:metal_plate_checker.tin.name=Tin Checker Plate
+tile.materialfoundation:metal_plate_checker.copper.name=Copper Checker Plate
+tile.materialfoundation:metal_plate_checker.bronze.name=Bronze Checker Plate
+tile.materialfoundation:metal_plate_checker.dark_steel.name=Dark Steel Checker Plate
+tile.materialfoundation:metal_plate_checker.pulsating_iron.name=Pulsating Iron Checker Plate
+tile.materialfoundation:metal_plate_checker.redstone_alloy.name=Redstone Alloy Checker Plate
+tile.materialfoundation:metal_plate_checker.vibrant_alloy.name=Vibrant Alloy Checker Plate
+tile.materialfoundation:metal_plate_checker.ardite.name=Ardite Checker Plate
+tile.materialfoundation:metal_plate_checker.cobalt.name=Cobalt Checker Plate
+tile.materialfoundation:metal_plate_checker.manyullyn.name=Manyullyn Checker Plate
+tile.materialfoundation:metal_plate_checker.osmium.name=Osmium Checker Plate
+tile.materialfoundation:metal_plate_checker.refined_obsidian.name=Refined Obsidian Checker Plate
+tile.materialfoundation:metal_plate_checker.refined_glowstone_unlit.name=Unlit Refined Glowstone Checker Plate
+tile.materialfoundation:metal_plate_checker.refined_glowstone_lit.name=Lit Refined Glowstone Checker Plate
 
-# Metal Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.iron.name=Iron Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.gold.name=Gold Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.copper.name=Copper Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.tin.name=Tin Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.silver.name=Silver Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.lead.name=Lead Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.nickel.name=Ferrous Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.platinum.name=Shiny Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.mithril.name=Mana Infused Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.electrum.name=Electrum Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.invar.name=Invar Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.bronze.name=Tinker's Alloy Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.signalum.name=Signalum Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.lumium.name=Lumium Scale Checker Plate
-tile.materialfoundation:metal_scale_checker.enderium.name=Enderium Scale Checker Plate
+# Metal Painted Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.white.name=White Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.orange.name=Orange Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.magenta.name=Magenta Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.light_blue.name=Light Blue Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.yellow.name=Yellow Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.lime.name=Lime Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.pink.name=Pink Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.gray.name=Gray Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.silver.name=Light Gray Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.cyan.name=Cyan Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.purple.name=Purple Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.blue.name=Blue Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.brown.name=Brown Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.green.name=Green Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.red.name=Red Checker Plate
+tile.materialfoundation:metal_painted_plate_checker.black.name=Black Checker Plate
 
 # Metal Scale Plate
-tile.materialfoundation:metal_scale.iron.name=Iron Scale Plate
-tile.materialfoundation:metal_scale.gold.name=Gold Scale Plate
-tile.materialfoundation:metal_scale.copper.name=Copper Scale Plate
-tile.materialfoundation:metal_scale.tin.name=Tin Scale Plate
-tile.materialfoundation:metal_scale.silver.name=Silver Scale Plate
-tile.materialfoundation:metal_scale.lead.name=Lead Scale Plate
-tile.materialfoundation:metal_scale.nickel.name=Ferrous Scale Plate
-tile.materialfoundation:metal_scale.platinum.name=Shiny Scale Plate
-tile.materialfoundation:metal_scale.mithril.name=Mana Infused Scale Plate
-tile.materialfoundation:metal_scale.electrum.name=Electrum Scale Plate
-tile.materialfoundation:metal_scale.invar.name=Invar Scale Plate
-tile.materialfoundation:metal_scale.bronze.name=Tinker's Alloy Scale Plate
-tile.materialfoundation:metal_scale.signalum.name=Signalum Scale Plate
-tile.materialfoundation:metal_scale.lumium.name=Lumium Scale Plate
-tile.materialfoundation:metal_scale.enderium.name=Enderium Scale Plate
+tile.materialfoundation:metal_plate_scale.iron.name=Iron Scale Plate
+tile.materialfoundation:metal_plate_scale.gold.name=Gold Scale Plate
+tile.materialfoundation:metal_plate_scale.tin.name=Tin Scale Plate
+tile.materialfoundation:metal_plate_scale.copper.name=Copper Scale Plate
+tile.materialfoundation:metal_plate_scale.bronze.name=Bronze Scale Plate
+tile.materialfoundation:metal_plate_scale.dark_steel.name=Dark Steel Scale Plate
+tile.materialfoundation:metal_plate_scale.pulsating_iron.name=Pulsating Iron Scale Plate
+tile.materialfoundation:metal_plate_scale.redstone_alloy.name=Redstone Alloy Scale Plate
+tile.materialfoundation:metal_plate_scale.vibrant_alloy.name=Vibrant Alloy Scale Plate
+tile.materialfoundation:metal_plate_scale.ardite.name=Ardite Scale Plate
+tile.materialfoundation:metal_plate_scale.cobalt.name=Cobalt Scale Plate
+tile.materialfoundation:metal_plate_scale.manyullyn.name=Manyullyn Scale Plate
+tile.materialfoundation:metal_plate_scale.osmium.name=Osmium Scale Plate
+tile.materialfoundation:metal_plate_scale.refined_obsidian.name=Refined Obsidian Scale Plate
+tile.materialfoundation:metal_plate_scale.refined_glowstone_unlit.name=Unlit Refined Glowstone Scale Plate
+tile.materialfoundation:metal_plate_scale.refined_glowstone_lit.name=Lit Refined Glowstone Scale Plate
 
-# Concrete
-tile.materialfoundation:composite.concrete.name=Concrete Wall
+# Metal Painted Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.white.name=White Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.orange.name=Orange Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.magenta.name=Magenta Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.light_blue.name=Light Blue Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.yellow.name=Yellow Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.lime.name=Lime Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.pink.name=Pink Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.gray.name=Gray Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.silver.name=Light Gray Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.cyan.name=Cyan Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.purple.name=Purple Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.blue.name=Blue Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.brown.name=Brown Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.green.name=Green Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.red.name=Red Scale Plate
+tile.materialfoundation:metal_painted_plate_scale.black.name=Black Scale Plate
+
+# Metal Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.iron.name=Iron Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.gold.name=Gold Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.tin.name=Tin Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.copper.name=Copper Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.bronze.name=Bronze Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.dark_steel.name=Dark Steel Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.pulsating_iron.name=Pulsating Iron Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.redstone_alloy.name=Redstone Alloy Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.vibrant_alloy.name=Vibrant Alloy Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.ardite.name=Ardite Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.cobalt.name=Cobalt Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.manyullyn.name=Manyullyn Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.osmium.name=Osmium Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.refined_obsidian.name=Refined Obsidian Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.refined_glowstone_unlit.name=Unlit Refined Glowstone Small Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_small.refined_glowstone_lit.name=Lit Refined Glowstone Small Studded Floor Plate
+
+# Metal Small Painted Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.white.name=White Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.orange.name=Orange Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.magenta.name=Magenta Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.light_blue.name=Light Blue Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.yellow.name=Yellow Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.lime.name=Lime Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.pink.name=Pink Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.gray.name=Gray Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.silver.name=Light Gray Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.cyan.name=Cyan Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.purple.name=Purple Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.blue.name=Blue Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.brown.name=Brown Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.green.name=Green Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.red.name=Red Small Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_small.black.name=Black Small Studded Floor Plate
+
+# Metal Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.iron.name=Iron Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.gold.name=Gold Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.tin.name=Tin Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.copper.name=Copper Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.bronze.name=Bronze Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.dark_steel.name=Dark Steel Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.pulsating_iron.name=Pulsating Iron Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.redstone_alloy.name=Redstone Alloy Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.vibrant_alloy.name=Vibrant Alloy Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.ardite.name=Ardite Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.cobalt.name=Cobalt Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.manyullyn.name=Manyullyn Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.osmium.name=Osmium Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.refined_obsidian.name=Refined Obsidian Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.refined_glowstone_unlit.name=Unlit Refined Glowstone Medium Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_medium.refined_glowstone_lit.name=Lit Refined Glowstone Medium Studded Floor Plate
+
+# Metal Medium Painted Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.white.name=White Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.orange.name=Orange Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.magenta.name=Magenta Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.light_blue.name=Light Blue Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.yellow.name=Yellow Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.lime.name=Lime Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.pink.name=Pink Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.gray.name=Gray Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.silver.name=Light Gray Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.cyan.name=Cyan Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.purple.name=Purple Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.blue.name=Blue Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.brown.name=Brown Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.green.name=Green Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.red.name=Red Medium Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_medium.black.name=Black Medium Studded Floor Plate
+
+# Metal Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.iron.name=Iron Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.gold.name=Gold Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.tin.name=Tin Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.copper.name=Copper Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.bronze.name=Bronze Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.dark_steel.name=Dark Steel Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.pulsating_iron.name=Pulsating Iron Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.redstone_alloy.name=Redstone Alloy Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.vibrant_alloy.name=Vibrant Alloy Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.ardite.name=Ardite Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.cobalt.name=Cobalt Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.manyullyn.name=Manyullyn Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.osmium.name=Osmium Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.refined_obsidian.name=Refined Obsidian Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.refined_glowstone_unlit.name=Unlit Refined Glowstone Large Studded Floor Plate
+tile.materialfoundation:metal_plate_floor_studded_large.refined_glowstone_lit.name=Lit Refined Glowstone Large Studded Floor Plate
+
+# Metal Large Painted Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.white.name=White Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.orange.name=Orange Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.magenta.name=Magenta Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.light_blue.name=Light Blue Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.yellow.name=Yellow Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.lime.name=Lime Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.pink.name=Pink Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.gray.name=Gray Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.silver.name=Light Gray Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.cyan.name=Cyan Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.purple.name=Purple Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.blue.name=Blue Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.brown.name=Brown Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.green.name=Green Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.red.name=Red Large Studded Floor Plate
+tile.materialfoundation:metal_painted_plate_floor_studded_large.black.name=Black Large Studded Floor Plate
+
+# Metal Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.iron.name=Iron Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.gold.name=Gold Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.tin.name=Tin Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.copper.name=Copper Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.bronze.name=Bronze Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.dark_steel.name=Dark Steel Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.pulsating_iron.name=Pulsating Iron Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.redstone_alloy.name=Redstone Alloy Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.vibrant_alloy.name=Vibrant Alloy Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.ardite.name=Ardite Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.cobalt.name=Cobalt Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.manyullyn.name=Manyullyn Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.osmium.name=Osmium Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.refined_obsidian.name=Refined Obsidian Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.refined_glowstone_unlit.name=Unlit Refined Glowstone Studded Wall Plate
+tile.materialfoundation:metal_plate_wall_studded.refined_glowstone_lit.name=Lit Refined Glowstone Studded Wall Plate
+
+# Metal Painted Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.white.name=White Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.orange.name=Orange Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.magenta.name=Magenta Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.light_blue.name=Light Blue Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.yellow.name=Yellow Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.lime.name=Lime Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.pink.name=Pink Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.gray.name=Gray Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.silver.name=Light Gray Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.cyan.name=Cyan Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.purple.name=Purple Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.blue.name=Blue Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.brown.name=Brown Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.green.name=Green Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.red.name=Red Studded Wall Plate
+tile.materialfoundation:metal_painted_plate_wall_studded.black.name=Black Studded Wall Plate

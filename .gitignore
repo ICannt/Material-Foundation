@@ -58,6 +58,7 @@ Temporary Items
 /lib
 /libsrc
 /run
+/serverrun
 gradlebuild.bat
 gradleeclipse.bat
 gradlerefresh.bat

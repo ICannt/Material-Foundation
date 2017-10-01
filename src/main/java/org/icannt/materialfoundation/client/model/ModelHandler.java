@@ -1,12 +1,18 @@
 package org.icannt.materialfoundation.client.model;
 
-import net.minecraft.client.renderer.ItemMeshDefinition;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.icannt.materialfoundation.client.model.mesher.ItemPaintTinMesher;
+import org.icannt.materialfoundation.common.init.ModBlocks;
+import org.icannt.materialfoundation.common.init.ModItems;
+import org.icannt.materialfoundation.common.item.variant.EnumGenericType;
+import org.icannt.materialfoundation.common.item.variant.EnumPaintType;
+
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
-import org.icannt.materialfoundation.common.registry.ItemRegistry;
 
 /**
  * Created by ICannt on 22/12/16.
@@ -14,18 +20,53 @@ import org.icannt.materialfoundation.common.registry.ItemRegistry;
 public class ModelHandler {
 
     public static void registerItemModels() {
-        // Burnt Lime
-        registerItemModel(ItemRegistry.BURNT_LIME);
-        registerItemModel(ItemRegistry.FABRICATOR);
+    	
+        // MF Fabricator
+        registerItemModel(ModItems.TOOL_FABRICATOR);
+               
+        // Generic Items
+        for (EnumGenericType variant : EnumGenericType.values()) {
+            ModelLoader.setCustomModelResourceLocation(ModItems.GENERIC, variant.ordinal(), new ModelResourceLocation(ModItems.GENERIC.getRegistryName() + "_" + variant.getName(), "inventory"));
+        }
+                
+        // Paint Tin
+        List<ModelResourceLocation> modelsPaint = new ArrayList<>();
+        for (EnumPaintType variant : EnumPaintType.values()) {
+            modelsPaint.add(new ModelResourceLocation(ModItems.METAL_TIN_PAINT.getRegistryName() + "_" + variant.getName(), "inventory"));
+        }
+
+        ModelBakery.registerItemVariants(ModItems.METAL_TIN_PAINT, modelsPaint.toArray(new ModelResourceLocation[modelsPaint.size()]));
+        ModelLoader.setCustomMeshDefinition(ModItems.METAL_TIN_PAINT, new ItemPaintTinMesher());
+        
+        // Empty Paint Tin
+        registerItemModel(ModItems.METAL_TIN_PAINT_EMPTY);
     }
 
     public static void registerItemModel(Item item) {
-        ModelBakery.registerItemVariants(item, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-        ModelLoader.setCustomMeshDefinition(item, new ItemMeshDefinition() {
-            @Override
-            public ModelResourceLocation getModelLocation(ItemStack stack) {
-                return new ModelResourceLocation(stack.getItem().getRegistryName(), "inventory");
-            }
-        });
+        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+    }
+
+    public static void initBlockModels() {
+        ModBlocks.COMPOSITE_CONCRETE.initClient();
+        ModBlocks.COMPOSITE_WALL_PLASTER.initClient();
+        ModBlocks.COMPOSITE_WALL_PLASTER_COMBO.initClient();
+        // ModBlocks.COMPOSITE_WALL_PLASTER_COMBO_01.initClient();
+        ModBlocks.METAL_PLATE_CHECKER.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_CHECKER.initClient();
+        ModBlocks.METAL_PLATE_SCALE.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_SCALE.initClient();
+        ModBlocks.METAL_PLATE_FLOOR_STUDDED_SMALL.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_FLOOR_STUDDED_SMALL.initClient();
+        ModBlocks.METAL_PLATE_FLOOR_STUDDED_MEDIUM.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_FLOOR_STUDDED_MEDIUM.initClient();
+        ModBlocks.METAL_PLATE_FLOOR_STUDDED_LARGE.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_FLOOR_STUDDED_LARGE.initClient();
+        ModBlocks.METAL_PLATE_WALL_STUDDED.initClient();
+        ModBlocks.METAL_PAINTED_PLATE_WALL_STUDDED.initClient();
+        ModBlocks.METAL_CRATE_WITH_GRILL.initClient();
+        ModBlocks.METAL_CRATE_WITH_GRILL_EXTRA.initClient();
+        ModBlocks.METAL_GRILL.initClient();
+        ModBlocks.METAL_GRILL_BOX.initClient();
+        ModBlocks.METAL_PLATE_CRATE.initClient();
     }
 }

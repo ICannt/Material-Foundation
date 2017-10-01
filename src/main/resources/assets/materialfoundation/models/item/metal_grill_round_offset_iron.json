@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "materialfoundation:blocks/metal_grill_round_offset_iron"
+    }
+}

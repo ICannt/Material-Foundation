@@ -1,0 +1,95 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "all": "materialfoundation:blocks/metal_plate_floor_studded_small_iron"
+        },
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "metal": {
+            "iron": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_iron"
+                }
+            },
+            "gold": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_gold"
+                }
+            },
+            "tin": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_tin"
+                }
+            },
+            "copper": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_copper"
+                }
+            },
+            "bronze": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_bronze"
+                }
+            },
+            "dark_steel": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_dark_steel"
+                }
+            },
+            "pulsating_iron": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_pulsating_iron"
+                }
+            },
+            "redstone_alloy": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_redstone_alloy"
+                }
+            },
+            "vibrant_alloy": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_vibrant_alloy"
+                }
+            },
+            "ardite": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_ardite"
+                }
+            },
+            "cobalt": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_cobalt"
+                }
+            },
+            "manyullyn": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_manyullyn"
+                }
+            },
+            "osmium": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_osmium"
+                }
+            },
+            "refined_obsidian": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_refined_obsidian"
+                }
+            },
+            "refined_glowstone_unlit": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_refined_glowstone"
+                }
+            },
+            "refined_glowstone_lit": {
+                "textures": {
+                    "all": "materialfoundation:blocks/metal_plate_floor_studded_small_refined_glowstone"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "materialfoundation:composite_wall_plaster_combo_normal_stairwell_01a"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "composite": {
+            "facing=north-south,composite_wall_plaster_combo_normal_stairwell_01a": { "model": "composite_wall_plaster_combo_normal_stairwell_01a" },
+            "facing=north-south,composite_wall_plaster_combo_normal_stairwell_01b": { "model": "composite_wall_plaster_combo_normal_stairwell_01b" },
+            "facing=north-south,composite_wall_plaster_combo_normal_stairwell_01c": { "model": "composite_wall_plaster_combo_normal_stairwell_01c" },
+            "facing=north-south,composite_wall_plaster_combo_normal_stairwell_01d": { "model": "composite_wall_plaster_combo_normal_stairwell_01d" },
+            "facing=north-south,composite_wall_plaster_combo_flipped_stairwell_01a": { "model": "composite_wall_plaster_combo_flipped_stairwell_01a" },
+            "facing=north-south,composite_wall_plaster_combo_flipped_stairwell_01b": { "model": "composite_wall_plaster_combo_flipped_stairwell_01b" },
+            "facing=north-south,composite_wall_plaster_combo_flipped_stairwell_01c": { "model": "composite_wall_plaster_combo_flipped_stairwell_01c" },
+            "facing=north-south,composite_wall_plaster_combo_flipped_stairwell_01d": { "model": "composite_wall_plaster_combo_flipped_stairwell_01d" },
+            "facing=west-east,composite_wall_plaster_combo_normal_stairwell_01a": { "model": "composite_wall_plaster_combo_normal_stairwell_01a" },
+            "facing=west-east,composite_wall_plaster_combo_normal_stairwell_01b": { "model": "composite_wall_plaster_combo_normal_stairwell_01b" },
+            "facing=west-east,composite_wall_plaster_combo_normal_stairwell_01c": { "model": "composite_wall_plaster_combo_normal_stairwell_01c" },
+            "facing=west-east,composite_wall_plaster_combo_normal_stairwell_01d": { "model": "composite_wall_plaster_combo_normal_stairwell_01d" },
+            "facing=west-east,composite_wall_plaster_combo_flipped_stairwell_01a": { "model": "composite_wall_plaster_combo_flipped_stairwell_01a" },
+            "facing=west-east,composite_wall_plaster_combo_flipped_stairwell_01b": { "model": "composite_wall_plaster_combo_flipped_stairwell_01b" },
+            "facing=west-east,composite_wall_plaster_combo_flipped_stairwell_01c": { "model": "composite_wall_plaster_combo_flipped_stairwell_01c" },
+            "facing=west-east,composite_wall_plaster_combo_flipped_stairwell_01d": { "model": "composite_wall_plaster_combo_flipped_stairwell_01d" }
+        }
+    }
+}
